@@ -17,6 +17,7 @@
   "dependencies": {
     "@angular/cli": "1.0.1",
     "@angular/compiler-cli": "^4.0.0",
+    "shx": "0.2.2",
     "@angular/animations": "^4.1.1",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
