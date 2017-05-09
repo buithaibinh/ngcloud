@@ -1,7 +1,7 @@
 {
-  "name": "echoes-ng2",
-  "version": "3.0.0",
-  "description": "Echoes Ng2",
+  "name": "ng2-cloud-admin",
+  "version": "1.0.0",
+  "description": "Cloud Admin Ng2",
   "main": "index.js",
   "scripts": {
     "start": "lite-server --config=./bs-config.js"
