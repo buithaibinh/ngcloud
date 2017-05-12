@@ -4,6 +4,7 @@ const authProviders = [
 ];
 
 export const routes: Routes = [
+    { path: '', redirectTo: 'dashboard', pathMatch: 'full'}
 ];
 
 export const appRoutingProviders: any[] = [
