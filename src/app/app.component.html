@@ -1,6 +1,6 @@
 <md-sidenav-container class="ng-root" fullscreen>
   
-  <app-navbar></app-navbar>
+  <app-navbar (onToggleFullscreen)="toggleFullscreen()"></app-navbar>
 
   <md-sidenav #start>
     <md-nav-list>
