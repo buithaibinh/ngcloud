@@ -23,7 +23,7 @@ import { APP_CONTAINER_MODULES } from './containers';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     routing,

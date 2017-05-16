@@ -39,21 +39,4 @@ export class AppComponent {
     { name: 'Platform', route: 'platform' },
     { name: 'Style', route: 'style' }
   ];
-
-  constructor(private _element: ElementRef) {
-
-  }
-
-  toggleFullscreen() {
-    let elem = this._element.nativeElement.querySelector('.ng-root');
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-    } else if (elem.webkitRequestFullScreen) {
-      elem.webkitRequestFullScreen();
-    } else if (elem.mozRequestFullScreen) {
-      elem.mozRequestFullScreen();
-    } else if (elem.msRequestFullScreen) {
-      elem.msRequestFullScreen();
-    }
-  }
 }

@@ -22,8 +22,7 @@
         "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
         "assets/bootstrap/bootstrap.css",
         "assets/bootstrap/bootstrap-extend.css",
-        "fonts/material-design/material-design.min.css",
-        "fonts/brand-icons/brand-icons.min.css",
+        "assets/vendor/flag-icon-css/flag-icon.css",
         "css/site.css",
         "css/styles.scss"
       ],
