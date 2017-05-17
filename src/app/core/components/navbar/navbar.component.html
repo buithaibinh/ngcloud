@@ -1,6 +1,6 @@
 <nav class="site-navbar navbar navbar-inverse navbar-fixed-top navbar-mega" role="navigation">
   <div class="navbar-header">
-    <button md-icon-button (click)="start.open()">
+    <button md-icon-button (click)="toggleSidebar()">
         <md-icon class="md-24" >menu</md-icon>
       </button>
 
@@ -20,8 +20,8 @@
     <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
       <!-- Navbar Toolbar -->
       <ul class="nav navbar-toolbar">
-        <li class="hidden-float" id="toggleMenubar">
-          <button md-icon-button (click)="start.open()">
+        <li class="hidden-float">
+          <button md-icon-button (click)="toggleSidebar()">
               <md-icon class="md-24" >menu</md-icon>
             </button>
         </li>
@@ -29,7 +29,7 @@
           <app-toggle-fullscreen></app-toggle-fullscreen>
         </li>
         <li class="hidden-float">
-          <button md-icon-button>
+          <button md-icon-button data-target="#site-navbar-search" data-toggle="collapse">
               <md-icon class="md-24" >search</md-icon>
             </button>
         </li>
@@ -171,7 +171,7 @@
           </ul>
         </li>
 
-        <li id="toggleChat">
+        <li>
           <button md-icon-button>
               <md-icon class="md-24" >settings</md-icon>
             </button>
@@ -190,7 +190,8 @@
           <div class="input-search">
             <i class="input-search-icon material-icons">search</i>
             <input type="text" class="form-control" name="site-search" placeholder="Search...">
-            <button type="button" class="input-search-close material-icons" aria-label="Close">close</button>
+            <button type="button" class="input-search-close material-icons" data-target="#site-navbar-search"
+              data-toggle="collapse" aria-label="Close">close</button>
           </div>
         </div>
       </form>

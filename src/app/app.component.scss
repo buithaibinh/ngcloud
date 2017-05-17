@@ -3,6 +3,11 @@ body {
     padding-top: 132px;
     box-sizing: border-box;
   }
+  .mat-sidenav {
+    min-width: 15vw;
+    top: 66px;
+  }
+  
 }
 
 // stretch to screen size in fullscreen mode

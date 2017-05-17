@@ -1,4 +1,12 @@
 import { Component, ViewEncapsulation, ElementRef } from '@angular/core';
+import { Store } from '@ngrx/store';
+import 'rxjs/add/operator/let';
+import { Observable } from 'rxjs';
+
+import { EchoesState, getSidebarExpanded$ } from './core/store';
+import { AppLayoutActions } from './core/store/app-layout';
+
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +15,8 @@ import { Component, ViewEncapsulation, ElementRef } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
+  sidebarExpanded$: Observable<any> = this.store.let(getSidebarExpanded$);
+
   navItems = [
     { name: 'Autocomplete', route: 'autocomplete' },
     { name: 'Button', route: 'button' },
@@ -40,20 +50,16 @@ export class AppComponent {
     { name: 'Style', route: 'style' }
   ];
 
-  constructor(private _element: ElementRef) {
-
+  constructor(
+    private appLayoutActions: AppLayoutActions,
+    private store: Store<EchoesState>, ) {
+    console.log('jQuery version  = ', $().jquery);
   }
 
-  // toggleFullscreen() {
-  //   let elem = this._element.nativeElement.querySelector('.ng-root');
-  //   if (elem.requestFullscreen) {
-  //     elem.requestFullscreen();
-  //   } else if (elem.webkitRequestFullScreen) {
-  //     elem.webkitRequestFullScreen();
-  //   } else if (elem.mozRequestFullScreen) {
-  //     elem.mozRequestFullScreen();
-  //   } else if (elem.msRequestFullScreen) {
-  //     elem.msRequestFullScreen();
-  //   }
-  // }
+  closeSidebar(){
+    return this.store.dispatch(this.appLayoutActions.collapseSidebar());
+  }
+  openSidebar(){
+    return this.store.dispatch(this.appLayoutActions.expandSidebar());
+  }
 }

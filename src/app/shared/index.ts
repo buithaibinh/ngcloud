@@ -8,12 +8,16 @@ import { COMPONENTS } from './components';
 import { PIPES } from './pipes';
 import { DIRECTIVES } from './directives';
 
+export const ANGULAR_MODULES = [
+  CommonModule,
+  FormsModule,
+  RouterModule,
+  MaterialModule,
+];
+
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    RouterModule,
-    MaterialModule,
+    ANGULAR_MODULES
   ],
   declarations: [
     ...PIPES,
@@ -21,8 +25,7 @@ import { DIRECTIVES } from './directives';
     ...DIRECTIVES,
   ],
   exports: [
-    CommonModule,
-    FormsModule,
+    ...ANGULAR_MODULES,
     ...PIPES,
     ...COMPONENTS,
     ...DIRECTIVES,

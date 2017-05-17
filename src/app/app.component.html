@@ -1,8 +1,6 @@
 <md-sidenav-container class="ng-root" fullscreen>
-  
-  <app-navbar (onToggleFullscreen)="toggleFullscreen()"></app-navbar>
-
-  <md-sidenav #start>
+  <app-navbar></app-navbar>
+  <md-sidenav #start [opened]="sidebarExpanded$ | async" (close)="closeSidebar()" (open)="openSidebar()">
     <md-nav-list>
       <a *ngFor="let navItem of navItems" md-list-item (click)="start.close()" [routerLink]="[navItem.route]">
         {{navItem.name}}
