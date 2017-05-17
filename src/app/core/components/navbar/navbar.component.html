@@ -38,32 +38,7 @@
       <!-- Navbar Toolbar Right -->
       <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" data-animation="scale-up" aria-expanded="false"
-            role="button">
-              <span class="flag-icon flag-icon-us"></span>
-            </a>
-          <ul class="dropdown-menu" role="menu">
-            <li role="presentation">
-              <a href="javascript:void(0)" role="menuitem">
-                  <span class="flag-icon flag-icon-gb"></span> English</a>
-            </li>
-            <li role="presentation">
-              <a href="javascript:void(0)" role="menuitem">
-                  <span class="flag-icon flag-icon-fr"></span> French</a>
-            </li>
-            <li role="presentation">
-              <a href="javascript:void(0)" role="menuitem">
-                  <span class="flag-icon flag-icon-cn"></span> Chinese</a>
-            </li>
-            <li role="presentation">
-              <a href="javascript:void(0)" role="menuitem">
-                  <span class="flag-icon flag-icon-de"></span> German</a>
-            </li>
-            <li role="presentation">
-              <a href="javascript:void(0)" role="menuitem">
-                  <span class="flag-icon flag-icon-nl"></span> Dutch</a>
-            </li>
-          </ul>
+          <app-lang-switcher></app-lang-switcher>
         </li>
         <li class="dropdown">
           <a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up"
@@ -90,7 +65,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          <button md-icon-button>
+          <button md-icon-button data-toggle="dropdown">
               <md-icon class="md-24" >notifications</md-icon>
               <span class="badge badge-danger up">6</span>
             </button>

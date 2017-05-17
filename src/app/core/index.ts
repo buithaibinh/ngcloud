@@ -17,7 +17,7 @@ import { APP_SERVICES } from './services';
     CoreStoreModule,
   ],
   providers: [
-    ...APP_SERVICES
+    ...APP_SERVICES,
   ]
 })
 export class CoreModule {

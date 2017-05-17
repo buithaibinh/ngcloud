@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 
+import { SharedModule } from '../../../shared';
+import { LangSwitcherModule } from '../lang-switcher';
 import { NavbarComponent } from './navbar.component';
 
-import { SharedModule } from '../../../shared';
-import { MaterialModule } from '@angular/material';
-
 @NgModule({
-    imports: [SharedModule],
+    imports: [SharedModule, LangSwitcherModule],
     exports: [NavbarComponent],
     declarations: [NavbarComponent],
     providers: [],

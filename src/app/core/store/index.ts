@@ -14,6 +14,7 @@ import { getSidebarExpanded } from './app-layout';
 import { EchoesState, EchoesReducers, EchoesActions } from './reducers';
 
 // import { storeFreeze } from 'ngrx-store-freeze';
+import * as fromMultilingual from '../i18n/index';
 
 export { EchoesState } from './reducers';
 const actions = EchoesActions;
@@ -49,3 +50,9 @@ function getAppLayoutState(state$: Observable<EchoesState>) {
 export function getSidebarExpanded$(state$: Observable<EchoesState>) {
   return state$.select((state) => state.appLayout.sidebarExpanded);
 }
+
+export function getMultilingualState(state$: Observable<EchoesState>): Observable<fromMultilingual.IMultilingualState> {
+  return state$.select(s => s.i18n);
+}
+
+export const getLang: any = compose(fromMultilingual.getLang, getMultilingualState);

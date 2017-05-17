@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
+import { MultilingualModule } from '../core/i18n/index';
 
 import { COMPONENTS } from './components';
 import { PIPES } from './pipes';
@@ -13,6 +14,7 @@ export const ANGULAR_MODULES = [
   FormsModule,
   RouterModule,
   MaterialModule,
+  MultilingualModule
 ];
 
 @NgModule({

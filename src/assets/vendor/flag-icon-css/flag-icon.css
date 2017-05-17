@@ -716,7 +716,7 @@
 .flag-icon-um {
   background-image: url(flags/um.svg);
 }
-.flag-icon-us {
+.flag-icon-us, .flag-icon-en {
   background-image: url(flags/us.svg);
 }
 .flag-icon-uy {

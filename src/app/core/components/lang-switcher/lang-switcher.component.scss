@@ -1,0 +1,16 @@
+.mat-icon-button {
+    position: relative;
+    margin: 12px 0px;
+    color: white;
+    cursor: pointer;
+}
+
+.mat-menu-item {
+    width: 160px;
+    height: 34px;
+    line-height: 34px;
+    .flag-name {
+        margin-left: 16px;
+        font-size: 14px;
+    }
+}

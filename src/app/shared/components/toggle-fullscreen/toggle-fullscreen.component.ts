@@ -3,7 +3,11 @@ import * as screenfull from 'screenfull'
 
 @Component({
   selector: 'app-toggle-fullscreen',
-  templateUrl: './toggle-fullscreen.component.html',
+  template: `
+    <button md-icon-button>
+      <md-icon class="md-24" >{{icon}}</md-icon>
+    </button>
+  `,
   styleUrls: ['./toggle-fullscreen.component.scss'],
 })
 export class ToggleFullscreenComponent implements OnInit {
