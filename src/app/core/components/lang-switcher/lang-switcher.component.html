@@ -1,13 +1,7 @@
-<!--<form>
-  Change Language: <select [(ngModel)]="lang" (change)="changeLang($event)" name="lang">
-    <option *ngFor="let l of supportedLanguages" [value]="l.code">{{l.title}}</option>
-  </select>
-</form>-->
-
 <button md-icon-button [mdMenuTriggerFor]="menu">
   <span [className]="'flag-icon flag-icon-' + lang"></span>
 </button>
-<md-menu #menu="mdMenu">
+<md-menu #menu="mdMenu" [xPosition]="'before'">
   <button md-menu-item *ngFor="let l of supportedLanguages" (click)="changeLang(l.code)">
     <span [className]="'flag-icon flag-icon-' + l.code"></span>
     <span class="flag-name">{{l.title}}</span>

@@ -10,6 +10,12 @@ import { AppLayoutActions } from '../../store/app-layout';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  profileItems = [
+    { name: 'Profile', route: 'profile', icon: 'person' },
+    { name: 'Billing', route: 'billing', icon: 'payment' },
+    { name: 'Settings', route: 'settings', icon: 'settings' },
+
+  ];
   constructor(
     private appLayoutActions: AppLayoutActions,
     private store: Store<EchoesState>

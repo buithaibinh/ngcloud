@@ -13,3 +13,11 @@
   }
 
 }
+.mat-menu-item {
+    width: 160px;
+    height: 34px;
+    line-height: 34px;
+    .text {
+        font-size: 14px;
+    }
+}

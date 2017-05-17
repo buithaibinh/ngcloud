@@ -4,7 +4,7 @@ import { MdIconRegistry } from '@angular/material';
 
 @Component({
   selector: 'icon-svg',
-  template: `<md-icon svgIcon="thumbs-up"></md-icon>`,
+  template: `<md-icon svgIcon="iconName"></md-icon>`,
   styleUrls: ['./icon-svg.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
