@@ -3,8 +3,9 @@ import { Store } from '@ngrx/store';
 import 'rxjs/add/operator/let';
 import { Observable } from 'rxjs';
 
-import { EchoesState, getSidebarExpanded$ } from './core/store';
-import { AppLayoutActions } from './core/store/app-layout';
+import { NgCloudAppState } from './core/store';
+
+import { AppLayoutActions, getSidebarExpanded$ } from './core/store/app-layout';
 
 import * as $ from 'jquery';
 
@@ -13,6 +14,9 @@ import * as $ from 'jquery';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  host: {
+    '[class.unicorn-dark-theme]': 'dark',
+  },
 })
 export class AppComponent {
   sidebarExpanded$: Observable<any> = this.store.let(getSidebarExpanded$);
@@ -52,7 +56,7 @@ export class AppComponent {
 
   constructor(
     private appLayoutActions: AppLayoutActions,
-    private store: Store<EchoesState>, ) {
+    private store: Store<NgCloudAppState>, ) {
     console.log('jQuery version  = ', $().jquery);
   }
 

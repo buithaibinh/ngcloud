@@ -10,15 +10,14 @@ import 'rxjs/add/operator/let';
 // import { NgrxActionCreatorFactoryModule } from './action-creator.util';
 
 import { environment } from '../../../environments/environment';
-import { getSidebarExpanded } from './app-layout';
-import { EchoesState, EchoesReducers, EchoesActions } from './reducers';
+import { NgCloudAppState, NgCloudReducers, NgCloudActions } from './reducers';
 
 // import { storeFreeze } from 'ngrx-store-freeze';
 import * as fromMultilingual from '../i18n/index';
 
-export { EchoesState } from './reducers';
-const actions = EchoesActions;
-const reducers = EchoesReducers;
+export { NgCloudAppState } from './reducers';
+const actions = NgCloudActions;
+const reducers = NgCloudReducers;
 // const storageConfig = ['videos', 'player', 'nowPlaylist', 'search', 'appLayout'];
 const composeStore = reducers;
 const optionalImports = [];
@@ -42,17 +41,3 @@ if (!environment.production) {
   providers: [ ...actions ]
 })
 export class CoreStoreModule {};
-
-// shared selectors
-function getAppLayoutState(state$: Observable<EchoesState>) {
-  return state$.select(state => state.appLayout);
-}
-export function getSidebarExpanded$(state$: Observable<EchoesState>) {
-  return state$.select((state) => state.appLayout.sidebarExpanded);
-}
-
-export function getMultilingualState(state$: Observable<EchoesState>): Observable<fromMultilingual.IMultilingualState> {
-  return state$.select(s => s.i18n);
-}
-
-export const getLang: any = compose(fromMultilingual.getLang, getMultilingualState);

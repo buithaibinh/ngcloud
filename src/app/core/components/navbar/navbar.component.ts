@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef, EventEmitter, Output, Input } from '@angular/core';
 
-import { EchoesState } from '../../store';
+import { NgCloudAppState } from '../../store';
 import { Store } from '@ngrx/store';
 import { AppLayoutActions } from '../../store/app-layout';
 
@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
   ];
   constructor(
     private appLayoutActions: AppLayoutActions,
-    private store: Store<EchoesState>
+    private store: Store<NgCloudAppState>
   ) {
 
   }

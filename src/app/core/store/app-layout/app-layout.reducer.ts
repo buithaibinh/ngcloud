@@ -8,14 +8,21 @@ export interface IAppVersion {
   isNewAvailable: boolean;
   checkingForVersion: boolean;
 }
+export interface ITheme {
+  name: string;
+}
 export interface IAppSettings {
   sidebarExpanded: boolean;
   requestInProcess: boolean;
   version: IAppVersion;
+  theme: ITheme;
 }
 const initialState: any = {
   sidebarExpanded: false,
   requestInProcess: false,
+  theme: {
+    name: 'dark'
+  },
   version: {
     semver: '',
     isNewAvailable: false,
@@ -45,6 +52,15 @@ export function appLayout (state: IAppSettings = initialState, action: Action): 
       return Object.assign({}, state, { version });
     }
 
+    case AppLayoutActions.THEME_CHANGED: {
+      if (state.theme !== action.payload)
+        return (<any>Object).assign({}, state, {
+            theme: action.payload
+          });
+
+      return state;
+    }
+
     default:
       return Object.assign({}, initialState, state);
   }
@@ -54,10 +70,6 @@ export const appLayoutRegister = {
   reducer: { appLayout },
   actions: AppLayoutActions
 };
-
-export function getSidebarExpanded($state: Observable<IAppSettings>) {
-  return $state.select(state => state.sidebarExpanded);
-}
 
 function getVersion(state: IAppSettings, packageJson: any): IAppVersion {
   const currentVersion = state.version.semver;

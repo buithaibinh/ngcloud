@@ -4,7 +4,7 @@ import { Store } from '@ngrx/store';
 
 // app
 import { ILang } from '../../interfaces';
-import { EchoesState } from '../../store';
+import { NgCloudAppState } from '../../store';
 import * as multilingual from '../../i18n/actions/index';
 import { MultilingualService, Languages, LanguageViewHelper } from '../../i18n/services/index';
 
@@ -20,7 +20,7 @@ export class LangSwitcherComponent {
   public supportedLanguages: Array<ILang>;
 
   constructor(
-    private store: Store<EchoesState>,
+    private store: Store<NgCloudAppState>,
     @Inject(Languages) private languages,
     @Inject(LanguageViewHelper) private viewHelper
   ) {

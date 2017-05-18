@@ -9,6 +9,8 @@ export class AppLayoutActions {
   static SIDEBAR_COLLAPSE = '[APP LAYOUT] SIDEBAR_COLLAPSE';
   static SIDEBAR_TOGGLE = '[APP LAYOUT] SIDEBAR_TOGGLE';
 
+  static THEME_CHANGED = '[APP LAYOUT] THEME_CHANGED';
+
   static APP_VERSION_RECIEVED = '[APP] APP_VERSION_RECIEVED';
   static APP_UPDATE_VERSION = '[APP] APP_UPDATE_VERSION';
   static APP_CHECK_VERSION = '[APP] APP_CHECK_VERSION';
@@ -34,6 +36,12 @@ export class AppLayoutActions {
   toggleSidebar(): Action {
     return {
       type: AppLayoutActions.SIDEBAR_TOGGLE
+    };
+  }
+
+  changeTheme(): Action {
+    return {
+      type: AppLayoutActions.THEME_CHANGED
     };
   }
 };
