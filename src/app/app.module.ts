@@ -58,7 +58,7 @@ export function HttpLoaderFactory(http: Http) {
     SharedModule,
     CoreModule,
     ...APP_CORE_MODULES,
-    ...APP_CONTAINER_MODULES
+    ...APP_CONTAINER_MODULES,
   ],
   providers: [
     appRoutingProviders,

@@ -27,7 +27,7 @@ export class AppComponent {
     { name: 'Dialog', route: 'dialog' },
     { name: 'Gestures', route: 'gestures' },
     { name: 'Grid List', route: 'grid-list' },
-    { name: 'Icon', route: 'icon' },
+    { name: 'Icons', route: 'icons' },
     { name: 'Input', route: 'input' },
     { name: 'List', route: 'list' },
     { name: 'Menu', route: 'menu' },

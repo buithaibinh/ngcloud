@@ -2677,6 +2677,7 @@ fieldset[disabled] .btn-pure.focus {
   margin: 0;
   font-size: 12px;
   border-radius: 0;
+  overflow-y: scroll;
 }
 .dropdown-menu-media .list-group-item {
   padding: 0 20px;

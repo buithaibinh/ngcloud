@@ -6,7 +6,7 @@
 
     <img class="navbar-brand-logo" src="../assets/images/logo.png" title="Remark">
 
-    <button md-icon-button class="navbar-toggle collapsed">
+    <button md-icon-button class="navbar-toggle collapsed" data-target="#site-navbar-collapse" data-toggle="collapse">
         <md-icon class="md-24" >more_vert</md-icon>
       </button>
 
@@ -22,7 +22,7 @@
       <ul class="nav navbar-toolbar">
         <li class="hidden-float">
           <button md-icon-button (click)="toggleSidebar()">
-              <md-icon class="md-24" >menu</md-icon>
+              <md-icon class="md-24">menu</md-icon>
             </button>
         </li>
         <li class="hidden-xs">
@@ -35,6 +35,9 @@
         </li>
       </ul>
       <!-- End Navbar Toolbar -->
+      <div class="navbar-brand navbar-brand-center">
+        <img class="navbar-brand-logo" src="../assets/images/logo.png" title="Remark">
+      </div>
       <!-- Navbar Toolbar Right -->
       <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
         <li class="dropdown">
@@ -64,7 +67,7 @@
           <button md-icon-button data-toggle="dropdown">
               <md-icon class="md-24" >notifications</md-icon>
               <span class="badge badge-danger up">6</span>
-            </button>
+          </button>
           <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
             <li class="dropdown-menu-header" role="presentation">
               <h5>NOTIFICATIONS</h5>
@@ -133,7 +136,7 @@
             </li>
             <li class="dropdown-menu-footer" role="presentation">
               <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
-                  <i class="icon md-settings" aria-hidden="true"></i>
+                  <md-icon class="md-24" >settings</md-icon>
                 </a>
               <a href="javascript:void(0)" role="menuitem">
                     All notifications
@@ -145,13 +148,10 @@
         <li>
           <button md-icon-button>
               <md-icon class="md-24" >settings</md-icon>
-            </button>
+          </button>
         </li>
       </ul>
       <!-- End Navbar Toolbar Right -->
-      <a href="index.html">
-          <img class="navbar-brand-logo" src="../assets/images/logo.png" title="Remark">
-        </a>
     </div>
     <!-- End Navbar Collapse -->
     <!-- Site Navbar Seach -->
