@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 
 import { SharedModule } from '../../../shared';
 import { LangSwitcherModule } from '../lang-switcher';
-import { NavbarComponent } from './navbar.component';
+import { TopbarComponent } from './topbar.component';
 
 @NgModule({
     imports: [SharedModule, LangSwitcherModule],
-    exports: [NavbarComponent],
-    declarations: [NavbarComponent],
+    exports: [TopbarComponent],
+    declarations: [TopbarComponent],
     providers: [],
 })
-export class NavbarModule { }
+export class TopbarModule { }

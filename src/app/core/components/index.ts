@@ -1,5 +1,5 @@
-import { NavbarModule } from './navbar';
+import { TopbarModule } from './topbar';
 
 export const APP_CORE_MODULES = [
-    NavbarModule,
+    TopbarModule,
 ];

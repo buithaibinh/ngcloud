@@ -1,0 +1,62 @@
+<md-toolbar color="primary">
+  <button md-icon-button (click)="toggleSidebar()">
+    <md-icon class="md-24">menu</md-icon>
+  </button>
+  <app-toggle-fullscreen></app-toggle-fullscreen>
+  <button md-icon-button data-target="#site-navbar-search" data-toggle="collapse">
+    <md-icon class="md-24" >search</md-icon>
+  </button>
+
+  <div class="brand-toolbar">
+    <img class="navbar-brand-logo" src="../assets/images/logo.png" title="Remark">
+
+   
+  </div>
+
+  <!-- Navbar Toolbar Right -->
+  <app-lang-switcher></app-lang-switcher>
+
+   <button md-icon-button [mdMenuTriggerFor]="profilesMenu">
+      <span class="avatar avatar-online">
+          <img src="../assets/portraits/5.jpg" alt="...">
+          <i></i>
+      </span>
+    </button>
+    <md-menu #profilesMenu="mdMenu" [xPosition]="'before'" [yPosition]="'below'">
+      <button md-menu-item *ngFor="let profileItem of profileItems" [routerLink]="[profileItem.route]">
+        <md-icon class="md-24" >{{profileItem.icon}}</md-icon>
+        <span class="text">{{profileItem.name}}</span>
+      </button>
+      <hr class="divider">
+      <button md-menu-item>
+        <md-icon class="md-24" >exit_to_app</md-icon>
+        <span class="text">Logout</span>
+      </button>
+    </md-menu>
+
+    <button md-icon-button data-toggle="dropdown">
+        <md-icon class="md-24" >notifications</md-icon>
+        <span class="badge badge-danger up">6</span>
+    </button>
+
+    <button md-icon-button (click)="changeTheme()">
+        <md-icon class="md-24" >settings</md-icon>
+    </button>
+  <!-- End Navbar Toolbar Right -->
+
+</md-toolbar>
+<!-- Site Navbar Seach -->
+<div class="collapse navbar-search-overlap" id="site-navbar-search">
+  <form role="search">
+    <div class="form-group">
+      <div class="input-search">
+        <i class="input-search-icon material-icons">search</i>
+        <input type="text" class="form-control" name="site-search" placeholder="Search...">
+        <button md-icon-button class="input-search-close" data-target="#site-navbar-search" data-toggle="collapse">
+          <md-icon class="md-24" >close</md-icon>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- End Site Navbar Seach -->

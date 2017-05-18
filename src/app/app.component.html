@@ -1,5 +1,4 @@
 <md-sidenav-container class="ng-root" fullscreen>
-  <app-navbar></app-navbar>
   <md-sidenav #start [opened]="sidebarExpanded$ | async" (close)="closeSidebar()" (open)="openSidebar()">
     <div class="site-menubar-header">
       <div class="cover overlay">
@@ -29,6 +28,8 @@
     </md-nav-list>
     <button md-button (click)="start.close()">CLOSE</button>
   </md-sidenav>
+
+  <app-navbar></app-navbar>
 
   <div #root="$implicit" dir="ltr" class="ng-content">
     <router-outlet></router-outlet>

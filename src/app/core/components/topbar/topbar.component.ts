@@ -6,10 +6,10 @@ import { AppLayoutActions, ITheme } from '../../store/app-layout';
 
 @Component({
   selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  templateUrl: './topbar.component.html',
+  styleUrls: ['./topbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class TopbarComponent implements OnInit {
   profileItems = [
     { name: 'Profile', route: 'profile', icon: 'person' },
     { name: 'Billing', route: 'billing', icon: 'payment' },
