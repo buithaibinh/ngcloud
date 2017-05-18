@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 import { NgCloudAppState } from './core/store';
 
-import { AppLayoutActions, getSidebarExpanded$ } from './core/store/app-layout';
+import { AppLayoutActions, getSidebarExpanded$, getDarkTheme$ } from './core/store/app-layout';
 
 import * as $ from 'jquery';
 
@@ -19,7 +19,9 @@ import * as $ from 'jquery';
   },
 })
 export class AppComponent {
+  private theme: any = {};
   sidebarExpanded$: Observable<any> = this.store.let(getSidebarExpanded$);
+  dark: boolean = false;
 
   navItems = [
     { name: 'Autocomplete', route: 'autocomplete' },
@@ -58,12 +60,17 @@ export class AppComponent {
     private appLayoutActions: AppLayoutActions,
     private store: Store<NgCloudAppState>, ) {
     console.log('jQuery version  = ', $().jquery);
+
+    this.store.let(getDarkTheme$).subscribe(isDark =>{
+      console.log('Choose theme dark = ', isDark);
+      this.dark = isDark;
+    });
   }
 
-  closeSidebar(){
+  closeSidebar() {
     return this.store.dispatch(this.appLayoutActions.collapseSidebar());
   }
-  openSidebar(){
+  openSidebar() {
     return this.store.dispatch(this.appLayoutActions.expandSidebar());
   }
 }

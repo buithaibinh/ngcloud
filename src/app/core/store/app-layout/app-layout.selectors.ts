@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs/Observable';
-import { IAppSettings } from './app-layout.reducer';
+import { IAppSettings, ITheme } from './app-layout.reducer';
 import { NgCloudAppState } from '../reducers';
 
 export function getAppLayoutState$(state$: Observable<NgCloudAppState>): Observable<IAppSettings> {
@@ -12,4 +12,13 @@ export function getSidebarExpanded$(state$: Observable<NgCloudAppState>) {
 
 export function getAppVersion$(state$: Observable<NgCloudAppState>): Observable<any> {
   return state$.select(state => state.appLayout.version);
+}
+
+export function getAppTheme$(state$: Observable<NgCloudAppState>): Observable<ITheme> {
+  return state$.select(state => {
+    return state.appLayout.theme;
+  });
+}
+export function getDarkTheme$(state$: Observable<NgCloudAppState>) {
+  return state$.select((state) => state.appLayout.theme.dark);
 }

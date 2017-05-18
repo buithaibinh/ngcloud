@@ -9,7 +9,7 @@ export interface IAppVersion {
   checkingForVersion: boolean;
 }
 export interface ITheme {
-  name: string;
+  dark: boolean;
 }
 export interface IAppSettings {
   sidebarExpanded: boolean;
@@ -17,11 +17,11 @@ export interface IAppSettings {
   version: IAppVersion;
   theme: ITheme;
 }
-const initialState: any = {
+const initialState: IAppSettings = {
   sidebarExpanded: false,
   requestInProcess: false,
   theme: {
-    name: 'dark'
+    dark: false
   },
   version: {
     semver: '',

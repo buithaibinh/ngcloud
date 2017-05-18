@@ -3,6 +3,8 @@ import { Action } from '@ngrx/store';
 
 import { ActionCreatorFactory } from 'ngrx-action-creator-factory';
 
+import { ITheme } from './app-layout.reducer';
+
 @Injectable()
 export class AppLayoutActions {
   static SIDEBAR_EXPAND = '[APP LAYOUT] SIDEBAR_EXPAND';
@@ -39,9 +41,10 @@ export class AppLayoutActions {
     };
   }
 
-  changeTheme(): Action {
+  changeTheme(data: ITheme): Action {
     return {
-      type: AppLayoutActions.THEME_CHANGED
+      type: AppLayoutActions.THEME_CHANGED,
+      payload: data
     };
   }
 };

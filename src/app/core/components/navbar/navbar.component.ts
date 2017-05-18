@@ -2,7 +2,7 @@ import { Component, OnInit, ElementRef, EventEmitter, Output, Input } from '@ang
 
 import { NgCloudAppState } from '../../store';
 import { Store } from '@ngrx/store';
-import { AppLayoutActions } from '../../store/app-layout';
+import { AppLayoutActions, ITheme } from '../../store/app-layout';
 
 @Component({
   selector: 'app-navbar',
@@ -24,6 +24,15 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  dark: boolean = false;
+  changeTheme(){
+    this.dark = !this.dark;
+    let data: ITheme = {
+      dark: this.dark
+    }
+    return this.store.dispatch(this.appLayoutActions.changeTheme(data));
   }
 
   toggleSidebar() {
