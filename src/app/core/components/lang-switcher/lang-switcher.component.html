@@ -1,7 +1,7 @@
 <button md-icon-button [mdMenuTriggerFor]="menu">
   <span [className]="'flag-icon flag-icon-' + lang"></span>
 </button>
-<md-menu #menu="mdMenu" [xPosition]="'before'">
+<md-menu #menu="mdMenu" xPosition="before" [overlapTrigger]="false">
   <button md-menu-item *ngFor="let l of supportedLanguages" (click)="changeLang(l.code)">
     <span [className]="'flag-icon flag-icon-' + l.code"></span>
     <span class="flag-name">{{l.title}}</span>
