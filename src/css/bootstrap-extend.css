@@ -743,8 +743,6 @@ textarea.form-control.no-resize {
 .input-search-close {
   color: #000;
   text-shadow: none;
-  filter: alpha(opacity=20);
-  opacity: .2;
 }
 .input-search-close.icon {
   font-size: inherit;

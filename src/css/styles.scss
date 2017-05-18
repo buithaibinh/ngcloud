@@ -19,28 +19,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.vertical-align-middle {
-    vertical-align: middle;
-    
-}
-.vertical-align {
-  font-size: 0;
-}
-.vertical-align:before {
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  content: "";
-}
-.vertical-align-middle,
-.vertical-align-bottom {
-  display: inline-block;
-  max-width: 100%;
-  font-size: 14px;
-}
-.vertical-align-bottom {
-  vertical-align: bottom;
-}
+
 .avatar-lg {
     width: 50px;
 }

@@ -62,7 +62,6 @@ export class AppComponent {
     console.log('jQuery version  = ', $().jquery);
 
     this.store.let(getDarkTheme$).subscribe(isDark =>{
-      console.log('Choose theme dark = ', isDark);
       this.dark = isDark;
     });
   }
