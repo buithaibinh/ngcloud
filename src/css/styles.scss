@@ -1,18 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 // @import "~assets/bootstrap-sass/variables";
-// @import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
-// // Load color variables
+// // // Load color variables
 // @import "vars-color";
 // @import "vars-font";
 // @import "vars-bootstrap";
-// @import 'vars-site';
+// @import 'mixin';
+@import 'vars-site';
 
 // // Sections
 // // -------------------------------
 // @import "sections/site-navbar";
-
-// @import "components/icon";
-
+@import "sections/site-menu";
 @import 'theme';
 
 .divider{

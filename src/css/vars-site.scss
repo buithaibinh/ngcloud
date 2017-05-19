@@ -1,28 +1,41 @@
-//== Site Container
+//== Colors
 //
-//##
-$site-container-width-xlg: 	$screen-xlg;
-$site-container-width-lg: 	$screen-lg;
-$site-container-width-md: 	$screen-md;
-$site-container-width-sm: 	$screen-sm;
+//## Gray and brand colors for use across Bootstrap.
 
-//== Site Navbar
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+
+$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+$headings-font-family:    inherit !default;
+$font-weight-override:    false;
+$font-weight-light:       300;
+$font-weight-normal:      400;
+$font-weight-medium:      500;
+$font-weight-bold:        700;
+
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+
+//== Scaffolding
 //
-//##
-$brand-font-family:                     $headings-font-family;
-$site-navbar-height:                    $navbar-height;
-$site-navbar-color:                     $gray;
-$site-navbar-hover-color:               $gray-dark;
-$site-navbar-brand-bg:                  $gray-darkest;
+//## Settings for some of the most global styles.
 
-$site-navbar-header-bg:                 $brand-primary;
-$site-navbar-header-color:              $inverse;
-
-$site-navbar-brand-color:               $inverse;
-
-$site-navbar-header-toolbar-hover-color: $inverse;
-$site-navbar-header-toolbar-hover-bg:    transparent;
-
+//** Background color for `<body>`.
+$body-bg:               #fff !default;
+//** Global text color on `<body>`.
+$text-color:            $gray-dark !default;
+$inverse:               white;
 //== Site Menubar
 //
 //##
@@ -57,7 +70,7 @@ $site-menubar-hover-transform:      -240px;
 //##
 $site-menu-top-weight:              $font-weight-bold;
 
-$site-menu-top-hover-color:         $gray-darkest;
+$site-menu-top-hover-color:         $gray-darker;
 $site-menu-top-hover-bg:            fade($gray-base, 5%);
 
 // $site-menu-top-active-head-bg:     $color-purple;
@@ -113,59 +126,3 @@ $site-menu-dark-top-active-color:      $inverse;
 $site-menu-dark-sub-active-color:      $inverse;
 $site-menu-dark-sub-open-color:        $site-menu-dark-sub-active-color;
 $site-menu-dark-sub-hover-color:       $site-menu-dark-top-hover-color;
-
-
-//== Site Sidebar
-//
-//##
-$site-sidebar-width: 300px;
-$site-sidebar-z-index: ($zindex-navbar + 10);
-$site-sidebar-nav-height: 90px;
-$site-sidebar-padding-horizontal: 30px;
-
-//== Page
-//
-//##
-$page-bg:                 #eceff1;
-
-$page-centered-max-width: 1400px;
-$page-vertical-padding:   30px;
-$page-horizontal-padding: 30px;
-
-//== Page Header
-//
-//##
-$page-header-bg:                        transparent;
-$page-header-bordered-bg:               $inverse;
-$page-header-vertical-padding:          30px;
-$page-header-bordered-vertical-padding: 20px;
-
-
-//== Page Aside
-//
-//##
-$page-aside-padding-horizontal: 30px;
-$page-aside-width:              260px;
-$page-aside-md-width:           220px;
-$page-aside-bg:                 $inverse;
-
-//== Page Main
-//
-//##
-$page-main-bg:                 $inverse;
-
-//== Site Footer
-//
-//##
-$site-footer-vertical-padding: 		10px;
-$site-footer-bg:               		$inverse;
-$site-footer-divider-color:    		$gray-lighter;
-$site-footer-height:           		44px;
-$site-footer-xs-height: 		66px;
-$site-footer-shadow: 			inset 0 0 $site-footer-height rgba(0, 0, 0, .02);
-
-//== Layout Boxed
-//
-//##
-$layout-boxed-width: 1320px;
-$layout-boxed-bg:    $gray-lighter;

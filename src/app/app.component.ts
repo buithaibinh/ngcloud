@@ -23,9 +23,29 @@ export class AppComponent {
   sidebarExpanded$: Observable<any> = this.store.let(getSidebarExpanded$);
   dark: boolean = false;
 
+  items = [
+    { text: 'Refresh' },
+    { text: 'Settings' },
+    { text: 'Help', disabled: true },
+    { text: 'Sign Out' }
+  ];
+
+  navLayout = [
+    { name: 'Flex Layout', route: 'flex-layout', icon: 'folder' },
+    { name: 'Golden Layout', route: 'golden-layout', icon: 'folder' }
+  ];
+
   navItems = [
-    { name: 'Autocomplete', route: 'autocomplete' },
-    { name: 'Button', route: 'button' },
+
+    { name: 'Dasboard', route: 'dasboard' },
+    {
+      name: 'Layouts', route: 'layout',
+      subs: [
+        { name: 'Flex Layout', route: 'flex-layout' },
+        { name: 'Golden Layout', route: 'golden-layout' }
+      ]
+    },
+    { name: 'Menu', route: 'menu' },
     { name: 'Button Toggle', route: 'button-toggle' },
     { name: 'Card', route: 'card' },
     { name: 'Chips', route: 'chips' },
@@ -61,7 +81,7 @@ export class AppComponent {
     private store: Store<NgCloudAppState>, ) {
     console.log('jQuery version  = ', $().jquery);
 
-    this.store.let(getDarkTheme$).subscribe(isDark =>{
+    this.store.let(getDarkTheme$).subscribe(isDark => {
       this.dark = isDark;
     });
   }

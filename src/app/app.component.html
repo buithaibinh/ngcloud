@@ -2,12 +2,11 @@
   <md-sidenav #start [opened]="sidebarExpanded$ | async" (close)="closeSidebar()" (open)="openSidebar()">
     <div class="site-menubar-header">
       <div class="cover overlay">
-        <img class="cover-image" src="../assets/images/dashboard-header.jpg"
-        alt="...">
+        <img class="cover-image" src="../assets/images/dashboard-header.jpg" alt="...">
         <div class="overlay-panel vertical-align overlay-background">
           <div class="vertical-align-middle">
             <div class="avatar avatar-lg" href="javascript:void(0)">
-              <img src="../assets/portraits/1.jpg" alt="">
+              <img md-list-avatar src="../assets/portraits/1.jpg" alt="">
             </div>
             <div class="site-menubar-info">
               <h5 class="site-menubar-user">Machi</h5>
@@ -17,16 +16,86 @@
         </div>
       </div>
     </div>
-    <md-nav-list>
-      <a *ngFor="let navItem of navItems" md-list-item (click)="start.close()" [routerLink]="[navItem.route]">
-        {{navItem.name}}
-      </a>
-      <hr>
-      <a md-list-item (click)="start.close()" [routerLink]="['baseline']">
-        Baseline
-      </a>
+    <md-nav-list dense>
+
+      <md-list-item [routerLink]="'dashboard'">
+        <md-icon md-list-icon>dashboard</md-icon>
+        <span md-line>Dashboard</span>
+      </md-list-item>
+
+      <!--Layout Menu-->
+      <h3 md-subheader>Layout</h3>
+      <md-list-item *ngFor="let item of navLayout" [routerLink]="[item.route]">
+        <md-icon md-list-icon>{{item.icon}}</md-icon>
+        <span md-line>{{item.name}}</span>
+      </md-list-item>
+      <!--Layout Menu-->
+
+      <!--Layout Menu-->
+      <h3 md-subheader>Layout</h3>
+      <md-list-item *ngFor="let item of navLayout" [routerLink]="[item.route]">
+        <md-icon md-list-icon>{{item.icon}}</md-icon>
+        <span md-line>{{item.name}}</span>
+      </md-list-item>
+      <!--Layout Menu-->
+      <!--Layout Menu-->
+      <h3 md-subheader>Layout</h3>
+      <md-list-item *ngFor="let item of navLayout" [routerLink]="[item.route]">
+        <md-icon md-list-icon>{{item.icon}}</md-icon>
+        <span md-line>{{item.name}}</span>
+      </md-list-item>
+      <!--Layout Menu-->
+      <!--Layout Menu-->
+      <h3 md-subheader>Layout</h3>
+      <md-list-item *ngFor="let item of navLayout" [routerLink]="[item.route]">
+        <md-icon md-list-icon>{{item.icon}}</md-icon>
+        <span md-line>{{item.name}}</span>
+      </md-list-item>
+      <!--Layout Menu-->
+      <!--Layout Menu-->
+      <h3 md-subheader>Layout</h3>
+      <md-list-item *ngFor="let item of navLayout" [routerLink]="[item.route]">
+        <md-icon md-list-icon>{{item.icon}}</md-icon>
+        <span md-line>{{item.name}}</span>
+      </md-list-item>
+      <!--Layout Menu-->
+      <!--Layout Menu-->
+      <h3 md-subheader>Layout</h3>
+      <md-list-item *ngFor="let item of navLayout" [routerLink]="[item.route]">
+        <md-icon md-list-icon>{{item.icon}}</md-icon>
+        <span md-line>{{item.name}}</span>
+      </md-list-item>
+      <!--Layout Menu-->
+      <!--Layout Menu-->
+      <h3 md-subheader>Layout</h3>
+      <md-list-item *ngFor="let item of navLayout" [routerLink]="[item.route]">
+        <md-icon md-list-icon>{{item.icon}}</md-icon>
+        <span md-line>{{item.name}}</span>
+      </md-list-item>
+      <!--Layout Menu-->
+      <!--Layout Menu-->
+      <h3 md-subheader>Layout</h3>
+      <md-list-item *ngFor="let item of navLayout" [routerLink]="[item.route]">
+        <md-icon md-list-icon>{{item.icon}}</md-icon>
+        <span md-line>{{item.name}}</span>
+      </md-list-item>
+      <!--Layout Menu-->
+      <!--Layout Menu-->
+      <h3 md-subheader>Layout</h3>
+      <md-list-item *ngFor="let item of navLayout" [routerLink]="[item.route]">
+        <md-icon md-list-icon>{{item.icon}}</md-icon>
+        <span md-line>{{item.name}}</span>
+      </md-list-item>
+      <!--Layout Menu-->
+      <!--Layout Menu-->
+      <h3 md-subheader>Layout</h3>
+      <md-list-item *ngFor="let item of navLayout" [routerLink]="[item.route]">
+        <md-icon md-list-icon>{{item.icon}}</md-icon>
+        <span md-line>{{item.name}}</span>
+      </md-list-item>
+      <!--Layout Menu-->
+
     </md-nav-list>
-    <button md-button (click)="start.close()">CLOSE</button>
   </md-sidenav>
 
   <app-navbar></app-navbar>

@@ -32,7 +32,6 @@ $icon-li-width:      (30em / 14);
 // ========================================================================
 
 .icon {
-  @include make-icon();
   line-height: 1;
 
   &.pull-left { margin-right: .3em; }
