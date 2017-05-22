@@ -10,7 +10,7 @@
 // // Sections
 // // -------------------------------
 // @import "sections/site-navbar";
-@import "sections/site-menu";
+@import "sections/page-header";
 @import 'theme';
 .avatar-lg {
     width: 50px;
@@ -28,17 +28,4 @@
         border: 0 none;
         border-radius: 1000px;
     }
-}
-
-.overlay-background {
-    background: rgba(0,0,0,.5);
-}
-.overlay-panel {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 0px 20px;
-    color: #fff;
 }
