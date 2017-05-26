@@ -33,7 +33,7 @@ export class HomeLayoutComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
-    const elemSidebar = <HTMLElement>document.querySelector('.sidebar-panel .mat-sidenav-focus-trap .cdk-focus-trap-content');
+    const elemSidebar = <HTMLElement>document.querySelector('.site-sidebar .mat-sidenav-focus-trap .cdk-focus-trap-content');
     const elemContent = <HTMLElement>document.querySelector('.mat-sidenav-content');
 
     if (window.matchMedia(`(min-width: 960px)`).matches && !this.isMac()) {
@@ -55,7 +55,7 @@ export class HomeLayoutComponent implements OnInit, OnDestroy {
 
   @HostListener('click', ['$event'])
   onClick(e: any) {
-    const elemSidebar = <HTMLElement>document.querySelector('.sidebar-panel .mat-sidenav-focus-trap .cdk-focus-trap-content');
+    const elemSidebar = <HTMLElement>document.querySelector('.site-sidebar .mat-sidenav-focus-trap .cdk-focus-trap-content');
     setTimeout(() => {
       if (window.matchMedia(`(min-width: 960px)`).matches && !this.isMac()) {
         Ps.update(elemSidebar);

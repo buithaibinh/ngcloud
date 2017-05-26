@@ -3,7 +3,7 @@
 
   <md-sidenav-container class="app-inner">
     <!--Site bar-->
-    <md-sidenav [opened]="sidebarExpanded$ | async" (close)="closeSidebar()" (open)="openSidebar()"  #sidemenu class="sidebar-panel" [mode]="isOver() ? 'over' : 'side'">
+    <md-sidenav [opened]="sidebarExpanded$ | async" (close)="closeSidebar()" (open)="openSidebar()"  #sidemenu class="site-sidebar" [mode]="isOver() ? 'over' : 'side'">
       <md-nav-list appAccordion class="navigation">
         <md-list-item appAccordionLink *ngFor="let menuitem of menuItems.getAll()" group="{{menuitem.state}}">
           <a appAccordionToggle class="relative" md-ripple [routerLink]="['/', menuitem.state]" *ngIf="menuitem.type === 'link'">

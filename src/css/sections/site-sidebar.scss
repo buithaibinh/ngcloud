@@ -1,6 +1,6 @@
 // site bar header
 // site-sidebar
-md-sidenav.sidebar-panel {
+md-sidenav.site-sidebar {
   overflow-x: hidden;
   width: $site-menubar-width;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)!important;
@@ -100,7 +100,7 @@ md-sidenav.sidebar-panel {
 }
 
 [dir="rtl"] {
-  md-sidenav.sidebar-panel {
+  md-sidenav.site-sidebar {
     .sub-menu a{
       @include padding-right(64px);
       @include padding-left(16px);
