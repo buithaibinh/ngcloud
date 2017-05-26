@@ -1,6 +1,6 @@
 <md-toolbar color="primary">
   <button md-icon-button (click)="toggleSidebar()">
-    <md-icon class="md-24">menu</md-icon>
+    <md-icon class="md-24">{{sidebarExpanded? 'arrow_back':'menu'}}</md-icon>
   </button>
   <app-toggle-fullscreen></app-toggle-fullscreen>
   <button md-icon-button data-target="#site-navbar-search" data-toggle="collapse">
@@ -9,37 +9,35 @@
 
   <div class="brand-toolbar">
     <img class="navbar-brand-logo" src="../assets/images/logo.png" title="Remark">
-
-   
   </div>
 
   <!-- Navbar Toolbar Right -->
   <app-lang-switcher></app-lang-switcher>
 
-   <button md-icon-button [mdMenuTriggerFor]="profilesMenu">
+  <button md-icon-button [mdMenuTriggerFor]="profilesMenu">
       <span class="avatar avatar-online">
           <img src="../assets/portraits/5.jpg" alt="...">
           <i></i>
       </span>
     </button>
-    <md-menu #profilesMenu="mdMenu" xPosition="before" [overlapTrigger]="false">
-      <button md-menu-item *ngFor="let profileItem of profileItems" [routerLink]="[profileItem.route]">
+  <md-menu #profilesMenu="mdMenu" xPosition="before" [overlapTrigger]="false">
+    <button md-menu-item *ngFor="let profileItem of profileItems" [routerLink]="[profileItem.route]">
         <md-icon class="md-24" >{{profileItem.icon}}</md-icon>
         <span class="text">{{profileItem.name}}</span>
       </button>
-      <md-divider></md-divider>
-      <button md-menu-item>
+    <md-divider></md-divider>
+    <button md-menu-item>
         <md-icon class="md-24" >exit_to_app</md-icon>
         <span class="text">Logout</span>
       </button>
-    </md-menu>
+  </md-menu>
 
-    <button md-icon-button data-toggle="dropdown">
+  <button md-icon-button data-toggle="dropdown">
         <md-icon class="md-24" >notifications</md-icon>
         <span class="badge badge-danger up">6</span>
     </button>
 
-    <button md-icon-button (click)="changeTheme()">
+  <button md-icon-button (click)="changeTheme()">
         <md-icon class="md-24" >settings</md-icon>
     </button>
   <!-- End Navbar Toolbar Right -->

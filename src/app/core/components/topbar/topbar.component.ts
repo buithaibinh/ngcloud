@@ -1,8 +1,9 @@
 import { Component, OnInit, ElementRef, EventEmitter, Output, Input } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
+import { Store } from '@ngrx/store';
 
 import { NgCloudAppState } from '../../store';
-import { Store } from '@ngrx/store';
-import { AppLayoutActions, ITheme } from '../../store/app-layout';
+import { AppLayoutActions, ITheme, getSidebarExpanded$ } from '../../store/app-layout';
 
 @Component({
   selector: 'app-navbar',
@@ -10,6 +11,8 @@ import { AppLayoutActions, ITheme } from '../../store/app-layout';
   styleUrls: ['./topbar.component.scss']
 })
 export class TopbarComponent implements OnInit {
+  private sidebarExpanded: boolean;
+
   profileItems = [
     { name: 'Profile', route: 'profile', icon: 'person' },
     { name: 'Billing', route: 'billing', icon: 'payment' },
@@ -24,10 +27,13 @@ export class TopbarComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.store.let(getSidebarExpanded$).subscribe((val: boolean) => {
+      this.sidebarExpanded = val;
+    });
   }
 
   dark: boolean = false;
-  changeTheme(){
+  changeTheme() {
     this.dark = !this.dark;
     let data: ITheme = {
       dark: this.dark
