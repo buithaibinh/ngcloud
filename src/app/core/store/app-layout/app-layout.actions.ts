@@ -13,6 +13,10 @@ export class AppLayoutActions {
 
   static THEME_CHANGED = '[APP LAYOUT] THEME_CHANGED';
 
+  static CHATBAR_EXPAND = '[APP LAYOUT] CHATBAR_EXPAND';
+  static CHATBAR_COLLAPSE = '[APP LAYOUT] CHATBAR_COLLAPSE';
+  static CHATBAR_TOGGLE = '[APP LAYOUT] CHATBAR_TOGGLE';
+
   static APP_VERSION_RECIEVED = '[APP] APP_VERSION_RECIEVED';
   static APP_UPDATE_VERSION = '[APP] APP_UPDATE_VERSION';
   static APP_CHECK_VERSION = '[APP] APP_CHECK_VERSION';
@@ -38,6 +42,27 @@ export class AppLayoutActions {
   toggleSidebar(): Action {
     return {
       type: AppLayoutActions.SIDEBAR_TOGGLE
+    };
+  }
+
+  // chat side bar
+  expandChatbar(): Action {
+    return {
+      type: AppLayoutActions.CHATBAR_EXPAND,
+      payload: true
+    };
+  }
+
+  collapseChatbar(): Action {
+    return {
+      type: AppLayoutActions.CHATBAR_COLLAPSE,
+      payload: false
+    };
+  }
+
+  toggleChatbar(): Action {
+    return {
+      type: AppLayoutActions.CHATBAR_TOGGLE
     };
   }
 

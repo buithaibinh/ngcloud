@@ -13,12 +13,14 @@ export interface ITheme {
 }
 export interface IAppSettings {
   sidebarExpanded: boolean;
+  chatbarExpanded: boolean;
   requestInProcess: boolean;
   version: IAppVersion;
   theme: ITheme;
 }
 const initialState: IAppSettings = {
   sidebarExpanded: false,
+  chatbarExpanded: false,
   requestInProcess: false,
   theme: {
     dark: false
@@ -29,7 +31,7 @@ const initialState: IAppSettings = {
     checkingForVersion: false
   }
 };
-export function appLayout (state: IAppSettings = initialState, action: Action): IAppSettings {
+export function appLayout(state: IAppSettings = initialState, action: Action): IAppSettings {
   switch (action.type) {
     case AppLayoutActions.SIDEBAR_EXPAND:
       return Object.assign({}, state, { sidebarExpanded: true });
@@ -39,6 +41,17 @@ export function appLayout (state: IAppSettings = initialState, action: Action): 
 
     case AppLayoutActions.SIDEBAR_TOGGLE:
       return Object.assign({}, state, { sidebarExpanded: !state.sidebarExpanded });
+
+    // chatbar side bar
+    case AppLayoutActions.CHATBAR_EXPAND:
+      return Object.assign({}, state, { chatbarExpanded: true });
+
+    case AppLayoutActions.CHATBAR_COLLAPSE:
+      return Object.assign({}, state, { chatbarExpanded: false });
+
+    case AppLayoutActions.CHATBAR_TOGGLE:
+      return Object.assign({}, state, { chatbarExpanded: !state.chatbarExpanded });
+    // end chatbar side bar
 
     case AppLayoutActions.APP_VERSION_RECIEVED: {
       const version = getVersion(state, action.payload);
@@ -55,8 +68,8 @@ export function appLayout (state: IAppSettings = initialState, action: Action): 
     case AppLayoutActions.THEME_CHANGED: {
       if (state.theme !== action.payload)
         return (<any>Object).assign({}, state, {
-            theme: action.payload
-          });
+          theme: action.payload
+        });
 
       return state;
     }

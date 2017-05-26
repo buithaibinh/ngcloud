@@ -1,0 +1,130 @@
+body {
+.mat-card {
+    padding: 0;
+    margin: ($content-padding/3);
+    border-radius: $border-radius-base;
+    @include mat-elevation(1);
+    .mat-card-header {
+      height: auto;
+    }
+    > :first-child {
+      border-radius: $border-radius-base $border-radius-base 0 0;
+    }
+    > :last-child {
+      border-radius: 0 0 $border-radius-base $border-radius-base;
+    }
+    /* Temporary fix */
+    /* https://github.com/angular/material2/issues/3131 */
+    [md-card-avatar] {
+      height: $mat-card-header-size;
+      width: $mat-card-header-size;
+      border-radius: 50%;
+    }
+    [md-card-avatar] {
+      font-size: 40px;
+      line-height: 40px;
+      margin: $content-padding 0 0 $content-padding;
+    }
+    /*********/
+    .mat-card-image {
+      width: 100%;
+      margin: 0;
+    }
+    .mat-card-image:first-child {
+      margin-top: 0;
+      border-radius: $border-radius-base $border-radius-base 0 0;
+    }
+    .mat-card-title {
+      padding-top: $content-padding;
+      padding-left: $content-padding;
+      padding-right: $content-padding;
+      line-height: 1;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .mat-card-subtitle {
+      padding-left: $content-padding;
+      padding-right: $content-padding;
+      line-height: 1;
+      font-size: 13px;
+    }
+    .mat-card-subtitle:first-child {
+      padding-top: $content-padding;
+    }
+    .mat-card-title:nth-child(2) {
+      margin-top: -24px;
+    }
+    .mat-card-content {
+      padding: $content-padding;
+      margin-bottom: 0;
+      position: relative;
+    }
+    [md-fab-card-float] {
+      top: -36px;
+      position: absolute;
+      right: 8px;
+    }
+    &, & .mat-card {
+      & .mat-card-actions:last-child {
+        padding: $content-padding / 2;
+        margin: 0;
+      }
+    }
+    &.mat-card {
+      padding: 0;
+    }
+    [md-card-float-icon] {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      margin-top: -20px;
+      width: 40px;
+      height: 40px;
+      .material-icons {
+        font-size: 40px;
+        opacity: .2;
+        transform: rotate(-5deg);
+      }
+    }
+    [md-card-widget] {
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-grid-row-align: center;
+      align-items: center;
+      -webkit-align-content: center;
+      align-content: center;
+      max-width: 100%;
+      padding: $content-padding;
+      [md-card-widget-title], p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .card-image-header {
+      position: relative;
+      background-size: cover;
+      background-position: center bottom;
+      background-repeat: no-repat;
+      width: 100%;
+    }
+    &.card-widget {
+      .card-widget-content {
+        display: flex;
+        flex-direction: row;
+        height: 40px;
+        margin: -($content-padding/2) 0 $content-padding 0;
+      }
+    }
+  }
+}
+
+/// menu
+.mat-menu {
+  border-radius: $border-radius-base;
+}
+[md-menu-item] {
+  font-size: $font-size-base!important;
+}

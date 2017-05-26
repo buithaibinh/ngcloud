@@ -41,6 +41,10 @@ export class TopbarComponent implements OnInit {
     return this.store.dispatch(this.appLayoutActions.changeTheme(data));
   }
 
+  toggleNotification(){
+    return this.store.dispatch(this.appLayoutActions.toggleChatbar());
+  }
+
   toggleSidebar() {
     return this.store.dispatch(this.appLayoutActions.toggleSidebar());
   }

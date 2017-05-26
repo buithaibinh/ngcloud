@@ -1,0 +1,10 @@
+.chat-panel{
+    max-width: 300px;
+    width: 100%;
+    overflow: hidden;
+    .mat-tab-label {
+        min-width: 80px !important;
+        line-height: $tab-height-chatbar!important;
+        height: $tab-height-chatbar !important;
+    }
+}

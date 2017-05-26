@@ -15,7 +15,7 @@ import * as $ from 'jquery';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
   host: {
-    '[class.unicorn-dark-theme]': 'dark',
+    '[class.ng2-cloud-dark-theme]': 'dark',
   },
 })
 export class AppComponent {

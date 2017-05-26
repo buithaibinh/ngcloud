@@ -5,7 +5,7 @@ import { MenuItems } from './menu-items';
 import { Subscription, Observable } from 'rxjs/Rx';
 
 import { NgCloudAppState } from '../../core/store';
-import { AppLayoutActions, getSidebarExpanded$, getDarkTheme$ } from '../../core/store/app-layout';
+import { AppLayoutActions, getSidebarExpanded$, getDarkTheme$, getChatbarExpanded$ } from '../../core/store/app-layout';
 
 import * as Ps from 'perfect-scrollbar';
 
@@ -15,6 +15,7 @@ import * as Ps from 'perfect-scrollbar';
 })
 export class HomeLayoutComponent implements OnInit, OnDestroy {
   sidebarExpanded$: Observable<any> = this.store.let(getSidebarExpanded$);
+  chatbarExpanded$: Observable<any> = this.store.let(getChatbarExpanded$);
   private _router: Subscription;
 
   today: number = Date.now();
@@ -97,5 +98,12 @@ export class HomeLayoutComponent implements OnInit, OnDestroy {
   }
   openSidebar() {
     return this.store.dispatch(this.appLayoutActions.expandSidebar());
+  }
+
+  closeChatbar() {
+    return this.store.dispatch(this.appLayoutActions.collapseChatbar());
+  }
+  openChatbar() {
+    return this.store.dispatch(this.appLayoutActions.expandChatbar());
   }
 }

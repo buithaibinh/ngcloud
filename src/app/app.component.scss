@@ -1,18 +1,3 @@
-body {
-  // stretch to screen size in fullscreen mode
-  .ng-content {
-    box-sizing: border-box;
-    height: 100%;
-    max-width: 1400px;
-    margin: auto;
-    padding: 0px 30px;
-  }
-  .mat-sidenav {
-    width: 260px;
-    top: 0px;
-  }
-  
-}
 .site-menubar-header{
   height: 64px;
   overflow: hidden;

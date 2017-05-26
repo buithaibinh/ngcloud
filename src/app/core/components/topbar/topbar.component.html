@@ -8,7 +8,7 @@
   </button>
 
   <div class="brand-toolbar">
-    <img class="navbar-brand-logo" src="../assets/images/logo.png" title="Remark">
+    <img class="navbar-brand-logo" src="../assets/images/logo.png" title="ng2 Cloud">
   </div>
 
   <!-- Navbar Toolbar Right -->
@@ -16,7 +16,7 @@
 
   <button md-icon-button [mdMenuTriggerFor]="profilesMenu">
       <span class="avatar avatar-online">
-          <img src="../assets/portraits/5.jpg" alt="...">
+          <img src="../assets/portraits/1.png" alt="...">
           <i></i>
       </span>
     </button>
@@ -32,7 +32,7 @@
       </button>
   </md-menu>
 
-  <button md-icon-button data-toggle="dropdown">
+  <button md-icon-button (click)="toggleNotification()">
         <md-icon class="md-24" >notifications</md-icon>
         <span class="badge badge-danger up">6</span>
     </button>

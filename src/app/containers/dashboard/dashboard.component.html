@@ -1,5 +1,74 @@
-<md-card>
-    <md-card-content>
-        <h1>{{'HOME' | translate}}</h1>
-    </md-card-content>
-</md-card>
+<div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxFlex.gt-sm="33.33%" fxFlex="100">
+        <md-card>
+            <md-card-subtitle fxLayout="row" fxLayoutAlign="start center">
+                Revenue &nbsp; <span class="font-weight-bold md-text-primary">+458,90</span>
+                <span fxFlex></span>
+                <button md-icon-button md-button-sm [md-menu-trigger-for]="card1" aria-label="Open card menu">
+                    <md-icon>more_vert</md-icon>
+                </button>
+            </md-card-subtitle>
+            <md-menu #card1="mdMenu" x-position="before">
+                <button md-menu-item>
+                    <md-icon>remove</md-icon>
+                    Hide card
+                </button>
+                <button md-menu-item>
+                    <md-icon>more</md-icon>
+                    Get documentation 
+                    </button>
+            </md-menu>
+            <md-card-content>
+                Chart 1
+            </md-card-content>
+        </md-card>
+    </div>
+    <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50" fxFlex="100">
+        <md-card>
+            <md-card-subtitle fxLayout="row" fxLayoutAlign="start center">
+                Revenue &nbsp; <span class="font-weight-bold md-text-primary">+458,90</span>
+                <span fxFlex></span>
+                <button md-icon-button md-button-sm [md-menu-trigger-for]="card1" aria-label="Open card menu">
+                    <md-icon>more_vert</md-icon>
+                </button>
+            </md-card-subtitle>
+            <md-menu #card1="mdMenu" x-position="before">
+                <button md-menu-item>
+                    <md-icon>remove</md-icon>
+                    Hide card
+                </button>
+                <button md-menu-item>
+                    <md-icon>more</md-icon>
+                    Get documentation 
+                    </button>
+            </md-menu>
+            <md-card-content>
+                Chart 1
+            </md-card-content>
+        </md-card>
+    </div>
+    <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50" fxFlex="100">
+        <md-card>
+            <md-card-subtitle fxLayout="row" fxLayoutAlign="start center">
+                Revenue &nbsp; <span class="font-weight-bold md-text-primary">+458,90</span>
+                <span fxFlex></span>
+                <button md-icon-button md-button-sm [md-menu-trigger-for]="card1" aria-label="Open card menu">
+                    <md-icon>more_vert</md-icon>
+                </button>
+            </md-card-subtitle>
+            <md-menu #card1="mdMenu" x-position="before">
+                <button md-menu-item>
+                    <md-icon>remove</md-icon>
+                    Hide card
+                </button>
+                <button md-menu-item>
+                    <md-icon>more</md-icon>
+                    Get documentation 
+                    </button>
+            </md-menu>
+            <md-card-content>
+                Chart 1
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

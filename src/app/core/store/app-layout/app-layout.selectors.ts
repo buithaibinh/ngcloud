@@ -10,6 +10,10 @@ export function getSidebarExpanded$(state$: Observable<NgCloudAppState>) {
   return state$.select((state) => state.appLayout.sidebarExpanded);
 }
 
+export function getChatbarExpanded$(state$: Observable<NgCloudAppState>) {
+  return state$.select((state) => state.appLayout.chatbarExpanded);
+}
+
 export function getAppVersion$(state$: Observable<NgCloudAppState>): Observable<any> {
   return state$.select(state => state.appLayout.version);
 }
