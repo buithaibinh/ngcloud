@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MultilingualModule } from '../core/i18n/index';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { COMPONENTS } from './components';
 import { PIPES } from './pipes';
@@ -16,7 +17,7 @@ export const ANGULAR_MODULES = [
   RouterModule,
   MaterialModule,
   FlexLayoutModule,
-  MultilingualModule
+  TranslateModule
 ];
 
 @NgModule({

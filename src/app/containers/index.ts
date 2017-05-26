@@ -1,9 +1,9 @@
-import { DasboardModule } from './dashboard';
+import { DashboardModule } from './dashboard';
 import { IconsModule } from './icons';
 import { FlexModule } from './flex-layout';
 
 export const APP_CONTAINER_MODULES = [
-  DasboardModule,
+  DashboardModule,
   IconsModule,
   FlexModule
 ];

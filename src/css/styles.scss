@@ -1,17 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-// @import "~assets/bootstrap-sass/variables";
-// // // Load color variables
-// @import "vars-color";
-// @import "vars-font";
-// @import "vars-bootstrap";
-// @import 'mixin';
-@import 'vars-site';
+@import "mixin/bi-app/bi-app-ltr";
+@import 'mixin/misc';
+@import 'mixin/flex';
 
+@import 'theme';
+
+@import 'vars-site';
 // // Sections
 // // -------------------------------
 // @import "sections/site-navbar";
-@import "sections/page-header";
-@import 'theme';
+@import "sections/page";
+// @import "sections/page-header";
+@import "sections/site-sidebar";
+@import "component";
+
 .avatar-lg {
     width: 50px;
 }
@@ -29,3 +31,6 @@
         border-radius: 1000px;
     }
 }
+
+// pace loading css
+.pace .pace-activity {top: 25px; left: 5px} .pace .pace-progress-inner {box-shadow: none;}

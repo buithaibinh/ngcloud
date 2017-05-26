@@ -1,0 +1,101 @@
+import { Component, OnInit, OnDestroy, ViewChild, HostListener } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Router, NavigationEnd } from '@angular/router';
+import { MenuItems } from './menu-items';
+import { Subscription, Observable } from 'rxjs/Rx';
+
+import { NgCloudAppState } from '../../core/store';
+import { AppLayoutActions, getSidebarExpanded$, getDarkTheme$ } from '../../core/store/app-layout';
+
+import * as Ps from 'perfect-scrollbar';
+
+@Component({
+  selector: 'app-layout',
+  templateUrl: './home-layout.component.html'
+})
+export class HomeLayoutComponent implements OnInit, OnDestroy {
+  sidebarExpanded$: Observable<any> = this.store.let(getSidebarExpanded$);
+  private _router: Subscription;
+
+  today: number = Date.now();
+  url: string;
+  showSettings = false;
+  dark: false;
+  boxed: false;
+  currentLang = 'en';
+  root = 'ltr';
+
+  @ViewChild('sidemenu') sidemenu;
+
+  constructor(public menuItems: MenuItems, private router: Router, private appLayoutActions: AppLayoutActions,
+    private store: Store<NgCloudAppState>) {
+  }
+
+  ngOnInit(): void {
+
+    const elemSidebar = <HTMLElement>document.querySelector('.sidebar-panel .mat-sidenav-focus-trap .cdk-focus-trap-content');
+    const elemContent = <HTMLElement>document.querySelector('.mat-sidenav-content');
+
+    if (window.matchMedia(`(min-width: 960px)`).matches && !this.isMac()) {
+      Ps.initialize(elemSidebar, { wheelSpeed: 2, suppressScrollX: true });
+      Ps.initialize(elemContent, { wheelSpeed: 2, suppressScrollX: true });
+    }
+
+    this._router = this.router.events.filter((event: any) => event instanceof NavigationEnd).subscribe(event => {
+      this.url = event.url;
+      if (this.isOver()) {
+        this.sidemenu.close();
+      }
+
+      if (window.matchMedia(`(min-width: 960px)`).matches && !this.isMac()) {
+        Ps.update(elemContent);
+      }
+    });
+  }
+
+  @HostListener('click', ['$event'])
+  onClick(e: any) {
+    const elemSidebar = <HTMLElement>document.querySelector('.sidebar-panel .mat-sidenav-focus-trap .cdk-focus-trap-content');
+    setTimeout(() => {
+      if (window.matchMedia(`(min-width: 960px)`).matches && !this.isMac()) {
+        Ps.update(elemSidebar);
+      }
+    }, 350);
+  }
+
+  ngOnDestroy() {
+    this._router.unsubscribe();
+  }
+
+  isOver(): boolean {
+    if (this.url === '/apps/messages' || this.url === '/apps/calendar' || this.url === '/apps/media' || this.url === '/maps/leaflet') {
+      return true;
+    } else {
+      return window.matchMedia(`(max-width: 960px)`).matches;
+    }
+  }
+
+  isMac(): boolean {
+    return navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+  }
+
+  addMenuItem(): void {
+    this.menuItems.add({
+      state: 'menu',
+      name: 'MENU',
+      type: 'sub',
+      icon: 'trending_flat',
+      children: [
+        { state: 'menu', name: 'MENU' },
+        { state: 'timelmenuine', name: 'MENU' }
+      ]
+    });
+  }
+
+  closeSidebar() {
+    return this.store.dispatch(this.appLayoutActions.collapseSidebar());
+  }
+  openSidebar() {
+    return this.store.dispatch(this.appLayoutActions.expandSidebar());
+  }
+}

@@ -11,7 +11,7 @@ import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: '<router-outlet></router-outlet>',
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
   host: {
