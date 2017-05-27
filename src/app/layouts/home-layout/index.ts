@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 
 import { SharedModule } from '../../shared/index';
-
+import { ADMIN_CONTAINER_MODULES } from '../../containers/index';
 import { TopbarModule } from '../../core/components/topbar';
 
-import { HomeRouting } from './home.routes'
+import { HomeLayoutRouting } from './home-layout.routes'
 import { HomeLayoutComponent } from './home-layout.component';
 import { MenuItems } from './menu-items';
 
 @NgModule({
-    imports: [SharedModule, HomeRouting, TopbarModule],
+    imports: [SharedModule, HomeLayoutRouting, TopbarModule, ADMIN_CONTAINER_MODULES],
     exports: [],
     declarations: [HomeLayoutComponent],
     providers: [MenuItems],
 })
-export class HomeModule { }
+export class HomeLayoutModule { }

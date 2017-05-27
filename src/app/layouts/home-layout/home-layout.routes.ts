@@ -8,9 +8,9 @@ const routes: Routes = [
         component: HomeLayoutComponent,
         children: [{
             path: 'home',
-            loadChildren: '../../containers/dashboard/index#DashboardModule'
+            loadChildren: '../../containers/home/index#HomeModule'
         }]
     }
 ];
 
-export const HomeRouting = RouterModule.forRoot(routes);
+export const HomeLayoutRouting = RouterModule.forRoot(routes);

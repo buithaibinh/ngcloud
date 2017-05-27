@@ -19,7 +19,7 @@ export interface IAppSettings {
   theme: ITheme;
 }
 const initialState: IAppSettings = {
-  sidebarExpanded: false,
+  sidebarExpanded: true,
   chatbarExpanded: false,
   requestInProcess: false,
   theme: {

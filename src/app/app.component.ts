@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation, ElementRef } from '@angular/core';
 import { Store } from '@ngrx/store';
 import 'rxjs/add/operator/let';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Rx';
 
 import { NgCloudAppState } from './core/store';
 

@@ -27,8 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // app container
 import { APP_CORE_MODULES } from './core/components';
-import { APP_CONTAINER_MODULES } from './containers';
-import { HomeModule } from './layouts/home-layout';
+import { HomeLayoutModule } from './layouts/home-layout';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
@@ -58,9 +57,8 @@ export function HttpLoaderFactory(http: Http) {
 
     SharedModule,
     CoreModule,
-    HomeModule,
+    HomeLayoutModule,
     // ...APP_CORE_MODULES,
-    // ...APP_CONTAINER_MODULES,
   ],
   providers: [
     appRoutingProviders,
