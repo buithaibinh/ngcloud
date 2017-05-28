@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store'
+import { Subscription, Observable } from 'rxjs/Rx';
+
 import { Router } from '@angular/router';
+
+import { HomeLayoutState } from '../../core/store';
+import { HomeLayoutActions, getDashboardEditMode$ } from '../../core/store/home-layout';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +18,11 @@ export class HomeComponent implements OnInit {
     { label: 'Activity', link: 'activity' }
   ];
   activeLinkIndex = 0;
-  constructor(private router: Router) {
+
+  dashboardEditMode: boolean;
+
+  constructor(private router: Router, private homeLayoutActions: HomeLayoutActions,
+    private store: Store<HomeLayoutState>) {
     // Initialize the index by checking if a tab link is contained in the url.
     // This is not an ideal check and can be removed if routerLink exposes if it is active.
     // https://github.com/angular/angular/pull/12525
@@ -21,7 +31,18 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.store.let(getDashboardEditMode$).subscribe((val: any) => {
+      this.dashboardEditMode = val;
+    })
   }
 
+  customize() {
+    return this.store.dispatch(this.homeLayoutActions.editDashboard(!this.dashboardEditMode));
+  }
+  changeTab(index: number) {
+    this.activeLinkIndex = index;
+    if (this.dashboardEditMode) {
+      return this.store.dispatch(this.homeLayoutActions.editDashboard(false));
+    }
+  }
 }

@@ -12,6 +12,7 @@ export const TABS_HOME_ROUTES: Routes = [
 ];
 
 const routes: Routes = [
+    
     {
         path: '',
         component: HomeComponent,

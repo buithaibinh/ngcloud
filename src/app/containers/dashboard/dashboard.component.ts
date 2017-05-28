@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Rx';
 
-import { NgCloudAppState } from '../../core/store';
+import { HomeLayoutState } from '../../core/store';
 
-import { AppLayoutActions, getSidebarExpanded$, getDarkTheme$ } from '../../core/store/app-layout';
+import { HomeLayoutActions, getDashboardEditMode$ } from '../../core/store/home-layout';
 
 @Component({
     moduleId: module.id,
@@ -14,10 +14,29 @@ import { AppLayoutActions, getSidebarExpanded$, getDarkTheme$ } from '../../core
 })
 
 export class DashboardComponent implements OnInit {
-    constructor(private store: Store<NgCloudAppState>) { }
+    private dashboardEditMode: boolean;
+    private initState: any = {
+        chart1: true,
+        chart2: true,
+        chart3: true,
+    };
+    private displayOption: any = {};
+
+    private tmpDisplayOption: any = {};
+
+    constructor(private store: Store<HomeLayoutState>) { }
 
     ngOnInit() {
-
+        let self = this;
+        Object.assign(this.tmpDisplayOption, self.initState);
+        self.store.let(getDashboardEditMode$).subscribe((val: any) => {
+            self.dashboardEditMode = val;
+            if (self.dashboardEditMode) {
+                Object.assign(self.displayOption, self.initState);
+            } else {
+                Object.assign(self.displayOption, self.tmpDisplayOption);
+            }
+        })
     }
 
     public barChartOptions: any = {

@@ -1,9 +1,17 @@
-<div class="home-nav-bar">
-<nav md-tab-nav-bar>
-  <a md-tab-link *ngFor="let tabLink of tabLinks; let i = index" [routerLink]="tabLink.link" [active]="activeLinkIndex === i"
-    (click)="activeLinkIndex = i">
+<md-toolbar class="header-toolbar">
+  <nav md-tab-nav-bar class="header-toolbar-row">
+    <a md-tab-link *ngFor="let tabLink of tabLinks; let i = index" [routerLink]="tabLink.link" [active]="activeLinkIndex === i"
+      (click)="changeTab(i)">
       {{tabLink.label}}
     </a>
-</nav>
-<router-outlet></router-outlet>
+  </nav>
+  <span fxFlex></span>
+  <button *ngIf="activeLinkIndex === 0" (click)="customize()" md-button>
+    <md-icon>{{dashboardEditMode? 'check':'mode_edit'}}</md-icon>{{dashboardEditMode? 'Done':'Customize'}}
+  </button>
+</md-toolbar>
+<div class="action-bar-underline" [class.edit]="dashboardEditMode"></div>
+
+<div class="home-content">
+  <router-outlet></router-outlet>
 </div>

@@ -10,12 +10,14 @@ import 'rxjs/add/operator/let';
 // import { NgrxActionCreatorFactoryModule } from './action-creator.util';
 
 import { environment } from '../../../environments/environment';
-import { NgCloudAppState, NgCloudReducers, NgCloudActions } from './reducers';
+import { NgCloudAppState, NgCloudReducers, NgCloudActions, HomeLayoutState } from './reducers';
 
 // import { storeFreeze } from 'ngrx-store-freeze';
 import * as fromMultilingual from '../i18n/index';
 
 export { NgCloudAppState } from './reducers';
+export { HomeLayoutState } from './reducers';
+
 const actions = NgCloudActions;
 const reducers = NgCloudReducers;
 // const storageConfig = ['videos', 'player', 'nowPlaylist', 'search', 'appLayout'];

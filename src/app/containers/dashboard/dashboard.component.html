@@ -1,14 +1,18 @@
 <div fxLayout="row" fxLayoutWrap="wrap">
-    <div fxFlex.gt-sm="33.33%" fxFlex="100">
+    <div fxFlex.gt-sm="33.33%" fxFlex="100" *ngIf="displayOption.chart1">
         <md-card>
             <md-card-subtitle fxLayout="row" fxLayoutAlign="start center">
                 Rain flow diagram &nbsp;
 
                 <span fxFlex></span>
-                <button md-raised-button color="primary" (click)="randomize()">Random</button>
-                <button md-icon-button md-button-sm [md-menu-trigger-for]="card1" aria-label="Open card menu">
+                <md-slide-toggle *ngIf="dashboardEditMode" [(ngModel)]="tmpDisplayOption.chart1" color="accent">
+
+                </md-slide-toggle>
+                <button md-icon-button (click)="randomize()" aria-label="Random"><md-icon>loop</md-icon></button>
+                <button *ngIf="!dashboardEditMode" md-icon-button md-button-sm [md-menu-trigger-for]="card1" aria-label="Open card menu">
                     <md-icon>more_vert</md-icon>
                 </button>
+
             </md-card-subtitle>
             <md-menu #card1="mdMenu" xPosition="before" [overlapTrigger]="false">
                 <button md-menu-item>
@@ -28,17 +32,16 @@
             </md-card-content>
         </md-card>
     </div>
-    <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50" fxFlex="100">
+    <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50" fxFlex="100"  *ngIf="displayOption.chart2">
         <md-card>
             <md-card-subtitle fxLayout="row" fxLayoutAlign="start center">
-                User visit &nbsp;
-                <md-chip-list>
-                    <a href="https://github.com/valor-software/ng2-charts">
-                        <md-chip>official website</md-chip>
-                    </a>
-                </md-chip-list>
+                User visit 
                 <span fxFlex></span>
-                <button md-icon-button md-button-sm [md-menu-trigger-for]="card2" aria-label="Open card menu">
+                <md-slide-toggle *ngIf="dashboardEditMode" [(ngModel)]="tmpDisplayOption.chart2" color="accent">
+
+                </md-slide-toggle>
+                <button md-icon-button (click)="randomizeType()" aria-label="Toggle"><md-icon>timeline</md-icon></button>
+                <button *ngIf="!dashboardEditMode" md-icon-button md-button-sm [md-menu-trigger-for]="card2" aria-label="Open card menu">
                     <md-icon>more_vert</md-icon>
                 </button>
             </md-card-subtitle>
@@ -60,18 +63,21 @@
             </md-card-content>
         </md-card>
     </div>
-    <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50" fxFlex="100">
+    <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50" fxFlex="100"  *ngIf="displayOption.chart3">
         <md-card>
             <md-card-subtitle fxLayout="row" fxLayoutAlign="start center">
-                Sale &nbsp;
+                Sale report &nbsp;
                 <md-chip-list>
                     <a href="https://github.com/valor-software/ng2-charts">
                         <md-chip>official website</md-chip>
                     </a>
                 </md-chip-list>
                 <span fxFlex></span>
-                <button md-raised-button color="primary" (click)="randomizeType()">Toggle</button>
-                <button md-icon-button md-button-sm [md-menu-trigger-for]="card3" aria-label="Open card menu">
+                <md-slide-toggle *ngIf="dashboardEditMode" [(ngModel)]="tmpDisplayOption.chart3" color="accent">
+
+                </md-slide-toggle>
+                <button md-icon-button (click)="randomizeType()" aria-label="Toggle"><md-icon>timeline</md-icon></button>
+                <button md-icon-button md-button-sm [md-menu-trigger-for]="card3" *ngIf="!dashboardEditMode" aria-label="Open card menu">
                     <md-icon>more_vert</md-icon>
                 </button>
             </md-card-subtitle>
