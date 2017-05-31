@@ -1,11 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Rx';
-
+import { GridOptions } from "ag-grid";
 import { DragulaService } from 'ng2-dragula';
 import { HomeLayoutState } from '../../core/store';
 
 import { HomeLayoutActions, getDashboardEditMode$ } from '../../core/store/home-layout';
+import { CellDateComponent } from '../../core/components/ag-components/cell-date.component';
 
 // example services
 import { ContactDataService, ContactData } from '../../shared/services/contact.service';
@@ -36,25 +37,47 @@ export class DashboardComponent implements OnInit, OnDestroy {
     private tmpDisplayOption: any = {};
     contacts: ContactData[] = [];
     projects: ProjectData[] = [];
+    private gridOptions: GridOptions;
 
     constructor(private store: Store<HomeLayoutState>,
         private dragulaService: DragulaService,
         private contactDataService: ContactDataService,
         private projectService: ProjectDataService,
-        ) {
+    ) {
         dragulaService.setOptions('first-bag', {
             moves: function (el: any, container: any, handle: any): any {
                 return handle.classList[0] === 'handle';
             }
         });
 
-        this.contactDataService.getAll().subscribe(data =>{
+        this.contactDataService.getAll().subscribe(data => {
             this.contacts = data;
         });
 
-        this.projectService.getAll().subscribe(data =>{
+        this.projectService.getAll().subscribe(data => {
             this.projects = data;
         });
+
+        this.gridOptions = {};
+        this.gridOptions.columnDefs = [
+            {
+                headerName: "ID",
+                field: "id",
+                width: 100
+            },
+            {
+                headerName: "Value",
+                field: "value",
+                cellRendererFramework: CellDateComponent,
+                width: 100
+            },
+
+        ];
+        this.gridOptions.rowData = [
+            { id: 5, value: 10 },
+            { id: 10, value: 15 },
+            { id: 15, value: 20 }
+        ]
     }
 
     ngOnDestroy() {

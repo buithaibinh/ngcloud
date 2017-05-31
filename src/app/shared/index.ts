@@ -47,8 +47,8 @@ export const ANGULAR_MODULES = [
     ...DIRECTIVES,
   ],
   exports: [
-    ...ANGULAR_MODULES,
     AgmCoreModule,
+    ...ANGULAR_MODULES,
     ...PIPES,
     ...COMPONENTS,
     ...DIRECTIVES,

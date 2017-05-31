@@ -31,7 +31,7 @@ import { HomeLayoutModule } from './layouts/home-layout';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
-    return new TranslateHttpLoader(http, "assets/i18n/", ".json");
+  return new TranslateHttpLoader(http, "assets/i18n/", ".json");
 }
 
 @NgModule({
