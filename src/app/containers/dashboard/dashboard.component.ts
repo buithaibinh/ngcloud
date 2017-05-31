@@ -6,6 +6,7 @@ import { DragulaService } from 'ng2-dragula';
 import { HomeLayoutState } from '../../core/store';
 
 import { HomeLayoutActions, getDashboardEditMode$ } from '../../core/store/home-layout';
+import { ContactDataService, ContactData } from '../../shared/services/contact.service';
 
 @Component({
     moduleId: module.id,
@@ -16,6 +17,12 @@ import { HomeLayoutActions, getDashboardEditMode$ } from '../../core/store/home-
 
 export class DashboardComponent implements OnInit, OnDestroy {
     private dashboardEditMode: boolean;
+    private mapOptions: any = {
+        lat: 51.678418,
+        lng: 7.809007,
+        zoom: 2,
+        scrollwheel: false
+    }
     private initState: any = {
         chart1: true,
         chart2: true,
@@ -24,18 +31,24 @@ export class DashboardComponent implements OnInit, OnDestroy {
     private displayOption: any = {};
 
     private tmpDisplayOption: any = {};
+    contacts: ContactData[] = [];
 
     constructor(private store: Store<HomeLayoutState>,
-        private dragulaService: DragulaService) {
+        private dragulaService: DragulaService,
+        private contactDataService: ContactDataService
+        ) {
         dragulaService.setOptions('first-bag', {
             moves: function (el: any, container: any, handle: any): any {
                 return handle.classList[0] === 'handle';
             }
         });
-        
+
+        this.contactDataService.getAll().subscribe(data =>{
+            this.contacts = data;
+        });
     }
 
-    ngOnDestroy(){
+    ngOnDestroy() {
         this.dragulaService.destroy('first-bag');
     }
     ngOnInit() {
@@ -55,7 +68,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
         scaleShowVerticalLines: false,
         responsive: true
     };
-    public lineChartOptions:any = {
+    public lineChartOptions: any = {
         responsive: true
     };
     public barChartLabels: string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];

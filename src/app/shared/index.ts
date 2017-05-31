@@ -9,9 +9,15 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ChartsModule } from 'ng2-charts';
 import { DragulaModule } from 'ng2-dragula';
 
+// Google map
+import { AgmCoreModule } from 'angular2-google-maps/core';
+
 import { COMPONENTS } from './components';
 import { PIPES } from './pipes';
 import { DIRECTIVES } from './directives';
+import { Config } from '../core/config';
+
+import { EXAMPLE_SERVICES } from './services';
 
 export const ANGULAR_MODULES = [
   CommonModule,
@@ -21,12 +27,15 @@ export const ANGULAR_MODULES = [
   FlexLayoutModule,
   TranslateModule,
   ChartsModule,
-  DragulaModule
+  DragulaModule,
 ];
 
 @NgModule({
   imports: [
-    ANGULAR_MODULES
+    ANGULAR_MODULES,
+    AgmCoreModule.forRoot({
+      apiKey: Config.GOOGLE_MAP_API_KEY
+    })
   ],
   declarations: [
     ...PIPES,
@@ -35,12 +44,13 @@ export const ANGULAR_MODULES = [
   ],
   exports: [
     ...ANGULAR_MODULES,
+    AgmCoreModule,
     ...PIPES,
     ...COMPONENTS,
     ...DIRECTIVES,
   ],
   providers: [
-
+    EXAMPLE_SERVICES
   ]
 })
 export class SharedModule { }

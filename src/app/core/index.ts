@@ -3,7 +3,7 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CoreStoreModule } from './store';
 import { AppEffectsModules } from './effects';
 
-import { APP_SERVICES } from './services';
+import { CORE_SERVICES } from './services';
 
 @NgModule({
   imports: [
@@ -17,7 +17,7 @@ import { APP_SERVICES } from './services';
     CoreStoreModule,
   ],
   providers: [
-    ...APP_SERVICES,
+    ...CORE_SERVICES,
   ]
 })
 export class CoreModule {

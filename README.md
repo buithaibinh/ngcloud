@@ -27,5 +27,10 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+ng2 Chart
+https://github.com/valor-software/ng2-charts
 
-https://github.com/xieziyu/ngx-echarts
+Google map
+https://angular-maps.com/docs/getting-started.html
+
+ng2Lodash

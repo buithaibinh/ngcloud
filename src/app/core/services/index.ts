@@ -1,5 +1,7 @@
 import { WindowService } from './window.service';
+import { PagerService } from './pager.service';
 
-export const APP_SERVICES = [
+export const CORE_SERVICES = [
     WindowService,
+    PagerService
 ];

@@ -7,3 +7,20 @@
 .handle {
     cursor: move;
 }
+
+// Map 
+.sebm-google-map-container {
+  height: 450px;
+}
+
+.contact {
+  .mat-fab {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+  }
+  .mat-list{
+    height: 395px;
+    overflow-y: scroll;
+  }
+}

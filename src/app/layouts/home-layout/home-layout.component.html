@@ -1,4 +1,4 @@
-<div class="app" #root="$implicit" dir="ltr" fullscreen> 
+<div class="app" #root="$implicit" dir="ltr" fullscreen>
   <app-navbar></app-navbar>
 
   <md-sidenav-container class="app-inner">
@@ -11,7 +11,7 @@
           <div class="overlay-panel vertical-align overlay-background">
             <div class="vertical-align-middle">
               <div class="avatar avatar-lg">
-                <img src="../assets/portraits/1.png" alt="">
+                <img src="../assets/avatars/1.png" alt="">
               </div>
               <div class="site-menubar-info">
                 <h5 class="site-menubar-user">Krist</h5>
@@ -41,7 +41,8 @@
             <span fxFlex></span>
             <span class="menu-badge md-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span>
           </a>
-          <a appAccordionToggle class="relative" md-ripple href="javascript:;" *ngIf="menuitem.type === 'sub'">
+          <a appAccordionToggle class="relative" md-ripple href="javascript:;"
+            *ngIf="menuitem.type === 'sub'">
             <md-icon>{{ menuitem.icon }}</md-icon>
             <span>{{ menuitem.name | translate }}</span>
             <span fxFlex></span>
@@ -69,7 +70,7 @@
     <md-sidenav #end align="end" class="chat-panel" mode="over" [opened]="chatbarExpanded$ | async" (close)="closeChatbar()"
       (open)="openChatbar()">
       <md-tab-group [selectedIndex]="2" md-stretch-tabs>
-         <md-tab>
+        <md-tab>
           <ng-template md-tab-label>
             <button md-icon-button>
               <md-icon class="md-24">info</md-icon>

@@ -16,6 +16,8 @@ export class Config {
 
   public static PageClass: any;
 
+  // Google Map API key
+  public static GOOGLE_MAP_API_KEY = 'AIzaSyB2piyiG7vM3ow9xhtaAQFI9kYYUISI-AM';
 
   public static DEBUG = {
     LEVEL_1: false, // .info only
