@@ -6,13 +6,18 @@
 @import 'theme';
 @import 'vars-color';
 @import 'vars-site';
+
 // // Sections
 // // -------------------------------
 // @import "sections/site-navbar";
 @import "sections/page";
 @import "sections/site-sidebar";
 @import "sections/site-chatbar";
-@import "component";
+
+// // Components
+// // -------------------------------
+// @import "sections/site-navbar";
+@import "components/ngx-table";
 
 // Material
 @import "material/cards";

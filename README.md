@@ -34,3 +34,7 @@ Google map
 https://angular-maps.com/docs/getting-started.html
 
 ng2Lodash
+https://github.com/gnovotny/ng2-lodash
+
+ngx-datatable
+https://github.com/swimlane/ngx-datatable

@@ -6,7 +6,7 @@ import 'rxjs/add/operator/delay';
 
 import * as _ from 'lodash';
 
-export interface ContactData {
+export interface ProjectData {
     name: string;
     tel: string;
     email: string;
@@ -14,18 +14,18 @@ export interface ContactData {
 }
 
 @Injectable()
-export class ContactDataService {
-    data: ContactData[];
+export class ProjectDataService {
+    data: ProjectData[];
 
     constructor(public http: Http) {
     }
-    getAll(startIndex: number = 0, endIndex: number = 10): Observable<ContactData[]> {
+    getAll(startIndex: number = 0, endIndex: number = 10): Observable<ProjectData[]> {
         let self = this;
         if (this.data) {
             return Observable.of(this.data.slice(startIndex, endIndex));
         } else {
             return this.http
-                .get('assets/data/contacts.json')
+                .get('assets/data/projects.json')
                 .map(res => {
                     let data = res.json();
                     self.data = data;

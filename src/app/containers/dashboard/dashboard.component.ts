@@ -6,7 +6,10 @@ import { DragulaService } from 'ng2-dragula';
 import { HomeLayoutState } from '../../core/store';
 
 import { HomeLayoutActions, getDashboardEditMode$ } from '../../core/store/home-layout';
+
+// example services
 import { ContactDataService, ContactData } from '../../shared/services/contact.service';
+import { ProjectDataService, ProjectData } from '../../shared/services/project.service';
 
 @Component({
     moduleId: module.id,
@@ -32,10 +35,12 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     private tmpDisplayOption: any = {};
     contacts: ContactData[] = [];
+    projects: ProjectData[] = [];
 
     constructor(private store: Store<HomeLayoutState>,
         private dragulaService: DragulaService,
-        private contactDataService: ContactDataService
+        private contactDataService: ContactDataService,
+        private projectService: ProjectDataService,
         ) {
         dragulaService.setOptions('first-bag', {
             moves: function (el: any, container: any, handle: any): any {
@@ -45,6 +50,10 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
         this.contactDataService.getAll().subscribe(data =>{
             this.contacts = data;
+        });
+
+        this.projectService.getAll().subscribe(data =>{
+            this.projects = data;
         });
     }
 

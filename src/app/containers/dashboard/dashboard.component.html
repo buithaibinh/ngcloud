@@ -184,11 +184,11 @@
             <md-card-title fxLayout="row" fxLayoutAlign="start center">
                 <md-icon>contacts</md-icon>&nbsp;<span>Contacts</span>
                 <span fxFlex></span>
-                 <button md-fab>
+                <button md-fab>
                     <md-icon class="md-24">add</md-icon>
                 </button>
             </md-card-title>
-           
+
             <hr>
             <md-list>
                 <ng-template let-item let-last="last" ngFor [ngForOf]="contacts">
@@ -206,25 +206,8 @@
 
 <!--Row 3-->
 <div fxLayout="row" fxLayoutWrap="wrap">
-    <div fxFlex.gt-sm="33.3%" fxFlex="100">
-        <md-card>
-            <md-card-header>
-                <md-card-title>Title</md-card-title>
-                <md-card-subtitle>Subtitle</md-card-subtitle>
-            </md-card-header>
-            <img md-card-image src="Card wide image source">
-            <md-card-content>
-                Text content
-            </md-card-content>
-            <md-card-actions align="start|end">
-                <button md-button (click)="onAction1">Action1</button>
-                <button md-button (click)="onAction2">Action2</button>
-                
-            </md-card-actions>
-            <md-card-footer>
-                Footer
-            </md-card-footer>
-        </md-card>
+    <div fxFlex.gt-sm="50%" fxFlex="100">
+        
     </div>
 </div>
 

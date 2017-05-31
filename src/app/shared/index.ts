@@ -9,6 +9,9 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ChartsModule } from 'ng2-charts';
 import { DragulaModule } from 'ng2-dragula';
 
+// ngx datatable
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+
 // Google map
 import { AgmCoreModule } from 'angular2-google-maps/core';
 
@@ -28,6 +31,7 @@ export const ANGULAR_MODULES = [
   TranslateModule,
   ChartsModule,
   DragulaModule,
+  NgxDatatableModule
 ];
 
 @NgModule({

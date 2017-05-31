@@ -1,0 +1,141 @@
+/* $Widget
+ ------------------------------------------*/
+.ngx-datatable.material {
+  padding: 0;
+  margin: ($content-padding/3);
+  @include mat-elevation(2);
+  @include mat-elevation-transition;
+  display: block;
+  position: relative;
+  border-radius: $border-radius-base;
+  &.single-selection,
+  &.multi-selection {
+    .datatable-body-row {
+      &.active,
+      &.active .datatable-row-group {
+        @include _mat-toolbar-color($candy-app-primary);
+      }
+
+      &.active:hover,
+      &.active:hover .datatable-row-group {
+        background-color: darken(mat-color($candy-app-primary), 2%);
+        color: #FFF;
+
+      }
+
+      &.active:focus,
+      &.active:focus .datatable-row-group {
+        background-color: darken(mat-color($candy-app-primary), 4%);
+        color: #FFF;
+      }
+    }
+  }
+
+  &.cell-selection {
+    .datatable-body-cell {
+      &:hover,
+      &:hover .datatable-row-group {
+        background: $color-light-blue-a400;
+      }
+
+      &:focus,
+      &:focus .datatable-row-group {
+        background-color: darken($color-light-blue-a400, 2%);
+      }
+
+      &.active,
+      &.active .datatable-row-group {
+        @include _mat-toolbar-color($candy-app-primary);
+      }
+
+      &.active:hover,
+      &.active:hover .datatable-row-group {
+        background-color: darken(mat-color($candy-app-primary), 2%);
+        color: #FFF;
+      }
+
+      &.active:focus,
+      &.active:focus .datatable-row-group {
+        background-color: darken(mat-color($candy-app-primary), 4%);
+        color: #FFF;
+      }
+    }
+  }
+
+  /**
+   * Shared Styles
+   */
+  .empty-row{
+     padding: .85rem 1.2rem;
+  }
+
+  .loading-row{
+     padding: .85rem 1.2rem;
+  }
+
+  /**
+   * Header Styles
+   */
+  .datatable-header {
+    border-bottom: 1px solid $background;
+
+    .datatable-header-cell {
+      padding: .85rem 1.2rem;
+      vertical-align: middle;
+
+      &.longpress {
+        color:#00E676;
+      }
+
+      &.dragging {
+        .resize-handle {
+          border-right: none;
+        }
+      }
+    }
+
+    .resize-handle {
+      border-right:solid 1px $background;
+    }
+  }
+
+  /**
+   * Body Styles
+   */
+  .datatable-body {
+    .datatable-row-detail {
+      background: #f5f5f5;
+      padding: 10px;
+    }
+
+    .datatable-body-row {
+      .datatable-body-cell {
+        padding: .85rem 1.2rem;
+        box-sizing: border-box;
+        max-height: 100%;
+        display: flex;
+        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        -webkit-box-pack: start;
+        -webkit-box-align: center;
+        .datatable-body-cell-label {
+          width: 100%;
+        }
+      }
+    }
+
+    .progress-linear {
+      .container {
+        background-color: rgb(170,209,249);
+
+        .bar {
+          background-color: rgb(16,108,200);
+        }
+      }
+    }
+  }
+}
