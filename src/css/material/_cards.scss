@@ -86,23 +86,6 @@ body {
         transform: rotate(-5deg);
       }
     }
-    [md-card-widget] {
-      height: auto;
-      display: flex;
-      flex-direction: row;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-grid-row-align: center;
-      align-items: center;
-      -webkit-align-content: center;
-      align-content: center;
-      max-width: 100%;
-      padding: $content-padding;
-      [md-card-widget-title], p {
-        margin: 0;
-        padding: 0;
-      }
-    }
     .card-image-header {
       position: relative;
       background-size: cover;
@@ -111,11 +94,14 @@ body {
       width: 100%;
     }
     &.card-widget {
-      .card-widget-content {
-        display: flex;
-        flex-direction: row;
-        height: 40px;
-        margin: -($content-padding/2) 0 $content-padding 0;
+      height: 88px;
+      .up{
+        color: $color-green-500;
+      }
+      .down {
+        color: $color-red-500;
+      }
+      .mat-card-content {
       }
     }
   }

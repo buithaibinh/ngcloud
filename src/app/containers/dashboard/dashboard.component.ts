@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Rx';
 
+import { DragulaService } from 'ng2-dragula';
 import { HomeLayoutState } from '../../core/store';
 
 import { HomeLayoutActions, getDashboardEditMode$ } from '../../core/store/home-layout';
@@ -13,7 +14,7 @@ import { HomeLayoutActions, getDashboardEditMode$ } from '../../core/store/home-
     styleUrls: ['dashboard.component.scss']
 })
 
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, OnDestroy {
     private dashboardEditMode: boolean;
     private initState: any = {
         chart1: true,
@@ -24,8 +25,19 @@ export class DashboardComponent implements OnInit {
 
     private tmpDisplayOption: any = {};
 
-    constructor(private store: Store<HomeLayoutState>) { }
+    constructor(private store: Store<HomeLayoutState>,
+        private dragulaService: DragulaService) {
+        dragulaService.setOptions('first-bag', {
+            moves: function (el: any, container: any, handle: any): any {
+                return handle.classList[0] === 'handle';
+            }
+        });
+        
+    }
 
+    ngOnDestroy(){
+        this.dragulaService.destroy('first-bag');
+    }
     ngOnInit() {
         let self = this;
         Object.assign(this.tmpDisplayOption, self.initState);
@@ -41,6 +53,9 @@ export class DashboardComponent implements OnInit {
 
     public barChartOptions: any = {
         scaleShowVerticalLines: false,
+        responsive: true
+    };
+    public lineChartOptions:any = {
         responsive: true
     };
     public barChartLabels: string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];

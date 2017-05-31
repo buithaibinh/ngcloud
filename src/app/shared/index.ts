@@ -7,6 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MultilingualModule } from '../core/i18n/index';
 import { TranslateModule } from '@ngx-translate/core';
 import { ChartsModule } from 'ng2-charts';
+import { DragulaModule } from 'ng2-dragula';
 
 import { COMPONENTS } from './components';
 import { PIPES } from './pipes';
@@ -19,7 +20,8 @@ export const ANGULAR_MODULES = [
   MaterialModule,
   FlexLayoutModule,
   TranslateModule,
-  ChartsModule
+  ChartsModule,
+  DragulaModule
 ];
 
 @NgModule({
