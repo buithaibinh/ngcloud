@@ -27,14 +27,9 @@ const MENUITEMS = [
     type: 'link',
     icon: 'explore'
   },
-  {state: 'accueil',
-    name: 'Accueil',
-    type: 'link',
-    icon: 'explore'
-  },
   {
-    state: 'apps',
-    name: 'Apps',
+    state: 'material',
+    name: 'Material',
     type: 'sub',
     icon: 'apps',
     badge: [
