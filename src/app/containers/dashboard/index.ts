@@ -1,24 +1,23 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
 import { SharedModule } from '../../shared/index';
 import { AgGridModule } from "ag-grid-angular/main";
 
-import { ActivityComponent } from '../activity/activity.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
-import { HomeRoutingModule } from './home.routing'
-import { HomeComponent } from './home.component';
+import { DashboardRoutes } from './dashboard.routing';
 
 import { CellDateComponent } from '../../core/components/ag-components/cell-date.component';
 
 @NgModule({
     imports: [
         SharedModule,
-        HomeRoutingModule,
+        RouterModule.forChild(DashboardRoutes),
         AgGridModule.withComponents(
             [CellDateComponent]
         ),
     ],
-    exports: [],
-    declarations: [HomeComponent, DashboardComponent, ActivityComponent, CellDateComponent],
-    providers: [],
+    declarations: [DashboardComponent, CellDateComponent]
 })
-export class HomeModule { }
+
+export class DashboardModule { }

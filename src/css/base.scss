@@ -1,13 +1,13 @@
 // ========================================================================
-@breadcrumb-margin-bottom:            10px;
-@breadcrumb-arrow-separator:          "\00bb";
-@breadcrumb-icon-margin-right:        10px;
+$breadcrumb-margin-bottom:            10px;
+$breadcrumb-arrow-separator:          "\00bb";
+$breadcrumb-icon-margin-right:        10px;
 
 // Component: breadcrumb
 // ========================================================================
 
 .breadcrumb {
-  margin-bottom: @breadcrumb-margin-bottom;
+  margin-bottom: $breadcrumb-margin-bottom;
   li {
     & + li:before {
       padding: 0 5px;
@@ -15,7 +15,7 @@
     .icon {
       text-decoration: none;
       &:before {
-        margin-right: @breadcrumb-icon-margin-right;
+        margin-right: $breadcrumb-icon-margin-right;
       }
     }
   }
@@ -48,6 +48,6 @@
 // -------------------------
 .breadcrumb-arrow {
   > li + li:before {
-    content: "@{breadcrumb-arrow-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+    content: "${breadcrumb-arrow-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
   }
 }

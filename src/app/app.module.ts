@@ -19,7 +19,7 @@ import { MultilingualModule, Languages, translateLoaderFactory, MultilingualEffe
 import { AppComponent } from './app.component';
 
 /* Root routing */
-import { routing, appRoutingProviders } from './app.routes';
+import { AppRoutes } from './app.routing';
 
 import 'hammerjs';
 import { MaterialModule } from '@angular/material';
@@ -39,7 +39,7 @@ export function HttpLoaderFactory(http: Http) {
     AppComponent,
   ],
   imports: [
-    routing,
+    RouterModule.forRoot(AppRoutes),
     RouterModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -61,7 +61,6 @@ export function HttpLoaderFactory(http: Http) {
     // ...APP_CORE_MODULES,
   ],
   providers: [
-    appRoutingProviders,
     // override with supported languages
     {
       provide: Languages,

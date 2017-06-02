@@ -1,220 +1,232 @@
-<div fxLayout="row" fxLayoutWrap="wrap">
-    <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
-        <md-card class="card-widget">
-            <md-card-subtitle fxLayout="row" fxLayoutAlign="start center">
-                <md-icon class="up">trending_up</md-icon>&nbsp;<span>15% From this yesterday</span>
-            </md-card-subtitle>
-            <md-card-title fxLayout="row" fxLayoutAlign="start center">
-                <md-icon>group</md-icon>&nbsp;<span>Users</span>
-                <span fxFlex></span>
-                <span class="grey-700 font-size-30">600</span>
+<md-toolbar class="header-toolbar">
+    <div fxLayout="column">
+    <ol class="breadcrumb">
+        <li><a [routerLink]="['/home']">Home</a></li>
+        <li class="active">Dashboard</li>
+    </ol>
+    </div>
+    <span fxFlex></span>
+    <button (click)="customize()" md-button>
+    <md-icon>{{dashboardEditMode? 'check':'mode_edit'}}</md-icon>{{dashboardEditMode? 'Done':'Customize'}}
+  </button>
+</md-toolbar>
+<div class="dashboard">
+    <div fxLayout="row" fxLayoutWrap="wrap">
+        <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
+            <md-card class="card-widget">
+                <md-card-subtitle fxLayout="row" fxLayoutAlign="start center">
+                    <md-icon class="up">trending_up</md-icon>&nbsp;<span>15% From this yesterday</span>
+                </md-card-subtitle>
+                <md-card-title fxLayout="row" fxLayoutAlign="start center">
+                    <md-icon>group</md-icon>&nbsp;<span>Users</span>
+                    <span fxFlex></span>
+                    <span class="grey-700 font-size-30">600</span>
 
-            </md-card-title>
-            <!--<md-card-footer>
+                </md-card-title>
+                <!--<md-card-footer>
                 <md-progress-bar mode="indeterminate"></md-progress-bar>
             </md-card-footer>-->
-        </md-card>
-    </div>
-    <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
-        <md-card class="card-widget">
-            <md-card-subtitle fxLayout="row" fxLayoutAlign="start center">
-                <md-icon class="down">trending_down</md-icon>&nbsp;<span>5.2% From this yesterday</span>
-            </md-card-subtitle>
-            <md-card-title fxLayout="row" fxLayoutAlign="start center">
-                <md-icon>receipt</md-icon>&nbsp;<span>Receipts</span>
-                <span fxFlex></span>
-                <span class="grey-700 font-size-30">1,234</span>
+            </md-card>
+        </div>
+        <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
+            <md-card class="card-widget">
+                <md-card-subtitle fxLayout="row" fxLayoutAlign="start center">
+                    <md-icon class="down">trending_down</md-icon>&nbsp;<span>5.2% From this yesterday</span>
+                </md-card-subtitle>
+                <md-card-title fxLayout="row" fxLayoutAlign="start center">
+                    <md-icon>receipt</md-icon>&nbsp;<span>Receipts</span>
+                    <span fxFlex></span>
+                    <span class="grey-700 font-size-30">1,234</span>
 
-            </md-card-title>
-        </md-card>
-    </div>
-    <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
-        <md-card class="card-widget">
-            <md-card-subtitle fxLayout="row" fxLayoutAlign="start center">
-                <md-icon class="up">trending_up</md-icon>&nbsp;<span>15% From this yesterday</span>
-            </md-card-subtitle>
-            <md-card-title fxLayout="row" fxLayoutAlign="start center">
-                <md-icon>cloud_queue</md-icon>&nbsp;<span>Sale</span>
-                <span fxFlex></span>
-                <span class="grey-700 font-size-30">50,123</span>
-            </md-card-title>
-            <!--<md-card-footer>
+                </md-card-title>
+            </md-card>
+        </div>
+        <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
+            <md-card class="card-widget">
+                <md-card-subtitle fxLayout="row" fxLayoutAlign="start center">
+                    <md-icon class="up">trending_up</md-icon>&nbsp;<span>15% From this yesterday</span>
+                </md-card-subtitle>
+                <md-card-title fxLayout="row" fxLayoutAlign="start center">
+                    <md-icon>cloud_queue</md-icon>&nbsp;<span>Sale</span>
+                    <span fxFlex></span>
+                    <span class="grey-700 font-size-30">50,123</span>
+                </md-card-title>
+                <!--<md-card-footer>
                 <md-progress-bar mode="query" color="warn"></md-progress-bar>
             </md-card-footer>-->
-        </md-card>
+            </md-card>
+        </div>
+        <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
+            <md-card class="card-widget">
+                <md-card-subtitle fxLayout="row" fxLayoutAlign="start center">
+                    <md-icon class="up">trending_up</md-icon>&nbsp;<span>15% From this yesterday</span>
+                </md-card-subtitle>
+                <md-card-title fxLayout="row" fxLayoutAlign="start center">
+                    <md-icon>equalizer</md-icon>&nbsp;<span>Download</span>
+                    <span fxFlex></span>
+                    <span class="grey-700 font-size-30">999</span>
+
+                </md-card-title>
+            </md-card>
+        </div>
     </div>
-    <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
-        <md-card class="card-widget">
-            <md-card-subtitle fxLayout="row" fxLayoutAlign="start center">
-                <md-icon class="up">trending_up</md-icon>&nbsp;<span>15% From this yesterday</span>
-            </md-card-subtitle>
-            <md-card-title fxLayout="row" fxLayoutAlign="start center">
-                <md-icon>equalizer</md-icon>&nbsp;<span>Download</span>
-                <span fxFlex></span>
-                <span class="grey-700 font-size-30">999</span>
 
-            </md-card-title>
-        </md-card>
-    </div>
-</div>
+    <!--Drag and Drop elements-->
 
-<!--Drag and Drop elements-->
+    <div fxLayout="row" fxLayoutWrap="wrap">
+        <div fxFlex.gt-sm="33.33%" fxFlex="100" [dragula]='"first-bag"'>
+            <md-card>
+                <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
+                    Rain flow diagram &nbsp;
 
-<div fxLayout="row" fxLayoutWrap="wrap">
-    <div fxFlex.gt-sm="33.33%" fxFlex="100" [dragula]='"first-bag"'>
-        <md-card>
-            <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
-                Rain flow diagram &nbsp;
+                    <span fxFlex></span>
+                    <md-slide-toggle *ngIf="dashboardEditMode" [(ngModel)]="tmpDisplayOption.chart1" color="accent">
 
-                <span fxFlex></span>
-                <md-slide-toggle *ngIf="dashboardEditMode" [(ngModel)]="tmpDisplayOption.chart1" color="accent">
-
-                </md-slide-toggle>
-                <button md-icon-button (click)="randomize()" aria-label="Random"><md-icon>loop</md-icon></button>
-                <button *ngIf="!dashboardEditMode" md-icon-button md-button-sm [md-menu-trigger-for]="card1" aria-label="Open card menu">
+                    </md-slide-toggle>
+                    <button md-icon-button (click)="randomize()" aria-label="Random"><md-icon>loop</md-icon></button>
+                    <button *ngIf="!dashboardEditMode" md-icon-button md-button-sm [md-menu-trigger-for]="card1" aria-label="Open card menu">
                     <md-icon>more_vert</md-icon>
                 </button>
 
-            </md-card-title>
-            <md-menu #card1="mdMenu" xPosition="before" [overlapTrigger]="false">
-                <button md-menu-item>
+                </md-card-title>
+                <md-menu #card1="mdMenu" xPosition="before" [overlapTrigger]="false">
+                    <button md-menu-item>
                     <md-icon>remove</md-icon>
                     Hide card
                 </button>
-                <button md-menu-item>
+                    <button md-menu-item>
                     <md-icon>more</md-icon>
                     Get documentation 
                     </button>
-            </md-menu>
-            <md-card-content>
-                <div>
-                    <canvas baseChart [datasets]="barChartData" height="200" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
-                        [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
-                </div>
-            </md-card-content>
-        </md-card>
-    </div>
-    <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50" fxFlex="100" [dragula]='"first-bag"'>
-        <md-card>
-            <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
-                User visit
-                <span fxFlex></span>
-                <md-slide-toggle *ngIf="dashboardEditMode" [(ngModel)]="tmpDisplayOption.chart2" color="accent">
+                </md-menu>
+                <md-card-content>
+                    <div>
+                        <canvas baseChart [datasets]="barChartData" height="200" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+                            [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                    </div>
+                </md-card-content>
+            </md-card>
+        </div>
+        <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50" fxFlex="100" [dragula]='"first-bag"'>
+            <md-card>
+                <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
+                    User visit
+                    <span fxFlex></span>
+                    <md-slide-toggle *ngIf="dashboardEditMode" [(ngModel)]="tmpDisplayOption.chart2" color="accent">
 
-                </md-slide-toggle>
-                <button md-icon-button (click)="randomizeType()" aria-label="Toggle"><md-icon>timeline</md-icon></button>
-                <button *ngIf="!dashboardEditMode" md-icon-button md-button-sm [md-menu-trigger-for]="card2" aria-label="Open card menu">
+                    </md-slide-toggle>
+                    <button md-icon-button (click)="randomizeType()" aria-label="Toggle"><md-icon>timeline</md-icon></button>
+                    <button *ngIf="!dashboardEditMode" md-icon-button md-button-sm [md-menu-trigger-for]="card2" aria-label="Open card menu">
                     <md-icon>more_vert</md-icon>
                 </button>
-            </md-card-title>
-            <md-menu #card2="mdMenu" xPosition="before" [overlapTrigger]="false">
-                <button md-menu-item>
+                </md-card-title>
+                <md-menu #card2="mdMenu" xPosition="before" [overlapTrigger]="false">
+                    <button md-menu-item>
                     <md-icon>remove</md-icon>
                     Hide card
                 </button>
-                <button md-menu-item>
+                    <button md-menu-item>
                     <md-icon>more</md-icon>
                     Get documentation 
                     </button>
-            </md-menu>
-            <md-card-content>
-                <div>
-                    <canvas baseChart height="200" [data]="lineChartData" legend="false" [labels]="lineChartLabels" [options]="lineChartOptions"
-                        [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
-                </div>
-            </md-card-content>
-        </md-card>
-    </div>
-    <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50" fxFlex="100" [dragula]='"first-bag"'>
-        <md-card>
-            <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
-                Sale report &nbsp;
-                <md-chip-list>
-                    <a href="https://github.com/valor-software/ng2-charts">
-                        <md-chip>official website</md-chip>
-                    </a>
-                </md-chip-list>
-                <span fxFlex></span>
-                <md-slide-toggle *ngIf="dashboardEditMode" [(ngModel)]="tmpDisplayOption.chart3" color="accent">
+                </md-menu>
+                <md-card-content>
+                    <div>
+                        <canvas baseChart height="200" [data]="lineChartData" legend="false" [labels]="lineChartLabels" [options]="lineChartOptions"
+                            [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                    </div>
+                </md-card-content>
+            </md-card>
+        </div>
+        <div fxFlex.gt-sm="33.33%" fxFlex.gt-xs="50" fxFlex="100" [dragula]='"first-bag"'>
+            <md-card>
+                <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
+                    Sale report &nbsp;
+                    <md-chip-list>
+                        <a href="https://github.com/valor-software/ng2-charts">
+                            <md-chip>official website</md-chip>
+                        </a>
+                    </md-chip-list>
+                    <span fxFlex></span>
+                    <md-slide-toggle *ngIf="dashboardEditMode" [(ngModel)]="tmpDisplayOption.chart3" color="accent">
 
-                </md-slide-toggle>
-                <button md-icon-button (click)="randomizeType()" aria-label="Toggle"><md-icon>timeline</md-icon></button>
-                <button md-icon-button md-button-sm [md-menu-trigger-for]="card3" *ngIf="!dashboardEditMode" aria-label="Open card menu">
+                    </md-slide-toggle>
+                    <button md-icon-button (click)="randomizeType()" aria-label="Toggle"><md-icon>timeline</md-icon></button>
+                    <button md-icon-button md-button-sm [md-menu-trigger-for]="card3" *ngIf="!dashboardEditMode" aria-label="Open card menu">
                     <md-icon>more_vert</md-icon>
                 </button>
-            </md-card-title>
-            <md-menu #card3="mdMenu" xPosition="before" [overlapTrigger]="false">
-                <button md-menu-item>
+                </md-card-title>
+                <md-menu #card3="mdMenu" xPosition="before" [overlapTrigger]="false">
+                    <button md-menu-item>
                     <md-icon>remove</md-icon>
                     Hide card
                 </button>
-                <button md-menu-item>
+                    <button md-menu-item>
                     <md-icon>more</md-icon>
                     Get documentation 
                     </button>
-            </md-menu>
-            <md-card-content>
-                <div>
-                    <canvas baseChart [data]="pieChartData" height="200" [labels]="pieChartLabels" [chartType]="pieChartType" (chartHover)="chartHovered($event)"
-                        (chartClick)="chartClicked($event)"></canvas>
-                </div>
-            </md-card-content>
-        </md-card>
+                </md-menu>
+                <md-card-content>
+                    <div>
+                        <canvas baseChart [data]="pieChartData" height="200" [labels]="pieChartLabels" [chartType]="pieChartType" (chartHover)="chartHovered($event)"
+                            (chartClick)="chartClicked($event)"></canvas>
+                    </div>
+                </md-card-content>
+            </md-card>
+        </div>
     </div>
-</div>
 
-<!--Row 2-->
-<div fxLayout="row" fxLayoutWrap="wrap">
-    <div fxFlex.gt-sm="60%" fxFlex="100">
-        <md-card>
-            <md-card-content>
-                <div>
-                    <!-- this creates a google map on the page with the given lat/lng from -->
-                    <!-- the component as the initial center of the map: -->
+    <!--Row 2-->
+    <div fxLayout="row" fxLayoutWrap="wrap">
+        <div fxFlex.gt-sm="60%" fxFlex="100">
+            <md-card>
+                <md-card-content>
+                    <div>
+                        <!-- this creates a google map on the page with the given lat/lng from -->
+                        <!-- the component as the initial center of the map: -->
 
-                    <sebm-google-map [latitude]="mapOptions.lat" [longitude]="mapOptions.lng" [scrollwheel]="mapOptions.scrollwheel" [zoom]="mapOptions.zoom">
-                        <sebm-google-map-marker [latitude]="mapOptions.lat" [longitude]="mapOptions.lng"></sebm-google-map-marker>
-                    </sebm-google-map>
-                </div>
-            </md-card-content>
-        </md-card>
-    </div>
-    <div fxFlex.gt-sm="40%" fxFlex="100">
-        <md-card class="contact">
-            <md-card-title fxLayout="row" fxLayoutAlign="start center">
-                <md-icon>contacts</md-icon>&nbsp;<span>Contacts</span>
-                <span fxFlex></span>
-                <button md-fab>
+                        <sebm-google-map [latitude]="mapOptions.lat" [longitude]="mapOptions.lng" [scrollwheel]="mapOptions.scrollwheel" [zoom]="mapOptions.zoom">
+                            <sebm-google-map-marker [latitude]="mapOptions.lat" [longitude]="mapOptions.lng"></sebm-google-map-marker>
+                        </sebm-google-map>
+                    </div>
+                </md-card-content>
+            </md-card>
+        </div>
+        <div fxFlex.gt-sm="40%" fxFlex="100">
+            <md-card class="contact">
+                <md-card-title fxLayout="row" fxLayoutAlign="start center">
+                    <md-icon>contacts</md-icon>&nbsp;<span>Contacts</span>
+                    <span fxFlex></span>
+                    <button md-fab>
                     <md-icon class="md-24">add</md-icon>
                 </button>
-            </md-card-title>
+                </md-card-title>
 
-            <hr>
-            <md-list>
-                <ng-template let-item let-last="last" ngFor [ngForOf]="contacts">
-                    <md-list-item>
-                        <img md-list-avatar src="{{item.photo}}" alt="">
-                        <h3 md-line> {{item.name}} </h3>
-                        <p md-line> {{item.email}}</p>
-                        <span md-line>{{item.tel}}</span>
-                    </md-list-item>
-                </ng-template>
-            </md-list>
-        </md-card>
+                <hr>
+                <md-list>
+                    <ng-template let-item let-last="last" ngFor [ngForOf]="contacts">
+                        <md-list-item>
+                            <img md-list-avatar src="{{item.photo}}" alt="">
+                            <h3 md-line> {{item.name}} </h3>
+                            <p md-line> {{item.email}}</p>
+                            <span md-line>{{item.tel}}</span>
+                        </md-list-item>
+                    </ng-template>
+                </md-list>
+            </md-card>
+        </div>
     </div>
-</div>
 
-<!--Row 3-->
-<div fxLayout="row" fxLayoutWrap="wrap">
-    <div fxFlex.gt-sm="50%" fxFlex="100">
-        <div style="width: 200px;">
-            <ag-grid-angular #agGrid style="width: 100%; height: 200px;" class="ag-fresh" [gridOptions]="gridOptions">
-            </ag-grid-angular>
+    <!--Row 3-->
+    <div fxLayout="row" fxLayoutWrap="wrap">
+        <div fxFlex.gt-sm="50%" fxFlex="100">
+            <div style="width: 200px;">
+                <ag-grid-angular #agGrid style="width: 100%; height: 200px;" class="ag-fresh" [gridOptions]="gridOptions">
+                </ag-grid-angular>
+            </div>
         </div>
     </div>
 </div>
-
-
 <!--Default menu-->
 <md-menu #menudefault="mdMenu" xPosition="before" [overlapTrigger]="false">
     <button md-menu-item>

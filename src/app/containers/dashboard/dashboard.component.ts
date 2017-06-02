@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Rx';
+import { Router } from '@angular/router';
+
 import { GridOptions } from "ag-grid";
 import { DragulaService } from 'ng2-dragula';
 import { HomeLayoutState } from '../../core/store';
@@ -38,11 +40,18 @@ export class DashboardComponent implements OnInit, OnDestroy {
     contacts: ContactData[] = [];
     projects: ProjectData[] = [];
     private gridOptions: GridOptions;
+    tabLinks = [
+        { label: 'Dashboard', link: '../home' },
+        { label: 'Activity', link: '../activity' }
+    ];
+    activeLinkIndex = 0;
 
     constructor(private store: Store<HomeLayoutState>,
+        private router: Router,
         private dragulaService: DragulaService,
         private contactDataService: ContactDataService,
         private projectService: ProjectDataService,
+        private homeLayoutActions: HomeLayoutActions,
     ) {
         dragulaService.setOptions('first-bag', {
             moves: function (el: any, container: any, handle: any): any {
@@ -78,11 +87,17 @@ export class DashboardComponent implements OnInit, OnDestroy {
             { id: 10, value: 15 },
             { id: 15, value: 20 }
         ]
+
+        // Initialize the index by checking if a tab link is contained in the url.
+        // This is not an ideal check and can be removed if routerLink exposes if it is active.
+        // https://github.com/angular/angular/pull/12525
+        this.activeLinkIndex = this.tabLinks.indexOf(this.tabLinks.find(tab => router.url.indexOf(tab.link) != -1));
     }
 
     ngOnDestroy() {
         this.dragulaService.destroy('first-bag');
     }
+
     ngOnInit() {
         let self = this;
         Object.assign(this.tmpDisplayOption, self.initState);
@@ -151,5 +166,15 @@ export class DashboardComponent implements OnInit, OnDestroy {
     public randomizeType(): void {
         this.lineChartType = this.lineChartType === 'line' ? 'bar' : 'line';
         this.pieChartType = this.pieChartType === 'doughnut' ? 'pie' : 'doughnut';
+    }
+
+    customize() {
+        return this.store.dispatch(this.homeLayoutActions.editDashboard(!this.dashboardEditMode));
+    }
+    changeTab(index: number) {
+        this.activeLinkIndex = index;
+        if (this.dashboardEditMode) {
+            return this.store.dispatch(this.homeLayoutActions.editDashboard(false));
+        }
     }
 }
