@@ -5,14 +5,14 @@ import { Router } from '@angular/router';
 
 import { GridOptions } from "ag-grid";
 import { DragulaService } from 'ng2-dragula';
-import { HomeLayoutState } from '../../core/store';
+import { HomeLayoutState } from '../../../core/store';
 
-import { HomeLayoutActions, getDashboardEditMode$ } from '../../core/store/home-layout';
-import { CellDateComponent } from '../../core/components/ag-components/cell-date.component';
+import { HomeLayoutActions, getDashboardEditMode$ } from '../../../core/store/home-layout';
+import { CellDateComponent } from '../../../core/components/ag-components/cell-date.component';
 
 // example services
-import { ContactDataService, ContactData } from '../../shared/services/contact.service';
-import { ProjectDataService, ProjectData } from '../../shared/services/project.service';
+import { ContactDataService, ContactData } from '../../../shared/services/contact.service';
+import { ProjectDataService, ProjectData } from '../../../shared/services/project.service';
 
 @Component({
     moduleId: module.id,

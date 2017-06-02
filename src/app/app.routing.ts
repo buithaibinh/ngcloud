@@ -11,6 +11,6 @@ export const AppRoutes: Routes = [{
     component: HomeLayoutComponent,
     children: [{
         path: 'home',
-        loadChildren: './containers/dashboard/#DashboardModule'
+        loadChildren: './containers/home/#HomeModule'
     },]
 }];
