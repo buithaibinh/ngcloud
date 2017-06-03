@@ -6,13 +6,13 @@ export interface BadgeItem {
 }
 
 export interface ChildrenItems {
-  state: string;
+  route: string;
   name: string;
   type?: string;
 }
 
 export interface Menu {
-  state: string;
+  route: string;
   name: string;
   type: string;
   icon: string;
@@ -22,92 +22,55 @@ export interface Menu {
 
 const MENUITEMS = [
   {
-    state: 'home',
+    route: 'home',
     name: 'Home',
     type: 'link',
     icon: 'explore'
   },
   {
-    state: 'material',
+    route: 'material',
     name: 'Material',
     type: 'sub',
     icon: 'apps',
     badge: [
-      {type: 'red', value: '5'}
+      { type: 'red', value: '5' }
     ],
     children: [
-      {state: 'calendar', name: 'Calendar'},
-      {state: 'media', name: 'Media'},
-      {state: 'messages', name: 'Message'},
-      {state: 'social', name: 'Social'},
+      { name: 'Autocomplete', route: 'autocomplete' },
+      { name: 'Button', route: 'button' },
+      { name: 'Button Toggle', route: 'button-toggle' },
+      { name: 'Card', route: 'card' },
+      { name: 'Chips', route: 'chips' },
+      { name: 'Checkbox', route: 'checkbox' },
+      { name: 'Data Table', route: 'data-table' },
+      { name: 'Datepicker', route: 'datepicker' },
+      { name: 'Dialog', route: 'dialog' },
+      { name: 'Gestures', route: 'gestures' },
+      { name: 'Grid List', route: 'grid-list' },
+      { name: 'Icon', route: 'icon' },
+      { name: 'Input', route: 'input' },
+      { name: 'List', route: 'list' },
+      { name: 'Menu', route: 'menu' },
+      { name: 'Live Announcer', route: 'live-announcer' },
+      { name: 'Overlay', route: 'overlay' },
+      { name: 'Portal', route: 'portal' },
+      { name: 'Progress Bar', route: 'progress-bar' },
+      { name: 'Progress Spinner', route: 'progress-spinner' },
+      { name: 'Radio', route: 'radio' },
+      { name: 'Ripple', route: 'ripple' },
+      { name: 'Select', route: 'select' },
+      { name: 'Sidenav', route: 'sidenav' },
+      { name: 'Slider', route: 'slider' },
+      { name: 'Slide Toggle', route: 'slide-toggle' },
+      { name: 'Snack Bar', route: 'snack-bar' },
+      { name: 'Tabs', route: 'tabs' },
+      { name: 'Toolbar', route: 'toolbar' },
+      { name: 'Tooltip', route: 'tooltip' },
+      { name: 'Platform', route: 'platform' },
+      { name: 'Style', route: 'style' },
+      { name: 'Typography', route: 'typography' }
     ]
   },
-  {
-    state: 'apps',
-    name: 'Apps',
-    type: 'sub',
-    icon: 'apps',
-    badge: [
-      {type: 'red', value: '5'}
-    ],
-    children: [
-      {state: 'calendar', name: 'Calendar'},
-      {state: 'media', name: 'Media'},
-      {state: 'messages', name: 'Message'},
-      {state: 'social', name: 'Social'},
-    ]
-  },
-  {
-    state: 'apps',
-    name: 'Apps',
-    type: 'sub',
-    icon: 'apps',
-    badge: [
-      {type: 'red', value: '5'}
-    ],
-    children: [
-      {state: 'calendar', name: 'Calendar'},
-      {state: 'media', name: 'Media'},
-      {state: 'messages', name: 'Message'},
-      {state: 'social', name: 'Social'},
-    ]
-  },
-  {
-    state: 'apps',
-    name: 'Apps',
-    type: 'sub',
-    icon: 'apps',
-    badge: [
-      {type: 'red', value: '5'}
-    ],
-    children: [
-      {state: 'calendar', name: 'Calendar'},
-      {state: 'media', name: 'Media'},
-      {state: 'messages', name: 'Message'},
-      {state: 'social', name: 'Social'},
-    ]
-  },
-  {
-    state: 'apps',
-    name: 'Apps',
-    type: 'sub',
-    icon: 'apps',
-    badge: [
-      {type: 'red', value: '5'}
-    ],
-    children: [
-      {state: 'calendar', name: 'Calendar'},
-      {state: 'media', name: 'Media'},
-      {state: 'messages', name: 'Message'},
-      {state: 'social', name: 'Social'},
-    ]
-  },
-  {
-    state: 'http://primer.nyasha.me/docs',
-    name: 'Docs',
-    type: 'extTabLink',
-    icon: 'local_library'
-  }
 ];
 
 @Injectable()

@@ -82,13 +82,13 @@ export class HomeLayoutComponent implements OnInit, OnDestroy {
 
   addMenuItem(): void {
     this.menuItems.add({
-      state: 'menu',
+      route: 'menu',
       name: 'MENU',
       type: 'sub',
       icon: 'trending_flat',
       children: [
-        { state: 'menu', name: 'MENU' },
-        { state: 'timelmenuine', name: 'MENU' }
+        { route: 'menu', name: 'MENU' },
+        { route: 'timelmenuine', name: 'MENU' }
       ]
     });
   }
