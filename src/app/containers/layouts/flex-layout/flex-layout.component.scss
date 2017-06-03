@@ -119,14 +119,13 @@ div.colored.box.nopad > div {
 
 
 .blocks {
-  min-width: 75px;
+  min-width: 50px;
   min-height: 50px;
   border-radius: 3px;
 }
 
 .black {
   border-radius: 5px;
-  min-width: 75px;
   min-height: 50px;
   color: white;
   background-color: #292929;
@@ -206,7 +205,7 @@ md-card-content pre {
 .fixed { height:275px; }
 
 .card-demo{
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 .card-demo md-card,
 .card-demo md-card-content {

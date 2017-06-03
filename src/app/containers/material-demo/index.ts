@@ -3,7 +3,8 @@ import { RouterModule } from '@angular/router';
 
 import { SharedModule } from '../../shared/index';
 
-import { MATERIAL_APP_ROUTES } from './material.routing';
+import { MaterialDemoComponent } from './material-demo.component';
+import { MATERIAL_APP_ROUTES } from './material-demo.routing';
 import { ProgressBarDemo } from './progress-bar/progress-bar-demo';
 import { ContentElementDialog, DialogDemo, IFrameDialog, JazzDialog } from './dialog/dialog-demo';
 import { RippleDemo } from './ripple/ripple-demo';
@@ -39,6 +40,7 @@ import { DatepickerDemo } from './datepicker/datepicker-demo';
 import { TypographyDemo } from './typography/typography-demo';
 
 const MATERIAL_COMPONENTS = [
+    MaterialDemoComponent,
     AutocompleteDemo,
     BaselineDemo,
     ButtonDemo,
@@ -92,5 +94,13 @@ const MATERIAL_COMPONENTS = [
     exports: [],
     declarations: [MATERIAL_COMPONENTS],
     providers: [],
+    entryComponents: [
+        JazzDialog,
+        ContentElementDialog,
+        IFrameDialog,
+        RotiniPanel,
+        ScienceJoke,
+        SpagettiPanel,
+    ],
 })
-export class MaterialModule { }
+export class MaterialDemoModule { }

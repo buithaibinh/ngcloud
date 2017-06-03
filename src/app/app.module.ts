@@ -22,7 +22,7 @@ import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
 
 import 'hammerjs';
-import { MaterialModule } from '@angular/material';
+import { MaterialModule, MdNativeDateModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // app container
@@ -47,6 +47,7 @@ export function HttpLoaderFactory(http: Http) {
     ReactiveFormsModule,
     HttpModule,
     MaterialModule,
+    MdNativeDateModule,
 
     AnalyticsModule,
     MultilingualModule.forRoot([{

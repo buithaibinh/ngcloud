@@ -31,7 +31,7 @@ const MENUITEMS = [
     route: 'material',
     name: 'Material',
     type: 'sub',
-    icon: 'apps',
+    icon: 'public',
     badge: [
       { type: 'red', value: '5' }
     ],
@@ -42,16 +42,13 @@ const MENUITEMS = [
       { name: 'Card', route: 'card' },
       { name: 'Chips', route: 'chips' },
       { name: 'Checkbox', route: 'checkbox' },
-      { name: 'Data Table', route: 'data-table' },
       { name: 'Datepicker', route: 'datepicker' },
       { name: 'Dialog', route: 'dialog' },
-      { name: 'Gestures', route: 'gestures' },
       { name: 'Grid List', route: 'grid-list' },
       { name: 'Icon', route: 'icon' },
       { name: 'Input', route: 'input' },
       { name: 'List', route: 'list' },
       { name: 'Menu', route: 'menu' },
-      { name: 'Live Announcer', route: 'live-announcer' },
       { name: 'Overlay', route: 'overlay' },
       { name: 'Portal', route: 'portal' },
       { name: 'Progress Bar', route: 'progress-bar' },
@@ -69,6 +66,19 @@ const MENUITEMS = [
       { name: 'Platform', route: 'platform' },
       { name: 'Style', route: 'style' },
       { name: 'Typography', route: 'typography' }
+    ]
+  },
+  {
+    route: 'layouts',
+    name: 'Layouts',
+    type: 'sub',
+    icon: 'computer',
+    badge: [
+      { type: 'red', value: '2' }
+    ],
+    children: [
+      { name: 'Flex Layout', route: 'flex-layout' },
+      { name: 'Golden layout', route: 'golden-layout' },
     ]
   },
 ];

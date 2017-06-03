@@ -17,7 +17,11 @@ export const AppRoutes: Routes = [
             },
             {
                 path: 'material',
-                loadChildren: './containers/material/#MaterialModule'
+                loadChildren: './containers/material-demo/#MaterialDemoModule'
+            },
+            {
+                path: 'layouts',
+                loadChildren: './containers/layouts/#LayoutsModule'
             },
         ]
     }

@@ -1,3 +1,4 @@
+<div class="page">
 <md-toolbar class="header-toolbar">
   <nav md-tab-nav-bar class="header-toolbar-row">
     <a md-tab-link *ngFor="let tabLink of tabLinks; let i = index" [routerLink]="tabLink.link" [active]="activeLinkIndex === i"
@@ -12,6 +13,5 @@
 </md-toolbar>
 <div class="action-bar-underline" [class.edit]="dashboardEditMode"></div>
 
-<div class="home-content">
   <router-outlet></router-outlet>
 </div>
