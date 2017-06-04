@@ -24,8 +24,10 @@
         "../node_modules/dragula/dist/dragula.css",
         "../node_modules/ag-grid/dist/styles/ag-grid.css",
         "../node_modules/ag-grid/dist/styles/theme-fresh.css",
-        "vendors/pace/themes/orange/pace-theme-flash.css",
+        "assets/vendor/pace/themes/orange/pace-theme-flash.css",
         "assets/vendor/flag-icon-css/flag-icon.css",
+        "assets/vendor/golden-layout/css/goldenlayout-base.css",
+        "assets/vendor/golden-layout/css/goldenlayout-light-theme.css",
         "css/bootstrap-extend.css",
         "css/styles.scss"
       ],
@@ -33,7 +35,8 @@
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/bootstrap/dist/js/bootstrap.js",
         "../node_modules/chart.js/dist/Chart.bundle.min.js",
-        "vendors/pace/pace.js"
+        "assets/vendor/golden-layout/goldenlayout.js",
+        "assets/vendor/pace/pace.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
