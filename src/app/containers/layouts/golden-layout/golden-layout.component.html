@@ -1,0 +1,20 @@
+<div class="page">
+  <md-toolbar class="header-toolbar">
+    <ol class="breadcrumb">
+      <li><a [routerLink]="['/home']">Home</a></li>
+      <li><a [routerLink]="['/layouts']">Layouts</a></li>
+      <li class="active">Golden Layout</li>
+    </ol>
+    <span fxFlex></span>
+    <div fxShow="false" fxShow.gt-xs>
+      <md-chip-list>
+        <md-chip (select)="onSelect">
+          <a href="#">Official Website</a>
+        </md-chip>
+      </md-chip-list>
+    </div>
+  </md-toolbar>
+
+  <div class="golden-layout" appGoldenLayout>
+  </div>
+</div>

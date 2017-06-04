@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 
 import { SharedModule } from '../../shared/index';
 import { FlexLayoutComponent } from './flex-layout/flex-layout.component';
+import { GoldenLayoutComponent } from './golden-layout/golden-layout.component';
 import { LayoutRoutes } from './layouts-routing';
 
 @NgModule({
@@ -11,7 +12,7 @@ import { LayoutRoutes } from './layouts-routing';
         SharedModule,
     ],
     exports: [],
-    declarations: [FlexLayoutComponent],
+    declarations: [FlexLayoutComponent, GoldenLayoutComponent],
     providers: [],
 })
 export class LayoutsModule { }
