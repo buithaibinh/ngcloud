@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-import { MaterialDemoComponent } from './material-demo.component';
+import { MaterialComponent } from './material.component';
 import { ButtonDemo } from './button/button-demo';
 import { BaselineDemo } from './baseline/baseline-demo';
 import { ButtonToggleDemo } from './button-toggle/button-toggle-demo';
@@ -39,7 +39,7 @@ import { TypographyDemo } from './typography/typography-demo';
 export const MATERIAL_APP_ROUTES: Routes = [
     {
         path: '',
-        component: MaterialDemoComponent,
+        component: MaterialComponent,
         data: { breadcrumb: "Material" },
         children: [
             { path: '', redirectTo: 'autocomplete', pathMatch: 'full'},

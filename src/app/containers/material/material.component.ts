@@ -10,11 +10,11 @@ interface IBreadcrumb {
 @Component({
     moduleId: module.id,
     selector: 'app-material',
-    templateUrl: 'material-demo.component.html',
-    styleUrls: ['material-demo.component.scss']
+    templateUrl: 'material.component.html',
+    styleUrls: ['material.component.scss']
 })
 
-export class MaterialDemoComponent implements OnInit {
+export class MaterialComponent implements OnInit {
     private breadcrumb: IBreadcrumb;
     constructor(private activatedRoute: ActivatedRoute,
         private router: Router) {
