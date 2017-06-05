@@ -1,9 +1,13 @@
+/* $cards
+ ------------------------------------------*/
+$mat-card-header-size: 40px !default;
 body {
-.mat-card {
+  .mat-card {
     padding: 0;
-    margin: ($content-padding/3);
+    margin: ($gutter/3);
     border-radius: $border-radius-base;
     @include mat-elevation(1);
+    color: rgba(mat-color($foreground, base), 0.87);
     .mat-card-header {
       height: auto;
     }
@@ -23,7 +27,7 @@ body {
     [md-card-avatar] {
       font-size: 40px;
       line-height: 40px;
-      margin: $content-padding 0 0 $content-padding;
+      margin: $gutter 0 0 $gutter;
     }
     /*********/
     .mat-card-image {
@@ -35,27 +39,27 @@ body {
       border-radius: $border-radius-base $border-radius-base 0 0;
     }
     .mat-card-title {
-      padding-top: $content-padding;
-      padding-left: $content-padding;
-      padding-right: $content-padding;
+      padding-top: $gutter;
+      padding-left: $gutter;
+      padding-right: $gutter;
       line-height: 1;
       font-size: 16px;
       font-weight: 400;
     }
     .mat-card-subtitle {
-      padding-left: $content-padding;
-      padding-right: $content-padding;
+      padding-left: $gutter;
+      padding-right: $gutter;
       line-height: 1;
       font-size: 13px;
     }
     .mat-card-subtitle:first-child {
-      padding-top: $content-padding;
+      padding-top: $gutter;
     }
     .mat-card-title:nth-child(2) {
       margin-top: -24px;
     }
     .mat-card-content {
-      padding: $content-padding;
+      padding: $gutter;
       margin-bottom: 0;
       position: relative;
     }
@@ -66,7 +70,7 @@ body {
     }
     &, & .mat-card {
       & .mat-card-actions:last-child {
-        padding: $content-padding / 2;
+        padding: $gutter / 2;
         margin: 0;
       }
     }
@@ -86,6 +90,23 @@ body {
         transform: rotate(-5deg);
       }
     }
+    [md-card-widget] {
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-grid-row-align: center;
+      align-items: center;
+      -webkit-align-content: center;
+      align-content: center;
+      max-width: 100%;
+      padding: $gutter;
+      [md-card-widget-title], p {
+        margin: 0;
+        padding: 0;
+      }
+    }
     .card-image-header {
       position: relative;
       background-size: cover;
@@ -94,23 +115,28 @@ body {
       width: 100%;
     }
     &.card-widget {
-      height: 88px;
-      .up{
-        color: $color-green-500;
-      }
-      .down {
-        color: $color-red-500;
-      }
-      .mat-card-content {
+      .card-widget-content {
+        display: flex;
+        flex-direction: row;
+        height: 40px;
+        margin: -($gutter/2) 0 $gutter 0;
       }
     }
   }
 }
 
-/// menu
-.mat-menu {
-  border-radius: $border-radius-base;
-}
-[md-menu-item] {
-  font-size: $font-size-base!important;
+body [dir="rtl"] {
+  .mat-card {
+    [md-card-avatar] {
+      margin: $gutter $gutter 0 0;
+    }
+    [md-fab-card-float] {
+      right: auto;
+      left: 8px;
+    }
+    [md-card-float-icon] {
+      right: auto;
+      left: 15px;
+    }
+  }
 }

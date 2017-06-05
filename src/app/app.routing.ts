@@ -23,6 +23,10 @@ export const AppRoutes: Routes = [
                 path: 'layouts',
                 loadChildren: './containers/layouts/#LayoutsModule'
             },
+            {
+                path: 'tables',
+                loadChildren: './containers/tables/#TablesModule'
+            },
         ]
     }
 ];

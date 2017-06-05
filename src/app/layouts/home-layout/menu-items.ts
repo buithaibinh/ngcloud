@@ -81,6 +81,16 @@ const MENUITEMS = [
       { name: 'Golden layout', route: 'golden-layout' },
     ]
   },
+  {
+    route: 'tables',
+    name: 'Tables',
+    type: 'sub',
+    icon: 'computer',
+    children: [
+      { name: 'Ng2 Tables', route: 'ng2-table' },
+      { name: 'Golden layout', route: 'golden-layout' },
+    ]
+  },
 ];
 
 @Injectable()

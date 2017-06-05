@@ -6,6 +6,8 @@
 @import 'vars-color';
 @import 'vars-site';
 
+
+
 // utilities
 @import 'utilities/background';
 
@@ -20,6 +22,7 @@
 // // Components
 // // -------------------------------
 // @import "sections/site-navbar";
+@import "components/ng2-table";
 @import "components/ngx-table";
 
 // Material

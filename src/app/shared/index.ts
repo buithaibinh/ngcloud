@@ -11,6 +11,7 @@ import { DragulaModule } from 'ng2-dragula';
 
 // ngx datatable
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { NG_TABLE_DIRECTIVES } from 'ng2-table';
 
 // Google map
 import { AgmCoreModule } from 'angular2-google-maps/core';
@@ -32,7 +33,8 @@ export const ANGULAR_MODULES = [
   TranslateModule,
   ChartsModule,
   DragulaModule,
-  NgxDatatableModule
+  NgxDatatableModule,
+  
 ];
 
 @NgModule({
@@ -40,12 +42,13 @@ export const ANGULAR_MODULES = [
     ANGULAR_MODULES,
     AgmCoreModule.forRoot({
       apiKey: Config.GOOGLE_MAP_API_KEY
-    })
+    }),
   ],
   declarations: [
     ...PIPES,
     ...COMPONENTS,
     ...DIRECTIVES,
+    NG_TABLE_DIRECTIVES,
   ],
   exports: [
     AgmCoreModule,
@@ -53,9 +56,10 @@ export const ANGULAR_MODULES = [
     ...PIPES,
     ...COMPONENTS,
     ...DIRECTIVES,
+    NG_TABLE_DIRECTIVES
   ],
   providers: [
     EXAMPLE_SERVICES
-  ]
+  ],
 })
 export class SharedModule { }

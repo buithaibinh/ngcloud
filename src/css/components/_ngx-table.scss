@@ -1,8 +1,9 @@
-/* $Widget
- ------------------------------------------*/
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
 .ngx-datatable.material {
   padding: 0;
-  margin: ($content-padding/3);
+  margin: ($gutter/3);
   @include mat-elevation(2);
   @include mat-elevation-transition;
   display: block;

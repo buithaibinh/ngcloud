@@ -29,7 +29,7 @@ $mat-toolbar-height-mobile-landscape: 48px !default;
   @include flex(1);
   overflow-y: auto;
   overflow-x: hidden;
-  padding: $content-padding;
+  padding: $gutter;
 }
 
 .app-dark .mat-sidenav-content {

@@ -10,11 +10,12 @@
 // Define the default theme (same as the example above).
 $candy-app-primary: mat-palette($mat-indigo);
 $candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
-$candy-app-theme:   mat-light-theme($candy-app-primary, $candy-app-accent);
-$background: map-get($candy-app-theme, background);
+$theme:   mat-light-theme($candy-app-primary, $candy-app-accent);
+$background: map-get($theme, background);
+$foreground: map-get($theme, foreground);
 
 // Include the default theme styles.
-@include angular-material-theme($candy-app-theme);
+@include angular-material-theme($theme);
 
 
 // Define an alternate dark theme.
