@@ -28,7 +28,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // app container
 import { APP_CORE_MODULES } from './core/components';
 import { HomeLayoutModule } from './layouts/home-layout';
-import { NgxTableComponent } from './containers/tables/ngx-table/ngx-table.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
@@ -38,7 +37,6 @@ export function HttpLoaderFactory(http: Http) {
 @NgModule({
   declarations: [
     AppComponent,
-    NgxTableComponent,
   ],
   imports: [
     RouterModule.forRoot(AppRoutes),

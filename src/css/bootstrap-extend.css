@@ -3670,35 +3670,12 @@ fieldset[disabled] .btn-pure.focus {
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.pager li > a,
-.pager li > span {
-  padding: 10px 20px;
-  color: #757575;
-  -webkit-transition: all .2s ease;
-       -o-transition: all .2s ease;
-          transition: all .2s ease;
+
+.pager li > a{
+  background-color: transparent;
+  border: none;
 }
-.pager li > a:hover,
-.pager li > a:focus {
-  color: #3f51b5;
-}
-.pager li .icon {
-  margin-top: -1px;
-}
-.pager li > a:hover,
-.pager li > a:focus {
-  border-color: #3f51b5;
-}
-.pager .disabled > a,
-.pager .disabled > a:hover,
-.pager .disabled > a:focus,
-.pager .disabled > span {
-  border-color: #e0e0e0;
-}
-.pager-round li > a,
-.pager-round li > span {
-  border-radius: 1000px;
-}
+
 .label {
   padding: .25em .6em .25em;
   font-weight: 300;

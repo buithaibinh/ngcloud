@@ -87,8 +87,8 @@ const MENUITEMS = [
     type: 'sub',
     icon: 'computer',
     children: [
-      { name: 'Ng2 Tables', route: 'ng2-table' },
-      { name: 'Golden layout', route: 'golden-layout' },
+      { name: 'Ng2 Table', route: 'ng2-table' },
+      { name: 'Ngx Table', route: 'ngx-table' },
     ]
   },
 ];

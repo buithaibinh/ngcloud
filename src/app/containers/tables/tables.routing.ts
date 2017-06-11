@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { Ng2TableComponent } from './ng2-table/ng2-table.component';
+import { NgxTableComponent } from './ngx-table/ngx-table.component';
 
 export const TablesRoutes: Routes = [
     {
@@ -10,6 +11,10 @@ export const TablesRoutes: Routes = [
             {
                 path: 'ng2-table',
                 component: Ng2TableComponent
+            },
+            {
+                path: 'ngx-table',
+                component: NgxTableComponent
             },
         ]
     },

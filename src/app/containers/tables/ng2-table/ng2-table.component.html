@@ -18,36 +18,33 @@
     </md-toolbar>
 
     <md-card class="card-demo">
-        <div fxLayout="column">
 
-            <md-card-content>
-                <div fxLayout="row">
-                    <md-input-container fxFlex="50%">
-                        <input fxFlex *ngIf="config.filtering" mdInput placeholder="Search all columns" [ngTableFiltering]="config.filtering"
-                        (tableChanged)="onChangeTable(config)" />
-                        <md-icon mdPrefix>search</md-icon>
-                    </md-input-container>
+        <md-card-content>
+            <div fxLayout="row">
+                <md-input-container fxFlex="50%">
+                    <input fxFlex *ngIf="config.filtering" mdInput placeholder="Search all columns" [ngTableFiltering]="config.filtering" (tableChanged)="onChangeTable(config)"
+                    />
+                    <md-icon mdPrefix>search</md-icon>
+                </md-input-container>
 
-                    <span fxFlex></span>
-                    <div fxShow="false" fxShow.gt-xs>
-                        <button md-icon-button (click)="onClick">
+                <span fxFlex></span>
+                <div fxShow="false" fxShow.gt-xs>
+                    <button md-icon-button (click)="onClick">
                         <md-icon class="md-48">input</md-icon>
                     </button>
-                        <button md-icon-button (click)="onClick">
+                    <button md-icon-button (click)="onClick">
                         <md-icon class="md-48">settings</md-icon>
                     </button>
-                    </div>
                 </div>
+            </div>
 
-                <ng-table [config]="config" (tableChanged)="onChangeTable(config)" (cellClicked)="onCellClick($event)" [rows]="rows" [columns]="columns">
-                </ng-table>
-            </md-card-content>
-            <md-card-actions align="start">
-                <pagination *ngIf="config.paging" class="pagination-sm" [(ngModel)]="page" [totalItems]="length" [itemsPerPage]="itemsPerPage"
-                    [maxSize]="maxSize" [boundaryLinks]="true" [rotate]="false" (pageChanged)="onChangeTable(config, $event)"
-                    (numPages)="numPages = $event">
-                </pagination>
-            </md-card-actions>
-        </div>
+            <ng-table [config]="config" (tableChanged)="onChangeTable(config)" (cellClicked)="onCellClick($event)" [rows]="rows" [columns]="columns">
+            </ng-table>
+        </md-card-content>
+        <md-card-actions align="start">
+            <pagination *ngIf="config.paging" class="pagination-sm" [(ngModel)]="page" [totalItems]="length" [itemsPerPage]="itemsPerPage"
+                [maxSize]="maxSize" [boundaryLinks]="true" [rotate]="false" (pageChanged)="onChangeTable(config, $event)" (numPages)="numPages = $event">
+            </pagination>
+        </md-card-actions>
     </md-card>
 </div>

@@ -1,33 +1,47 @@
 @import '~@swimlane/ngx-datatable/release/index.css';
 @import '~@swimlane/ngx-datatable/release/themes/material.css';
 @import '~@swimlane/ngx-datatable/release/assets/icons.css';
-.ngx-datatable.material {
-  padding: 0;
-  margin: ($gutter/3);
-  @include mat-elevation(2);
-  @include mat-elevation-transition;
-  display: block;
-  position: relative;
-  border-radius: $border-radius-base;
+
+
+.dark-theme .ngx-datatable.material {
+  background: mat-color($dark-background, card);
+  color: mat-color($dark-foreground, base);
+  &.striped {
+    .datatable-row-odd {
+      background: mat-color($dark-background, 'hover');
+    }
+  }
+
   &.single-selection,
   &.multi-selection {
     .datatable-body-row {
       &.active,
       &.active .datatable-row-group {
-        @include _mat-toolbar-color($candy-app-primary);
+        @include _mat-toolbar-color($dark-primary);
       }
 
       &.active:hover,
       &.active:hover .datatable-row-group {
-        background-color: darken(mat-color($candy-app-primary), 2%);
-        color: #FFF;
-
+        background-color: darken(mat-color($dark-primary), 2%);
       }
 
       &.active:focus,
       &.active:focus .datatable-row-group {
-        background-color: darken(mat-color($candy-app-primary), 4%);
-        color: #FFF;
+        background-color: darken(mat-color($dark-primary), 4%);
+      }
+    }
+  }
+
+  &:not(.cell-selection) {
+    .datatable-body-row {
+      &:hover,
+      &:hover .datatable-row-group {
+        background: mat-color($dark-background, 'hover');
+      }
+
+      &:focus,
+      &:focus .datatable-row-group {
+        background-color: darken(mat-color($dark-background, 'hover'), 2%);;
       }
     }
   }
@@ -36,28 +50,159 @@
     .datatable-body-cell {
       &:hover,
       &:hover .datatable-row-group {
-        background: $color-light-blue-a400;
+        background: mat-color($dark-background, 'hover');
       }
 
       &:focus,
       &:focus .datatable-row-group {
-        background-color: darken($color-light-blue-a400, 2%);
+        background-color: darken(mat-color($dark-background, 'hover'), 2%);;
       }
 
       &.active,
       &.active .datatable-row-group {
-        @include _mat-toolbar-color($candy-app-primary);
+        @include _mat-toolbar-color($dark-primary);
       }
 
       &.active:hover,
       &.active:hover .datatable-row-group {
-        background-color: darken(mat-color($candy-app-primary), 2%);
+        background-color: darken(mat-color($dark-primary), 2%);
+      }
+
+      &.active:focus,
+      &.active:focus .datatable-row-group {
+        background-color: darken(mat-color($dark-primary), 4%);
+      }
+    }
+  }
+
+  .datatable-header .datatable-row-left, .datatable-body .datatable-row-left,
+  .datatable-header .datatable-row-right, .datatable-body .datatable-row-right {
+    background-color: rgba(73, 73, 73, 1);
+  }
+
+  /**
+   * Header Styles
+   */
+  .datatable-header {
+    border-bottom: 1px solid mat-color($dark-foreground, divider);
+
+    .datatable-header-cell {
+      color: mat-color($dark-foreground, base);
+    }
+
+    .resize-handle {
+      border-right:solid 1px mat-color($dark-foreground, divider);
+    }
+  }
+
+  /**
+   * Footer Styles
+   */
+  .datatable-footer {
+    border-top: 1px solid mat-color($dark-foreground, divider);
+
+    .datatable-pager {
+      li {
+        &.disabled a{
+          color: rgba(255, 255, 255, 0.26) !important;
+        }
+        a {
+          color: mat-color($dark-foreground, base);
+        }
+        &.active a{
+          background: mat-color($dark-primary);
+        }
+      }
+    }
+  }
+}
+
+.ngx-datatable.material {
+  padding: 0;
+  margin: ($gutter/3);
+  @include mat-elevation(2);
+  @include mat-elevation-transition;
+  display: block;
+  position: relative;
+  border-radius: $border-radius-base;
+  &.fullscreen {
+    position: absolute !important;
+    height: auto !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  &.striped {
+    .datatable-row-odd {
+      background: mat-color($background, 'hover');
+    }
+  }
+
+  &.single-selection,
+  &.multi-selection {
+    .datatable-body-row {
+      &.active,
+      &.active .datatable-row-group {
+        @include _mat-toolbar-color($primary);
+      }
+
+      &.active:hover,
+      &.active:hover .datatable-row-group {
+        background-color: darken(mat-color($primary), 2%);
+        color: #FFF;
+
+      }
+
+      &.active:focus,
+      &.active:focus .datatable-row-group {
+        background-color: darken(mat-color($primary), 4%);
+        color: #FFF;
+      }
+    }
+  }
+
+  &:not(.cell-selection) {
+    .datatable-body-row {
+      &:hover,
+      &:hover .datatable-row-group {
+        background: mat-color($background, 'hover');
+      }
+
+      &:focus,
+      &:focus .datatable-row-group {
+        background-color: darken(mat-color($background, 'hover'), 2%);;
+      }
+    }
+  }
+
+  &.cell-selection {
+    .datatable-body-cell {
+      &:hover,
+      &:hover .datatable-row-group {
+        background: mat-color($background, 'hover');
+      }
+
+      &:focus,
+      &:focus .datatable-row-group {
+        background-color: darken(mat-color($background, 'hover'), 2%);;
+      }
+
+      &.active,
+      &.active .datatable-row-group {
+        @include _mat-toolbar-color($primary);
+      }
+
+      &.active:hover,
+      &.active:hover .datatable-row-group {
+        background-color: darken(mat-color($primary), 2%);
         color: #FFF;
       }
 
       &.active:focus,
       &.active:focus .datatable-row-group {
-        background-color: darken(mat-color($candy-app-primary), 4%);
+        background-color: darken(mat-color($primary), 4%);
         color: #FFF;
       }
     }
@@ -78,10 +223,11 @@
    * Header Styles
    */
   .datatable-header {
-    border-bottom: 1px solid $background;
+    border-bottom: 1px solid mat-color($foreground, divider);
 
     .datatable-header-cell {
       padding: .85rem 1.2rem;
+      color: rgba(mat-color($foreground, base), 0.87);
       vertical-align: middle;
 
       &.longpress {
@@ -96,7 +242,7 @@
     }
 
     .resize-handle {
-      border-right:solid 1px $background;
+      border-right:solid 1px mat-color($foreground, divider);
     }
   }
 
@@ -135,6 +281,30 @@
 
         .bar {
           background-color: rgb(16,108,200);
+        }
+      }
+    }
+  }
+
+  /**
+   * Footer Styles
+   */
+  .datatable-footer {
+    border-top: 1px solid mat-color($foreground, divider);
+
+    .datatable-pager {
+      li {
+        vertical-align: middle;
+
+        &.disabled a{
+          color: rgba(0, 0, 0, 0.26) !important;
+          background-color: transparent !important;
+        }
+
+        &.active a{
+          background: mat-color($primary);
+          color: white;
+          font-weight: $font-weight-base;
         }
       }
     }
