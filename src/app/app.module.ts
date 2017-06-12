@@ -24,6 +24,7 @@ import { AppRoutes } from './app.routing';
 import 'hammerjs';
 import { MaterialModule, MdNativeDateModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BusyModule } from 'angular2-busy';
 
 // app container
 import { APP_CORE_MODULES } from './core/components';
@@ -43,6 +44,7 @@ export function HttpLoaderFactory(http: Http) {
     RouterModule,
     BrowserModule,
     BrowserAnimationsModule,
+    BusyModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,

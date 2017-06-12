@@ -12,6 +12,7 @@ import { PinningTableComponent } from './pinning-table/pinning-table.component';
 import { InlineTableComponent } from './inline-table/inline-table.component';
 import { FullTableComponent } from './full-table/full-table.component';
 import { TemplateTableComponent } from './template-table/template-table.component';
+import { ContactComponent } from './contact/contact.component';
 
 import { TablesRoutes } from './tables.routing';
 
@@ -24,6 +25,7 @@ const TABLE_COMPONENTS = [
     InlineTableComponent,
     FullTableComponent,
     TemplateTableComponent,
+    ContactComponent
 ];
 
 @NgModule({

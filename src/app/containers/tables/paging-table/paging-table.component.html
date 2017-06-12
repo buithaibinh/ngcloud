@@ -40,11 +40,7 @@
           <button md-icon-button aria-label="Toggle"><md-icon>more_vert</md-icon></button>
         </md-card-title>
         <md-card-content>
-          <ngx-datatable class="material" [rows]="rowsServer" [columns]="columns" [columnMode]="'force'"
-            [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [externalPaging]="true" [count]="page.totalElements"
-            [offset]="page.pageNumber" [limit]="page.size" (page)='setPage($event)'>
-          </ngx-datatable>
-
+          <app-contact></app-contact>
         </md-card-content>
       </md-card>
     </div>

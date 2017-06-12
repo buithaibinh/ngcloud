@@ -71,6 +71,7 @@ export class ContactDataService {
     public getResults(page: Page): Observable<PagedData<ContactData>> {
         return this.http
             .get('assets/data/contacts.json')
+            .delay(500)
             .map(res => {
                 let data = res.json();
                 return this.getPagedData(page, data);
