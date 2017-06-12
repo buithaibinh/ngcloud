@@ -1,3 +1,46 @@
-<p>
-  filter-table works!
-</p>
+<div class="page">
+  <md-toolbar class="header-toolbar">
+    <ol class="breadcrumb">
+      <li><a [routerLink]="['/home']">Home</a></li>
+      <li><a [routerLink]="['/tables']">Tables</a></li>
+      <li class="active">Filtering</li>
+    </ol>
+    <span fxFlex></span>
+    <!--<div fxShow="false" fxShow.gt-xs>
+      <md-chip-list>
+        <md-chip>
+          <a target="_blank" href="https://github.com/valor-software/ng2-table">Official Website</a>
+        </md-chip>
+      </md-chip-list>
+    </div>-->
+  </md-toolbar>
+  <!--Row 1-->
+
+  <md-card>
+    <md-card-title fxLayout="row" fxLayoutAlign="start center">
+      Client-side Search and Filtering
+      <span fxFlex></span>
+      <button md-icon-button aria-label="Toggle"><md-icon>more_vert</md-icon></button>
+    </md-card-title>
+    <md-card-content>
+      <div fxLayout="row" fxLayoutGap="50px">
+        <md-input-container fxFlex.lt-sm="100">
+          <input mdInput (keyup)='updateFilter($event)' placeholder="Search on the name column">
+          <md-icon mdPrefix>search</md-icon>
+        </md-input-container>
+        <span fxFlex></span>
+        <md-select [fxHide.lt-sm]="true" multiple placeholder="Columns displayed" [(ngModel)]="currentColums" require="true" disabled="false"
+          #columsControl="ngModel">
+          <md-option *ngFor="let column of allColumns" (click)='toggle(column)' [value]="column.prop">
+            {{ column.name }}
+          </md-option>
+        </md-select>
+      </div>
+      <ngx-datatable [sorts]="[{prop: 'name', dir: 'asc'}]" #table [scrollbarH]="true" class='material' [columns]="columns" [columnMode]="'force'"
+        [headerHeight]="50" [footerHeight]="70" [rowHeight]="'auto'" [limit]="12" [rows]='temp'>
+      </ngx-datatable>
+
+    </md-card-content>
+  </md-card>
+
+</div>

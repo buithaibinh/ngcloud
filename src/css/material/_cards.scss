@@ -8,6 +8,9 @@ body {
     border-radius: $border-radius-base;
     @include mat-elevation(1);
     color: rgba(mat-color($foreground, base), 0.87);
+    .mat-select-trigger{
+      font-size: 14px;
+    }
     .mat-card-header {
       height: auto;
     }
