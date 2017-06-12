@@ -28,7 +28,7 @@ export const TablesRoutes: Routes = [
             },
             {
                 path: 'paging',
-                component: FilterTableComponent
+                component: PagingTableComponent
             },
             {
                 path: 'pinning',
