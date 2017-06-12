@@ -1,7 +1,11 @@
 @import '~@swimlane/ngx-datatable/release/index.css';
 @import '~@swimlane/ngx-datatable/release/themes/material.css';
+// @import '~@swimlane/ngx-datatable/release/themes/dark.css';
 @import '~@swimlane/ngx-datatable/release/assets/icons.css';
 
+.ngx-datatable.scroll-vertical {
+    height: 70vh;
+}
 
 .dark-theme .ngx-datatable.material {
   background: mat-color($dark-background, card);

@@ -22,7 +22,7 @@
         <md-card-content>
             <div fxLayout="row">
                 <md-input-container fxFlex="50%">
-                    <input fxFlex *ngIf="config.filtering" mdInput placeholder="Search all columns" [ngTableFiltering]="config.filtering" (tableChanged)="onChangeTable(config)"
+                    <input fxFlex *ngIf="config.filtering" mdInput placeholder="Search names" [ngTableFiltering]="config.filtering" (tableChanged)="onChangeTable(config)"
                     />
                     <md-icon mdPrefix>search</md-icon>
                 </md-input-container>

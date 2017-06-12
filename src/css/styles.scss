@@ -25,6 +25,10 @@
 // Material
 @import "material/cards";
 
+body {
+  font-weight: $font-weight-base;
+}
+
 .avatar {
   position: relative;
   display: inline-block;

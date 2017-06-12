@@ -1,0 +1,108 @@
+<div class="page">
+  <md-toolbar class="header-toolbar">
+    <ol class="breadcrumb">
+      <li><a [routerLink]="['/home']">Home</a></li>
+      <li><a [routerLink]="['/tables']">Tables</a></li>
+      <li class="active">Selection</li>
+    </ol>
+    <span fxFlex></span>
+    <!--<div fxShow="false" fxShow.gt-xs>
+      <md-chip-list>
+        <md-chip>
+          <a target="_blank" href="https://github.com/valor-software/ng2-table">Official Website</a>
+        </md-chip>
+      </md-chip-list>
+    </div>-->
+  </md-toolbar>
+  <!--Row 1-->
+  <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxFlex.gt-sm="50%" fxFlex="100">
+      <md-card>
+        <md-card-subtitle>This demonstrates a simple single selection table.</md-card-subtitle>
+        <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
+          Single Row Selection
+          <span fxFlex></span>
+          <button md-icon-button aria-label="Toggle"><md-icon>more_vert</md-icon></button>
+        </md-card-title>
+        <md-card-content>
+          
+          <ngx-datatable class="material" [rows]="rows" [columnMode]="'force'" [columns]="columns" [headerHeight]="50" [footerHeight]="50"
+            [rowHeight]="'auto'" [limit]="10" [selected]="singleRowSelected" [selectionType]="'single'" (activate)="onActivate($event)"
+            (select)='onSingleSelect($event)'>
+          </ngx-datatable>
+
+        </md-card-content>
+      </md-card>
+    </div>
+
+    <div fxFlex.gt-sm="50%" fxFlex="100">
+      <md-card>
+        <md-card-title fxLayout="row" fxLayoutAlign="start center">
+          Checkbox Selection
+          <span fxFlex></span>
+          <button md-icon-button aria-label="Toggle"><md-icon>more_vert</md-icon></button>
+        </md-card-title>
+        <md-card-content>
+          <ngx-datatable class="material" [rows]="rows" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'"
+            [limit]="10" [selected]="chkSelected" [selectionType]="'checkbox'" (activate)="onActivate($event)" (select)='onChkSelect($event)'>
+            <ngx-datatable-column [width]="50" [sortable]="false" [canAutoResize]="false" [draggable]="false" [resizeable]="false">
+              <ng-template ngx-datatable-header-template let-value="value" let-allRowsSelected="allRowsSelected" let-selectFn="selectFn">
+                <md-checkbox [checked]="allRowsSelected" (change)="selectFn(!allRowsSelected)">
+                </md-checkbox>
+              </ng-template>
+              <ng-template ngx-datatable-cell-template let-value="value" let-isSelected="isSelected" let-onCheckboxChangeFn="onCheckboxChangeFn">
+                <md-checkbox [checked]="isSelected" (change)="onCheckboxChangeFn($event)">
+                </md-checkbox>
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Name"></ngx-datatable-column>
+            <ngx-datatable-column name="Gender"></ngx-datatable-column>
+            <ngx-datatable-column name="Company"></ngx-datatable-column>
+          </ngx-datatable>
+
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+
+  <!--Row 2-->
+  <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxFlex.gt-sm="50%" fxFlex="100">
+      <md-card>
+        <md-card-subtitle>This demonstrates multi selection table, where any click event causes a selection.</md-card-subtitle>
+        <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
+          Mutil Click Selection
+          <span fxFlex></span>
+          <button md-icon-button aria-label="Toggle"><md-icon>more_vert</md-icon></button>
+        </md-card-title>
+        <md-card-content>
+          
+          <ngx-datatable class="material" [rows]="rows" [columnMode]="'force'" [columns]="columns" [headerHeight]="50" [footerHeight]="50"
+            [rowHeight]="'auto'" [limit]="10" [selected]="mutilClickRowSelected" [selectionType]="'multiClick'" (activate)="onActivate($event)"
+            (select)='onMutilClickSelect($event)'>
+          </ngx-datatable>
+
+        </md-card-content>
+      </md-card>
+    </div>
+
+    <div fxFlex.gt-sm="50%" fxFlex="100">
+      <md-card>
+        <md-card-subtitle>This demonstrates multi selection table, use CTRL or SHIFT click to select multiple items.</md-card-subtitle>
+        <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
+          Mutil Row Selection
+          <span fxFlex></span>
+          <button md-icon-button aria-label="Toggle"><md-icon>more_vert</md-icon></button>
+        </md-card-title>
+        <md-card-content>
+          
+          <ngx-datatable class="material" [rows]="rows" [columnMode]="'force'" [columns]="columns" [headerHeight]="50" [footerHeight]="50"
+            [rowHeight]="'auto'" [limit]="10" [selected]="mutilRowSelected" [selectionType]="'multi'" (activate)="onActivate($event)"
+            (select)='onMutilSelect($event)'>
+          </ngx-datatable>
+
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+</div>

@@ -87,8 +87,14 @@ const MENUITEMS = [
     type: 'sub',
     icon: 'computer',
     children: [
-      { name: 'Ng2 Table', route: 'ng2-table' },
       { name: 'Ngx Table', route: 'ngx-table' },
+      { name: 'Selections', route: 'selection' },
+      { name: 'Filter', route: 'filter' },
+      { name: 'Paging', route: 'paging' },
+      { name: 'Pinning', route: 'pinning' },
+      { name: 'Inline', route: 'inline' },
+      { name: 'Full Screen', route: 'full' },
+      { name: 'Template table', route: 'template' },
     ]
   },
 ];

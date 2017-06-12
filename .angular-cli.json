@@ -32,6 +32,8 @@
         "css/styles.scss"
       ],
       "scripts": [
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
         "../node_modules/chart.js/dist/Chart.bundle.min.js",
         "assets/vendor/golden-layout/goldenlayout.js",
         "assets/vendor/pace/pace.js"

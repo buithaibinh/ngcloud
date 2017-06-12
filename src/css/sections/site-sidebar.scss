@@ -107,7 +107,7 @@ md-sidenav.site-sidebar {
   }
   .mat-list-item.open > .mat-list-item-content {
     max-height: 1000px;
-    background: mat-get($background);
+    background: mat-color($background, 'hover');
   }
   .mat-nav-list a {
     display: flex;

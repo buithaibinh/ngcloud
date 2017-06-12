@@ -16,37 +16,198 @@
     </div>
 
   </md-toolbar>
-  <md-card class="card-demo">
-    <md-card-content>
-    <ngx-datatable #mydatatable class="material" [headerHeight]="50" [limit]="15" [columnMode]="'force'" [footerHeight]="50" [rowHeight]="'auto'"
-      [rows]="rows">
-      <ngx-datatable-column name="Name">
-        <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
-          <span title="Double click to edit" (dblclick)="editing[row.$$index + '-name'] = true" *ngIf="!editing[row.$$index + '-name']">
+  <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxFlex.gt-sm="50%" fxFlex="100">
+      <md-card>
+        <md-card-title fxLayout="row" fxLayoutAlign="start center">
+          Filter
+          <span fxFlex></span>
+          <span fxFlex></span>
+          <button md-icon-button aria-label="Toggle"><md-icon>more_vert</md-icon></button>
+        </md-card-title>
+        <md-card-content>
+          <div fxLayout="row">
+            <md-input-container fxFlex="40%">
+              <input fxFlex mdInput (keyup)='updateFilter($event)' placeholder="Search names">
+              <md-icon mdPrefix>search</md-icon>
+            </md-input-container>
+            <span fxFlex></span>
+            <md-select fxFlex="40%" multiple placeholder="Columns displayed" [(ngModel)]="currentColums" require="true" disabled="false"
+              #columsControl="ngModel">
+              <md-option *ngFor="let column of allColumns" (click)='toggle(column)' [value]="column.name">
+                {{ column.name }}
+              </md-option>
+            </md-select>
+          </div>
+          <ngx-datatable [sorts]="[{prop: 'name', dir: 'asc'}]" #table [scrollbarH]="true" class='material' [columns]="columns" [columnMode]="'force'"
+            [headerHeight]="50" [footerHeight]="70" [rowHeight]="'auto'" [limit]="12" [rows]='temp'>
+          </ngx-datatable>
+
+        </md-card-content>
+      </md-card>
+    </div>
+    <div fxFlex.gt-sm="50%" fxFlex="100">
+      <md-card>
+        <md-card-subtitle>Click to cell to edit, click to header to sort</md-card-subtitle>
+        <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
+          Inline Editing
+          <span fxFlex></span>
+          <button md-icon-button aria-label="Toggle"><md-icon>more_vert</md-icon></button>
+        </md-card-title>
+        <md-card-content>
+          <ngx-datatable #mydatatable class="material" rowHeight="auto" [headerHeight]="50" [limit]="10" [columnMode]="'force'" [footerHeight]="70"
+            [rowHeight]="50" [rows]="rows">
+            <ngx-datatable-column name="Name">
+              <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
+                <span title="Double click to edit" (dblclick)="editing[row.$$index + '-name'] = true" *ngIf="!editing[row.$$index + '-name']">
               {{value}}
             </span>
-          <input autofocus (blur)="updateValue($event, 'name', value, row)" *ngIf="editing[row.$$index + '-name']" type="text" [value]="value"
-          />
-        </ng-template>
-      </ngx-datatable-column>
-      <ngx-datatable-column name="Gender">
-        <ng-template ngx-datatable-cell-template let-row="row" let-value="value">
-          <span title="Double click to edit" (dblclick)="editing[row.$$index + '-gender'] = true" *ngIf="!editing[row.$$index + '-gender']">
+                <input autofocus (blur)="updateValue($event, 'name', value, row)" *ngIf="editing[row.$$index + '-name']" type="text" [value]="value"
+                />
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Gender">
+              <ng-template ngx-datatable-cell-template let-row="row" let-value="value">
+                <span title="Double click to edit" (dblclick)="editing[row.$$index + '-gender'] = true" *ngIf="!editing[row.$$index + '-gender']">
               {{value}}
             </span>
-          <select *ngIf="editing[row.$$index + '-gender']" (change)="updateValue($event, 'gender', value, row)" [value]="value">
+                <select *ngIf="editing[row.$$index + '-gender']" (change)="updateValue($event, 'gender', value, row)" [value]="value">
               <option value="male">Male</option>
               <option value="female">Female</option>
             </select>
-        </ng-template>
-      </ngx-datatable-column>
-      <ngx-datatable-column name="Age">
-        <ng-template ngx-datatable-cell-template let-value="value">
-          {{value}}
-        </ng-template>
-      </ngx-datatable-column>
-    </ngx-datatable>
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Age">
+              <ng-template ngx-datatable-cell-template let-value="value">
+                {{value}}
+              </ng-template>
+            </ngx-datatable-column>
+          </ngx-datatable>
 
-    </md-card-content>
-  </md-card>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+  <!--Row 2-->
+  <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxFlex.gt-sm="50%" fxFlex="100">
+      <md-card>
+        <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
+          Select row
+          <span fxFlex></span>
+          <md-slide-toggle [(ngModel)]="multi" (change)="rowSelected = []" color="accent">
+            Multi select
+          </md-slide-toggle>
+        </md-card-title>
+        <md-card-content>
+          <p *ngIf="!multi">This demonstrates a simple single selection table.</p>
+          <p *ngIf="multi">This demonstrates multi selection table, where any click event causes a selection.</p>
+          <ngx-datatable class="material" [rows]="rows" [columnMode]="'force'" [columns]="columns" [headerHeight]="50" [footerHeight]="50"
+            [rowHeight]="'auto'" [limit]="10" [selected]="rowSelected" [selectionType]="multi? 'multiClick':'single'" (activate)="onActivate($event)"
+            (select)='onSelectRows($event)'>
+          </ngx-datatable>
+
+        </md-card-content>
+      </md-card>
+    </div>
+
+    <div fxFlex.gt-sm="50%" fxFlex="100">
+      <md-card>
+        <md-card-title fxLayout="row" fxLayoutAlign="start center">
+          Checkbox Selection
+          <span fxFlex></span>
+          <button md-icon-button aria-label="Toggle"><md-icon>more_vert</md-icon></button>
+        </md-card-title>
+        <md-card-content>
+          <ngx-datatable class="material" [rows]="rowsSelect" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'"
+            [limit]="10" [selected]="selected" [selectionType]="'checkbox'" (activate)="onActivate($event)" (select)='onSelect($event)'>
+            <ngx-datatable-column [width]="50" [sortable]="false" [canAutoResize]="false" [draggable]="false" [resizeable]="false">
+              <ng-template ngx-datatable-header-template let-value="value" let-allRowsSelected="allRowsSelected" let-selectFn="selectFn">
+                <md-checkbox [checked]="allRowsSelected" (change)="selectFn(!allRowsSelected)">
+                </md-checkbox>
+              </ng-template>
+              <ng-template ngx-datatable-cell-template let-value="value" let-isSelected="isSelected" let-onCheckboxChangeFn="onCheckboxChangeFn">
+                <md-checkbox [checked]="isSelected" (change)="onCheckboxChangeFn($event)">
+                </md-checkbox>
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Name"></ngx-datatable-column>
+            <ngx-datatable-column name="Gender"></ngx-datatable-column>
+            <ngx-datatable-column name="Company"></ngx-datatable-column>
+          </ngx-datatable>
+
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+  <!--Row 3-->
+  <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxFlex.gt-sm="50%" fxFlex="100">
+      <md-card>
+        <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
+          Template
+          <span fxFlex></span>
+        </md-card-title>
+        <md-card-content>
+          <ngx-datatable class="material" [rows]="rows" [columnMode]="'force'" limit="10" [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'">
+            <ngx-datatable-column name="Name">
+              <ng-template let-column="column" ngx-datatable-header-template>
+                Holla! {{column.name}}
+              </ng-template>
+              <ng-template let-value="value" ngx-datatable-cell-template>
+                Hi: <strong>{{value}}</strong>
+              </ng-template>
+            </ngx-datatable-column>
+
+            <ngx-datatable-column name="Age">
+              <ng-template let-value="value" ngx-datatable-cell-template>
+                <md-progress-bar mode="determinate" [value]="value">
+                </md-progress-bar>
+              </ng-template>
+            </ngx-datatable-column>
+
+            <ngx-datatable-column [width]="10"  name="Actions">
+              <ng-template ngx-datatable-cell-template>
+                <section>
+                  <button md-icon-button color="primary">
+                    <md-icon class="md-24">menu</md-icon>
+                  </button>
+                  <button md-icon-button>
+                    <md-icon class="md-24">more_vert</md-icon>
+                  </button> 
+                </section>
+              </ng-template>
+            </ngx-datatable-column>
+          </ngx-datatable>
+
+        </md-card-content>
+      </md-card>
+    </div>
+
+    <div fxFlex.gt-sm="50%" fxFlex="100">
+      <md-card>
+        <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
+          Pinner/ Horizontal and Vertical Scrolling
+          <span fxFlex></span>
+          <button md-icon-button aria-label="Toggle"><md-icon>more_vert</md-icon></button>
+        </md-card-title>
+        <md-card-content>
+          <ngx-datatable class="material" [columnMode]="'force'" [limit]="10" [headerHeight]="50" [footerHeight]="50" [rowHeight]="50"
+            [scrollbarV]="true" [scrollbarH]="true" [rows]="rows">
+            <ngx-datatable-column name="Name" [width]="300" [frozenLeft]="true">
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Gender">
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Age">
+            </ngx-datatable-column>
+            <ngx-datatable-column name="City" [width]="150" prop="address">
+            </ngx-datatable-column>
+            <ngx-datatable-column name="State" [width]="300" prop="country">
+            </ngx-datatable-column>
+          </ngx-datatable>
+
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
 </div>
