@@ -1,3 +1,63 @@
-<p>
-  inline-table works!
-</p>
+<div class="page">
+  <md-toolbar class="header-toolbar">
+    <ol class="breadcrumb">
+      <li><a [routerLink]="['/home']">Home</a></li>
+      <li><a [routerLink]="['/tables']">Tables</a></li>
+      <li class="active">Inline</li>
+    </ol>
+    <span fxFlex></span>
+    <div fxShow="false" fxShow.gt-xs>
+      <md-chip-list>
+        <md-chip>
+          <a target="_blank" href="https://github.com/valor-software/ng2-table">Official Website</a>
+        </md-chip>
+      </md-chip-list>
+
+    </div>
+
+  </md-toolbar>
+  <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxFlex="100">
+      <md-card>
+        <md-card-subtitle>Click to cell to edit, click to header to sort</md-card-subtitle>
+        <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
+          Inline Editing
+          <span fxFlex></span>
+          <button md-icon-button aria-label="Toggle"><md-icon>more_vert</md-icon></button>
+        </md-card-title>
+        <md-card-content>
+          <ngx-datatable #mydatatable class="material" rowHeight="auto" [headerHeight]="50" [limit]="10" [columnMode]="'force'" [footerHeight]="70"
+            [rowHeight]="50" [rows]="rows">
+            <ngx-datatable-column name="Name">
+              <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
+                <span title="Double click to edit" (dblclick)="editing[row.$$index + '-name'] = true" *ngIf="!editing[row.$$index + '-name']">
+              {{value}}
+            </span>
+                <input autofocus (blur)="updateValue($event, 'name', value, row)" *ngIf="editing[row.$$index + '-name']" type="text" [value]="value"
+                />
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Gender">
+              <ng-template ngx-datatable-cell-template let-row="row" let-value="value">
+                <span title="Double click to edit" (dblclick)="editing[row.$$index + '-gender'] = true" *ngIf="!editing[row.$$index + '-gender']">
+              {{value}}
+            </span>
+                <select *ngIf="editing[row.$$index + '-gender']" (change)="updateValue($event, 'gender', value, row)" [value]="value">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Age">
+              <ng-template ngx-datatable-cell-template let-value="value">
+                {{value}}
+              </ng-template>
+            </ngx-datatable-column>
+          </ngx-datatable>
+
+        </md-card-content>
+      </md-card>
+    </div>
+
+  </div>
+</div>
