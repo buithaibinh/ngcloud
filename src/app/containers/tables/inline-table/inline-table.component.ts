@@ -24,4 +24,10 @@ export class InlineTableComponent implements OnInit {
     this.rows[row.$$index][cell] = event.target.value;
   }
 
+  onkeypress(event: any, cell, cellValue, row) {
+    if (event.which == 13 || event.keyCode == 13) {
+      return this.updateValue(event, cell, cellValue, row);
+    }
+    return true;
+  }
 }

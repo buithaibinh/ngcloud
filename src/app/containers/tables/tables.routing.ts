@@ -13,7 +13,7 @@ export const TablesRoutes: Routes = [
     {
         path: '',
         children: [
-            { path: '', redirectTo: 'ngx-table', pathMatch: 'full' },
+            { path: '', redirectTo: 'selection', pathMatch: 'full' },
             {
                 path: 'ngx-table',
                 component: NgxTableComponent

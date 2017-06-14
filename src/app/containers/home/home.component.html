@@ -1,6 +1,6 @@
 <div class="page">
-<md-toolbar class="header-toolbar">
-  <nav md-tab-nav-bar class="header-toolbar-row">
+<md-toolbar class="page-header">
+  <nav md-tab-nav-bar class="page-header-row">
     <a md-tab-link *ngFor="let tabLink of tabLinks; let i = index" [routerLink]="tabLink.link" [active]="activeLinkIndex === i"
       (click)="changeTab(i)">
       {{tabLink.label}}

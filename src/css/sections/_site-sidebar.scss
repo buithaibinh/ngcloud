@@ -80,14 +80,14 @@
 // site-sidebar
 md-sidenav.site-sidebar {
   overflow-x: hidden;
-  width: $site-menubar-width;
+  width: $sidebar-width;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)!important;
   .mat-sidenav-focus-trap>.cdk-focus-trap-content {
     position: relative;
     //height: auto;
   }
   > nav {
-    min-width: $site-menubar-width;
+    min-width: $sidebar-width;
   }
   .mat-list-item .mat-list-item-content {
     display: block;

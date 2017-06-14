@@ -41,8 +41,7 @@
             <span fxFlex></span>
             <span class="menu-badge md-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span>
           </a>
-          <a appAccordionToggle class="relative" md-ripple href="javascript:;"
-            *ngIf="menuitem.type === 'sub'">
+          <a appAccordionToggle class="relative" md-ripple href="javascript:;" *ngIf="menuitem.type === 'sub'">
             <md-icon>{{ menuitem.icon }}</md-icon>
             <span>{{ menuitem.name | translate }}</span>
             <span fxFlex></span>
@@ -284,8 +283,17 @@
       </md-tab-group>
     </md-sidenav>
     <!--End Chat Panel-->
-    
+
     <router-outlet></router-outlet>
 
+    <footer class="site-footer">
+      <div class="site-footer-legal">© {{year}} <a href="#">ng Cloud Admin</a></div>
+      <div class="site-footer-right">
+        Crafted with <i class="red-600 icon md-favorite"></i> by <a href="#">Krist</a>
+      </div>
+    </footer>
+
   </md-sidenav-container>
+
+
 </div>

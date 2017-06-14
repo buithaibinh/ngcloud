@@ -17,7 +17,7 @@ export class HomeLayoutComponent implements OnInit, OnDestroy {
   sidebarExpanded$: Observable<any> = this.store.let(getSidebarExpanded$);
   chatbarExpanded$: Observable<any> = this.store.let(getChatbarExpanded$);
   private _router: Subscription;
-
+  year: any = new Date().getFullYear();
   today: number = Date.now();
   url: string;
   showSettings = false;

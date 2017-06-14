@@ -18,6 +18,15 @@
   box-shadow: $arguments;
 }
 
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
 @mixin transform($arguments...) {
   -webkit-transform: $arguments;
   -moz-transform: $arguments;

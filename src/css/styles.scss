@@ -10,11 +10,7 @@
 
 // // Sections
 // // -------------------------------
-// @import "sections/site-navbar";
-@import "sections/page";
-@import "sections/site-sidebar";
-@import "sections/site-chatbar";
-@import "sections/breadcrumbs";
+@import 'sections';
 
 // // Components
 // // -------------------------------
@@ -24,6 +20,7 @@
 
 // Material
 @import "material/cards";
+@import "material/lists";
 
 body {
   font-weight: $font-weight-base;
@@ -78,15 +75,4 @@ body {
 a:hover,
 a:focus {
   text-decoration: none;
-}
-
-.page {
-    // max-width: $page-centered-max-width;
-    margin: 0 auto;
-    .mat-toolbar{
-     background-color: transparent;
-     padding: 5px 0;
-     font-size: 14px;
-     line-height: 14px;
-    }
 }

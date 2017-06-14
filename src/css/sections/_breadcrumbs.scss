@@ -9,6 +9,7 @@ $breadcrumb-icon-margin-right:        10px;
   margin-bottom: $breadcrumb-margin-bottom;
   background-color: transparent;
   font-weight: $font-weight-base;
+  font-size: $font-size-base;
   li {
     & + li:before {
       padding: 0 5px;
