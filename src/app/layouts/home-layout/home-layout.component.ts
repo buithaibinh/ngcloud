@@ -20,11 +20,8 @@ export class HomeLayoutComponent implements OnInit, OnDestroy {
   year: any = new Date().getFullYear();
   today: number = Date.now();
   url: string;
-  showSettings = false;
-  dark: false;
-  boxed: false;
-  currentLang = 'en';
-  root = 'ltr';
+  boxed: boolean = false;
+  dir = 'ltr';
 
   @ViewChild('sidemenu') sidemenu;
 
@@ -69,7 +66,7 @@ export class HomeLayoutComponent implements OnInit, OnDestroy {
   }
 
   isOver(): boolean {
-    if (this.url === '/apps/messages' || this.url === '/apps/calendar' || this.url === '/apps/media' || this.url === '/maps/leaflet') {
+    if (this.boxed || this.url === '/apps/messages' || this.url === '/apps/calendar' || this.url === '/apps/media' || this.url === '/maps/leaflet') {
       return true;
     } else {
       return window.matchMedia(`(max-width: 960px)`).matches;

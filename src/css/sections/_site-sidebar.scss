@@ -77,7 +77,6 @@
   background: rgba(0, 0, 0, .5);
 }
 
-// site-sidebar
 md-sidenav.site-sidebar {
   overflow-x: hidden;
   width: $sidebar-width;
@@ -119,7 +118,6 @@ md-sidenav.site-sidebar {
   .sub-menu {
     padding-top: 0;
     overflow: hidden;
-    //max-height: 0;
     -webkit-transition: .5s cubic-bezier(.35, 0, .25, 1);
     -moz-transition: .5s cubic-bezier(.35, 0, .25, 1);
     transition: .5s cubic-bezier(.35, 0, .25, 1);

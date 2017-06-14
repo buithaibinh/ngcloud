@@ -1,9 +1,5 @@
 /* $main-panel
  ------------------------------------------*/
-$mat-toolbar-height-desktop: 64px !default;
-$mat-toolbar-height-mobile-portrait: 56px !default;
-$mat-toolbar-height-mobile-landscape: 48px !default;
-
 .app-inner {
   position: relative;
   width: 100%;
@@ -14,15 +10,33 @@ $mat-toolbar-height-mobile-landscape: 48px !default;
 }
 
 /* Boxed layout*/
-.app.boxed {
+
+.app {
   overflow: hidden;
   margin-right: auto;
   margin-left: auto;
+  .page {
+    max-width: $page-centered-max-width;
+    margin: 0 auto;
+    position: relative;
+    min-height: calc(100% - #{$site-footer-height});
+  }
 }
+
+@media (min-width: $screen-lg-min) {
+  .app.boxed {
+    max-width: $layout-boxed-width;
+    .navbar-search-overlap{
+      margin-right: auto;
+      margin-left: auto;
+      max-width: $layout-boxed-width;
+    }
+  }
+}
+
 
 .mat-sidenav-content {
   min-height: 100%;
-  //background: $main-panel-bg;
   box-sizing: border-box;
   @include flex-direction(column);
   @include flexbox;
@@ -32,6 +46,6 @@ $mat-toolbar-height-mobile-landscape: 48px !default;
   padding: $gutter;
 }
 
-.app-dark .mat-sidenav-content {
+.dark-theme .mat-sidenav-content {
   background-color: rgba(53, 53, 53, 1.00);
 }
