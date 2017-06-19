@@ -26,7 +26,7 @@
                 </md-slide-toggle>
                 <span fxFlex></span>
                 <button md-icon-button mdTooltip="Refresh Data" (click)="createRowData()" aria-label="Random"><md-icon>loop</md-icon></button>
-                <button *ngIf="showGrid" md-icon-button (change)="selectAll()" [mdTooltip]="tooltip" aria-label="Toggle"><md-icon>{{checkAll? 'clear' : 'done_all'}}</md-icon></button>
+                <button *ngIf="showGrid" md-icon-button (click)="selectAll()" [mdTooltip]="tooltip" aria-label="Toggle"><md-icon>{{checkAll? 'clear' : 'done_all'}}</md-icon></button>
                 <md-slide-toggle name="componentProperty" [(ngModel)]="showGrid" color="primary">
                     {{showGrid? 'Hide Grid':'Show Grid'}}
                 </md-slide-toggle>
@@ -36,9 +36,9 @@
                     <input type="text" mdInput (keyup)="onQuickFilterChanged($event)" placeholder="Type text to filter...">
                     <md-icon mdPrefix>search</md-icon>
                 </md-input-container>
-                <ag-grid-angular #agGrid style="width: 100%; height: 450px;" class="ag-fresh" [gridOptions]="gridOptions" [columnDefs]="columnDefs"
+                <ag-grid-angular #agGrid style="width: 100%; height: 450px;" class="ag-material" [gridOptions]="gridOptions" [columnDefs]="columnDefs"
                     [rowData]="rowData" enableColResize enableSorting enableFilter groupHeaders suppressRowClickSelection toolPanelSuppressGroups
-                    toolPanelSuppressValues debug rowHeight="35" rowSelection="multiple" (modelUpdated)="onModelUpdated()" (cellClicked)="onCellClicked($event)"
+                    toolPanelSuppressValues debug rowHeight="48" rowSelection="multiple" (modelUpdated)="onModelUpdated()" (cellClicked)="onCellClicked($event)"
                     (cellDoubleClicked)="onCellDoubleClicked($event)" (cellContextMenu)="onCellContextMenu($event)" (cellValueChanged)="onCellValueChanged($event)"
                     (cellFocused)="onCellFocused($event)" (rowSelected)="onRowSelected($event)" (selectionChanged)="onSelectionChanged()"
                     (beforeFilterChanged)="onBeforeFilterChanged()" (afterFilterChanged)="onAfterFilterChanged()" (filterModified)="onFilterModified()"
