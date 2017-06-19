@@ -13,7 +13,7 @@ export class SelectDemo {
   pokemonRequired = false;
   drinksDisabled = false;
   pokemonDisabled = false;
-  showSelect = false;
+  showSelect = true;
   currentDrink: string;
   currentPokemon: string[];
   latestChangeEvent: MdSelectChange;

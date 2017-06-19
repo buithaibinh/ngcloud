@@ -1,20 +1,18 @@
-<div class="page">
-    <md-toolbar class="page-header">
-        <ol class="breadcrumb">
-            <li><a [routerLink]="['/home']">Home</a></li>
-            <li><a [routerLink]="['/material']">Material</a></li>
-            <li class="active">{{breadcrumb?.label}}</li>
-        </ol>
-        <span fxFlex></span>
-        <div fxShow="false" fxShow.gt-xs>
-            <md-chip-list>
-                <md-chip (select)="onSelect">
-                    Official Website
-                </md-chip>
-            </md-chip-list>
-        </div>
+<md-toolbar class="page-header">
+    <ol class="breadcrumb">
+        <li><a [routerLink]="['/home']">Home</a></li>
+        <li><a [routerLink]="['/material']">Material</a></li>
+        <li class="active">{{breadcrumb?.label}}</li>
+    </ol>
+    <span fxFlex></span>
+    <div fxShow="false" fxShow.gt-xs>
+        <md-chip-list>
+            <md-chip (select)="onSelect">
+                Official Website
+            </md-chip>
+        </md-chip-list>
+    </div>
 
-    </md-toolbar>
+</md-toolbar>
 
-    <router-outlet></router-outlet>
-</div>
+<router-outlet></router-outlet>

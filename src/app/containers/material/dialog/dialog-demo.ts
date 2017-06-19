@@ -72,10 +72,10 @@ export class DialogDemo {
   selector: 'demo-jazz-dialog',
   template: `
   <p>It's Jazz!</p>
-  <p><label>How much? <input #howMuch></label></p>
+  <p><label>How much? <input mdInput #howMuch></label></p>
   <p> {{ data.message }} </p>
-  <button type="button" (click)="dialogRef.close(howMuch.value)">Close dialog</button>
-  <button (click)="togglePosition()">Change dimensions</button>`
+  <button md-button type="button" (click)="dialogRef.close(howMuch.value)">Close dialog</button>
+  <button md-button (click)="togglePosition()">Change dimensions</button>`
 })
 export class JazzDialog {
   private _dimesionToggle = false;

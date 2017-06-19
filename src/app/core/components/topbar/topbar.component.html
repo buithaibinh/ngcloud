@@ -15,10 +15,11 @@
   <app-lang-switcher></app-lang-switcher>
 
   <button md-icon-button [mdMenuTriggerFor]="profilesMenu">
-      <span class="avatar avatar-online">
-          <img src="../assets/avatars/1.png" alt="...">
+      <span class="avatar avatar-busy">
+          <img md-card-avatar src="assets/avatars/1.png">
           <i></i>
       </span>
+      
     </button>
   <md-menu #profilesMenu="mdMenu" xPosition="before" [overlapTrigger]="false">
     <button md-menu-item *ngFor="let profileItem of profileItems" [routerLink]="[profileItem.route]">

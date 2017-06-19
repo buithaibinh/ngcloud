@@ -1,29 +1,34 @@
-<div class="slide-toggle-example">
+<md-card>
+  <md-card-content>
+    <div class="slide-toggle-example">
 
-  <md-slide-toggle color="primary" [(ngModel)]="firstToggle">
-    Default Slide Toggle
-  </md-slide-toggle>
+      <md-slide-toggle color="primary" [(ngModel)]="firstToggle">
+        Default Slide Toggle
+      </md-slide-toggle>
 
-  <md-slide-toggle [(ngModel)]="firstToggle" disabled>
-    Disabled Slide Toggle
-  </md-slide-toggle>
+      <md-slide-toggle [(ngModel)]="firstToggle" disabled>
+        Disabled Slide Toggle
+      </md-slide-toggle>
 
-  <md-slide-toggle [disabled]="firstToggle">
-    Disable Bound
-  </md-slide-toggle>
+      <md-slide-toggle [disabled]="firstToggle">
+        Disable Bound
+      </md-slide-toggle>
 
-  <p>Example where the slide toggle is required inside of a form.</p>
+      <p>Example where the slide toggle is required inside of a form.</p>
 
-  <form #form="ngForm" (ngSubmit)="onFormSubmit()" ngNativeValidate>
+      <form #form="ngForm" (ngSubmit)="onFormSubmit()" ngNativeValidate>
 
-    <md-slide-toggle name="slideToggle" required ngModel>
-      Slide Toggle
-    </md-slide-toggle>
+        <md-slide-toggle name="slideToggle" required ngModel>
+          Slide Toggle
+        </md-slide-toggle>
 
-    <p>
-      <button md-raised-button type="submit">Submit Form</button>
-    </p>
+        <p>
+          <button md-raised-button type="submit">Submit Form</button>
+        </p>
 
-  </form>
+      </form>
 
-</div>
+    </div>
+
+  </md-card-content>
+</md-card>

@@ -1,14 +1,13 @@
 .demo-card-container {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
 
   .mat-card {
     margin: 0 16px 16px 0;
     width: 350px;
-  }
-
-  img {
-    background-color: gray;
+    .demo-img{
+      padding: 15px;
+    }
   }
 }
 

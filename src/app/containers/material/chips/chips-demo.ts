@@ -36,7 +36,8 @@ export class ChipsDemo {
   ];
 
   alert(message: string): void {
-    alert(message);
+    // alert(message);
+    console.log(message);
   }
 
   add(input: HTMLInputElement): void {

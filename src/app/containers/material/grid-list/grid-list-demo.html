@@ -15,46 +15,39 @@
     <md-card-title>Fixed-height grid list</md-card-title>
     <md-card-content>
       <md-grid-list [cols]="fixedCols" [rowHeight]="fixedRowHeight">
-        <md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
-                      [style.background]="tile.color">
+        <md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
           {{tile.text}}
         </md-grid-tile>
       </md-grid-list>
     </md-card-content>
     <md-card-actions>
-      <p>Change list cols: <input type="number" [(ngModel)]="fixedCols"></p>
-      <p>Change row height: <input type="number" [(ngModel)]="fixedRowHeight"></p>
-      <button md-button (click)="addTileCols()" color="primary">ADD COLSPAN (THREE)</button>
-    </md-card-actions>
-  </md-card>
+      <md-input-container>
+        <input type="number" mdInput [(ngModel)]="fixedCols" placeholder="Change list cols">
+      </md-input-container>
 
-  <md-card>
-    <md-card-title>Ratio-height grid list</md-card-title>
-    <md-card-content class="demo-ratio-list">
-      <md-grid-list cols="2" [rowHeight]="ratio" gutterSize="4px">
-        <md-grid-tile *ngFor="let tile of tiles" [style.background]="'lightblue'">
-          {{tile.text}}
-        </md-grid-tile>
-      </md-grid-list>
-    </md-card-content>
-    <md-card-actions>
-      <p>Change ratio: <input [(ngModel)]="ratio"></p>
+      <md-input-container>
+        <input type="number" mdInput [(ngModel)]="fixedRowHeight" placeholder="Change row height">
+      </md-input-container>
+      <button md-button (click)="addTileCols()" color="primary">ADD COLSPAN (THREE)</button>
     </md-card-actions>
   </md-card>
 
   <md-card>
     <md-card-title>Fit-height grid list</md-card-title>
     <md-card-content class="demo-fit-list">
-      <md-grid-list cols="2" rowHeight="fit" [gutterSize]="ratioGutter"
-                    [style.height]="fitListHeight">
+      <md-grid-list cols="2" rowHeight="fit" [gutterSize]="ratioGutter" [style.height]="fitListHeight">
         <md-grid-tile *ngFor="let tile of tiles" [style.background]="'#F1EBBA'">
           {{tile.text}}
         </md-grid-tile>
       </md-grid-list>
     </md-card-content>
     <md-card-actions>
-      <p>Change list height: <input [(ngModel)]="fitListHeight"></p>
-      <p>Change gutter: <input type="number" [(ngModel)]="ratioGutter"></p>
+      <md-input-container>
+        <input type="text" mdInput [(ngModel)]="fitListHeight" placeholder="Change list height">
+      </md-input-container>
+      <md-input-container>
+        <input type="number" mdInput [(ngModel)]="ratioGutter" placeholder="Change gutter">
+      </md-input-container>
     </md-card-actions>
   </md-card>
 
@@ -88,4 +81,3 @@
     </md-card-content>
   </md-card>
 </div>
-
