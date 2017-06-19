@@ -1,5 +1,8 @@
 .ag-material {
   font-family: $font-family-base;
+  .ag-selection-checkbox {
+    padding-left: 4px;
+  }
 }
 
 .dark-theme {
