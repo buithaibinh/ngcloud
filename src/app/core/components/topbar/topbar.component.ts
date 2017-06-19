@@ -22,13 +22,13 @@ import { AppLayoutActions, ITheme, getSidebarExpanded$ } from '../../store/app-l
     trigger('toggleSearch', [
       state('void', style(
         {
-          transform: 'translate3d(0, 25%, 0) scale(0.9)',
+          transform: 'translateZ(0)',
           opacity: 0
         }
       )),
-      state('enter', style({ transform: 'translate3d(0, 0, 0) scale(1)', opacity: 1 })),
-      state('exit', style({ transform: 'translate3d(0, 25%, 0)', opacity: 0 })),
-      transition('* => *', animate('400ms cubic-bezier(0.25, 0.8, 0.25, 1)')),
+      state('enter', style({ transform: 'translateZ(0)', opacity: 1 })),
+      state('exit', style({ transform: 'translateZ(0)', opacity: 0.5 })),
+      transition('* => *', animate('400ms cubic-bezier(0.250, 0.250, 0.750, 0.750)')),
     ])
   ],
   host: {
