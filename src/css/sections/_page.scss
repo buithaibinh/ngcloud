@@ -23,16 +23,16 @@
   }
 }
 
-@media (min-width: $screen-lg-min) {
-  .app.boxed {
-    max-width: $layout-boxed-width;
-    .navbar-search-overlap{
-      margin-right: auto;
-      margin-left: auto;
-      max-width: $layout-boxed-width;
-    }
-  }
-}
+// @media (min-width: $screen-lg-min) {
+//   .app.boxed {
+//     max-width: $layout-boxed-width;
+//     .navbar-search-overlap{
+//       margin-right: auto;
+//       margin-left: auto;
+//       max-width: $layout-boxed-width;
+//     }
+//   }
+// }
 
 
 .mat-sidenav-content {
@@ -48,4 +48,55 @@
 
 .dark-theme .mat-sidenav-content {
   background-color: rgba(53, 53, 53, 1.00);
+}
+
+.avatar {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  white-space: nowrap;
+  vertical-align: bottom;
+  border-radius: 1000px;
+  i {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+  }
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 0 none;
+    border-radius: 1000px;
+  }
+}
+.avatar-lg {
+  width: 50px;
+  i {
+    width: 12px;
+    height: 12px;
+  }
+}
+.avatar-online i {
+  background-color: #4caf50;
+}
+.avatar-off i {
+  background-color: #616161;
+}
+.avatar-busy i {
+  background-color: #ff9800;
+}
+.avatar-away i {
+  background-color: #f44336;
+}
+// pace loading css
+.pace .pace-activity {top: 25px; left: 5px} .pace .pace-progress-inner {box-shadow: none;}
+
+a:hover,
+a:focus {
+  text-decoration: none;
 }

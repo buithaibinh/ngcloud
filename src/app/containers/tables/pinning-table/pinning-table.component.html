@@ -1,54 +1,52 @@
-<div class="page">
-  <md-toolbar class="page-header">
-    <ol class="breadcrumb">
-      <li><a [routerLink]="['/home']">Home</a></li>
-      <li><a [routerLink]="['/tables']">Tables</a></li>
-      <li class="active">Pinning</li>
-    </ol>
-    <span fxFlex></span>
-    <section>
-      <button md-icon-button>
+<md-toolbar class="page-header">
+  <ol class="breadcrumb">
+    <li><a [routerLink]="['/home']">Home</a></li>
+    <li><a [routerLink]="['/tables']">Tables</a></li>
+    <li class="active">Pinning</li>
+  </ol>
+  <span fxFlex></span>
+  <section>
+    <button md-icon-button>
       <md-icon mdTooltip="Setting" class="md-24">settings</md-icon>
       </button>
 
-      <button md-icon-button color="primary">
+    <button md-icon-button color="primary">
       <md-icon mdTooltip="Menu" class="md-24">menu</md-icon>
       </button>
-    </section>
+  </section>
 
-  </md-toolbar>
-  <div fxLayout="row" fxLayoutWrap="wrap">
-    <div fxFlex="100">
-      <md-card>
-        <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
-          Pinner/ Horizontal Vertical Scrolling
-          <span fxFlex></span>
-          <button md-icon-button aria-label="Toggle"><md-icon>more_vert</md-icon></button>
-        </md-card-title>
-        <md-card-content>
-          <ngx-datatable class="material" [columnMode]="'force'" [limit]="10" [headerHeight]="50" [footerHeight]="50" [rowHeight]="50"
-            [scrollbarV]="true" [scrollbarH]="true" [rows]="rows">
-            <ngx-datatable-column name="Name" [width]="300" [frozenLeft]="true">
-            </ngx-datatable-column>
-            <ngx-datatable-column name="Gender">
-            </ngx-datatable-column>
-            <ngx-datatable-column name="Age">
-            </ngx-datatable-column>
-            <ngx-datatable-column name="City" [width]="300" prop="address">
-            </ngx-datatable-column>
-            <ngx-datatable-column name="Position" [width]="300" prop="position">
-            </ngx-datatable-column>
-            <ngx-datatable-column name="Start Date" [width]="300" prop="startDate">
-            </ngx-datatable-column>
-            <ngx-datatable-column name="DOB" [width]="300" prop="birthday">
-            </ngx-datatable-column>
-            <ngx-datatable-column name="State" [width]="300" prop="country">
-            </ngx-datatable-column>
-          </ngx-datatable>
+</md-toolbar>
+<div fxLayout="row" fxLayoutWrap="wrap">
+  <div fxFlex="100">
+    <md-card>
+      <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
+        Pinner/ Horizontal Vertical Scrolling
+        <span fxFlex></span>
+        <button md-icon-button aria-label="Toggle"><md-icon>more_vert</md-icon></button>
+      </md-card-title>
+      <md-card-content>
+        <ngx-datatable class="material" [columnMode]="'force'" [limit]="10" [headerHeight]="50" [footerHeight]="50" [rowHeight]="50"
+          [scrollbarV]="true" [scrollbarH]="true" [rows]="rows">
+          <ngx-datatable-column name="Name" [width]="300" [frozenLeft]="true">
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Gender">
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Age">
+          </ngx-datatable-column>
+          <ngx-datatable-column name="City" [width]="300" prop="address">
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Position" [width]="300" prop="position">
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Start Date" [width]="300" prop="startDate">
+          </ngx-datatable-column>
+          <ngx-datatable-column name="DOB" [width]="300" prop="birthday">
+          </ngx-datatable-column>
+          <ngx-datatable-column name="State" [width]="300" prop="country">
+          </ngx-datatable-column>
+        </ngx-datatable>
 
-        </md-card-content>
-      </md-card>
-    </div>
-
+      </md-card-content>
+    </md-card>
   </div>
+
 </div>

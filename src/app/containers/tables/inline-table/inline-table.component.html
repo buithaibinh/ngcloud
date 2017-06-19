@@ -1,72 +1,70 @@
-<div class="page">
-  <md-toolbar class="page-header">
-    <ol class="breadcrumb">
-      <li><a [routerLink]="['/home']">Home</a></li>
-      <li><a [routerLink]="['/tables']">Tables</a></li>
-      <li class="active">Inline</li>
-    </ol>
-    <span fxFlex></span>
-    <section>
-      <button md-icon-button>
+<md-toolbar class="page-header">
+  <ol class="breadcrumb">
+    <li><a [routerLink]="['/home']">Home</a></li>
+    <li><a [routerLink]="['/tables']">Tables</a></li>
+    <li class="active">Inline</li>
+  </ol>
+  <span fxFlex></span>
+  <section>
+    <button md-icon-button>
       <md-icon mdTooltip="Setting" class="md-24">settings</md-icon>
       </button>
 
-      <button md-icon-button color="primary">
+    <button md-icon-button color="primary">
       <md-icon mdTooltip="Menu" class="md-24">menu</md-icon>
       </button>
-    </section>
+  </section>
 
-  </md-toolbar>
-  <div fxLayout="row" fxLayoutWrap="wrap">
-    <div fxFlex="100">
-      <md-card>
-        <md-card-subtitle>Click to cell to edit, click to header to sort</md-card-subtitle>
-        <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
-          Inline Editing
-          <span fxFlex></span>
-          <button md-icon-button aria-label="Toggle"><md-icon>more_vert</md-icon></button>
-        </md-card-title>
-        <md-card-content>
-          <ngx-datatable #mydatatable class="material" rowHeight="auto" [headerHeight]="50" [limit]="10" [columnMode]="'force'" [footerHeight]="70"
-            [rowHeight]="50" [rows]="rows">
-            <ngx-datatable-column name="Name">
-              <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
-                <md-input-container focused="true" class="demo-full-width" *ngIf="editing[row.$$index + '-name']">
-                  <input mdInput [value]="value" (keypress)="onkeypress($event, 'name', value, row)" (blur)="updateValue($event, 'name', value, row)">
-                </md-input-container>
-                <span title="Double click to edit" (dblclick)="editing[row.$$index + '-name'] = true;" *ngIf="!editing[row.$$index + '-name']">
+</md-toolbar>
+<div fxLayout="row" fxLayoutWrap="wrap">
+  <div fxFlex="100">
+    <md-card>
+      <md-card-subtitle>Click to cell to edit, click to header to sort</md-card-subtitle>
+      <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
+        Inline Editing
+        <span fxFlex></span>
+        <button md-icon-button aria-label="Toggle"><md-icon>more_vert</md-icon></button>
+      </md-card-title>
+      <md-card-content>
+        <ngx-datatable #mydatatable class="material" rowHeight="auto" [headerHeight]="50" [limit]="10" [columnMode]="'force'" [footerHeight]="70"
+          [rowHeight]="50" [rows]="rows">
+          <ngx-datatable-column name="Name">
+            <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
+              <md-input-container focused="true" class="full-width" *ngIf="editing[row.$$index + '-name']">
+                <input mdInput [value]="value" (keypress)="onkeypress($event, 'name', value, row)" (blur)="updateValue($event, 'name', value, row)">
+              </md-input-container>
+              <span title="Double click to edit" (dblclick)="editing[row.$$index + '-name'] = true;" *ngIf="!editing[row.$$index + '-name']">
               {{value}}
             </span>
-                <!--<md-input-container class="demo-full-width">
+              <!--<md-input-container class="demo-full-width">
                   <input mdInput (keypress)="onkeypress($event, 'name', value, row)" (blur)="updateValue($event, 'name', value, row)" *ngIf="editing[row.$$index + '-name']"
                     [value]="value" placeholder="City">
                 </md-input-container>-->
 
 
 
-              </ng-template>
-            </ngx-datatable-column>
-            <ngx-datatable-column name="Gender">
-              <ng-template ngx-datatable-cell-template let-row="row" let-value="value">
-                <span title="Double click to edit" (dblclick)="editing[row.$$index + '-gender'] = true" *ngIf="!editing[row.$$index + '-gender']">
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Gender">
+            <ng-template ngx-datatable-cell-template let-row="row" let-value="value">
+              <span title="Double click to edit" (dblclick)="editing[row.$$index + '-gender'] = true" *ngIf="!editing[row.$$index + '-gender']">
               {{value}}
             </span>
-                <select *ngIf="editing[row.$$index + '-gender']" (change)="updateValue($event, 'gender', value, row)" [value]="value">
+              <select *ngIf="editing[row.$$index + '-gender']" (change)="updateValue($event, 'gender', value, row)" [value]="value">
               <option value="male">Male</option>
               <option value="female">Female</option>
             </select>
-              </ng-template>
-            </ngx-datatable-column>
-            <ngx-datatable-column name="Age">
-              <ng-template ngx-datatable-cell-template let-value="value">
-                {{value}}
-              </ng-template>
-            </ngx-datatable-column>
-          </ngx-datatable>
+            </ng-template>
+          </ngx-datatable-column>
+          <ngx-datatable-column name="Age">
+            <ng-template ngx-datatable-cell-template let-value="value">
+              {{value}}
+            </ng-template>
+          </ngx-datatable-column>
+        </ngx-datatable>
 
-        </md-card-content>
-      </md-card>
-    </div>
-
+      </md-card-content>
+    </md-card>
   </div>
+
 </div>

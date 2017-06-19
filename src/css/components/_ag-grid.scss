@@ -1,0 +1,21 @@
+.ag-fresh {
+    font-family: $font-family-base;
+    .ag-cell-no-focus,
+    .ag-header-cell, .ag-cell-focus
+     {
+        border-top: none;
+        border-left: none;
+        border-bottom: 1px solid silver;
+        border-right: 1px solid silver;
+    } 
+    .ag-row-odd {
+        background-color: #f6f6f6;
+    }
+
+    img.vertical-top{
+    vertical-align: top!important;
+    }
+    img.vertical-middle{
+        vertical-align: middle!important;
+    }
+}

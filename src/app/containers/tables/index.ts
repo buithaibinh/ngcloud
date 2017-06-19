@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { PaginationModule } from 'ngx-bootstrap';
 import { SharedModule } from '../../shared/index';
 
 import { NgxTableComponent } from './ngx-table/ngx-table.component';
@@ -32,7 +31,6 @@ const TABLE_COMPONENTS = [
     imports: [
         SharedModule,
         RouterModule.forChild(TablesRoutes),
-        PaginationModule.forRoot(),
     ],
     exports: [],
     declarations: [TABLE_COMPONENTS],

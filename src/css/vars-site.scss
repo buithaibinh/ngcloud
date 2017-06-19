@@ -3,6 +3,11 @@
 //
 $transition-duration: 300ms !default;
 $gutter: 1rem !default;
+
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+$font-family-roboto:      Roboto,"Helvetica Neue",sans-serif !default;
+$font-family-base:        $font-family-roboto !default;
+
 $font-size-base:          14px;
 $font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
@@ -22,7 +27,7 @@ $font-weight-normal:      400;
 $font-weight-medium:      500;
 $font-weight-bold:        700;
 
-$font-weight-base:        $font-weight-normal;
+$font-weight-base:        $font-weight-normal !default;
 
 // Extra small screen / phone
 //** Deprecated `$screen-xs` as of v3.0.1

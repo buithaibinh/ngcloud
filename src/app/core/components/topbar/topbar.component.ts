@@ -1,6 +1,15 @@
-import { Component, OnInit, ElementRef, EventEmitter, Output, Input } from '@angular/core';
+import { Component, OnInit, ElementRef, EventEmitter, Output, Input, ViewChild, NgZone } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { Store } from '@ngrx/store';
+
+import {
+  animate,
+  trigger,
+  state,
+  style,
+  transition,
+  AnimationEvent,
+} from '@angular/animations';
 
 import { NgCloudAppState } from '../../store';
 import { AppLayoutActions, ITheme, getSidebarExpanded$ } from '../../store/app-layout';
@@ -8,10 +17,32 @@ import { AppLayoutActions, ITheme, getSidebarExpanded$ } from '../../store/app-l
 @Component({
   selector: 'app-navbar',
   templateUrl: './topbar.component.html',
-  styleUrls: ['./topbar.component.scss']
+  styleUrls: ['./topbar.component.scss'],
+  animations: [
+    trigger('toggleSearch', [
+      state('void', style(
+        {
+          transform: 'translate3d(0, 25%, 0) scale(0.9)',
+          opacity: 0
+        }
+      )),
+      state('enter', style({ transform: 'translate3d(0, 0, 0) scale(1)', opacity: 1 })),
+      state('exit', style({ transform: 'translate3d(0, 25%, 0)', opacity: 0 })),
+      transition('* => *', animate('400ms cubic-bezier(0.25, 0.8, 0.25, 1)')),
+    ])
+  ],
+  host: {
+    '[@toggleSearch]': '_stateSearch',
+    '(@toggleSearch.done)': '_onAnimationDone($event)',
+  },
 })
 export class TopbarComponent implements OnInit {
   private sidebarExpanded: boolean;
+  private showSearch: boolean = false;
+  @ViewChild('search') search: ElementRef;
+
+  /** State of the search animation. */
+  _stateSearch: 'void' | 'enter' | 'exit' = 'enter';
 
   profileItems = [
     { name: 'Profile', route: 'profile', icon: 'person' },
@@ -21,7 +52,8 @@ export class TopbarComponent implements OnInit {
   ];
   constructor(
     private appLayoutActions: AppLayoutActions,
-    private store: Store<NgCloudAppState>
+    private store: Store<NgCloudAppState>,
+    private _ngZone: NgZone
   ) {
 
   }
@@ -41,11 +73,31 @@ export class TopbarComponent implements OnInit {
     return this.store.dispatch(this.appLayoutActions.changeTheme(data));
   }
 
-  toggleNotification(){
+  toggleNotification() {
     return this.store.dispatch(this.appLayoutActions.toggleChatbar());
   }
 
   toggleSidebar() {
     return this.store.dispatch(this.appLayoutActions.toggleSidebar());
+  }
+
+  toggleSearchbar() {
+    this.showSearch = !this.showSearch;
+    if (this.showSearch) {
+      // Give ngIf a chance to render the <input>.
+      // Then set the focus, but do this outside the Angualar zone to be efficient.
+      // There is no need to run change detection after setTimeout() runs,
+      // since we're only focusing an element.
+      this._ngZone.runOutsideAngular(() => {
+        setTimeout(() => {
+          this.search.nativeElement.focus();
+        }, 0);
+      });
+    }
+  }
+
+  /** Callback, invoked whenever an animation on the host completes. */
+  _onAnimationDone(event: AnimationEvent) {
+    console.log('Animation done');
   }
 }

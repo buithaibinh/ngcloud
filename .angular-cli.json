@@ -29,7 +29,6 @@
         "assets/vendor/flag-icon-css/flag-icon.css",
         "assets/vendor/golden-layout/css/goldenlayout-base.css",
         "assets/vendor/golden-layout/css/goldenlayout-light-theme.css",
-        "css/bootstrap-extend.css",
         "css/styles.scss"
       ],
       "scripts": [

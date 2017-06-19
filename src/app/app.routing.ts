@@ -27,6 +27,10 @@ export const AppRoutes: Routes = [
                 path: 'tables',
                 loadChildren: './containers/tables/#TablesModule'
             },
+            {
+                path: 'ag-grid',
+                loadChildren: './containers/ag-grid/#A2GridModule'
+            },
         ]
     }
 ];

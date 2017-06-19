@@ -1,0 +1,27 @@
+.navbar-search-overlap {
+  z-index: 1;
+  position: absolute!important;
+  top: 0;
+  right: 0;
+  left: 0;
+  .mat-toolbar {
+    font-size: $font-size-base;
+  }
+}
+
+.topbar {
+  .mat-icon {
+    cursor: pointer;
+  }
+  .brand-toolbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar-brand-logo {
+    height: 36px;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}

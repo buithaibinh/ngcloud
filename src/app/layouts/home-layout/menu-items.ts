@@ -97,6 +97,15 @@ const MENUITEMS = [
       { name: 'Template table', route: 'template' },
     ]
   },
+  {
+    route: 'ag-grid',
+    name: 'ag-Grid',
+    type: 'sub',
+    icon: 'list',
+    children: [
+      { name: 'Rich grid', route: 'rich-grid' },
+    ]
+  },
 ];
 
 @Injectable()

@@ -1,9 +1,9 @@
-<md-toolbar color="primary">
+<md-toolbar color="primary" class="topbar">
   <button md-icon-button (click)="toggleSidebar()">
     <md-icon class="md-24">{{sidebarExpanded? 'arrow_back':'menu'}}</md-icon>
   </button>
   <app-toggle-fullscreen></app-toggle-fullscreen>
-  <button md-icon-button data-target="#site-navbar-search" data-toggle="collapse">
+  <button md-icon-button (click)="toggleSearchbar()">
     <md-icon class="md-24" >search</md-icon>
   </button>
 
@@ -34,7 +34,7 @@
 
   <button md-icon-button (click)="toggleNotification()">
         <md-icon class="md-24" >notifications</md-icon>
-        <span class="badge badge-danger up">6</span>
+        <span class="badge md-red up">6</span>
     </button>
 
   <button md-icon-button (click)="changeTheme()">
@@ -44,17 +44,15 @@
 
 </md-toolbar>
 <!-- Site Navbar Seach -->
-<div class="collapse navbar-search-overlap" id="site-navbar-search">
-  <form role="search">
-    <div class="form-group">
-      <div class="input-search">
-        <i class="input-search-icon material-icons">search</i>
-        <input type="text" class="form-control" name="site-search" placeholder="Search...">
-        <button md-icon-button class="input-search-close" data-target="#site-navbar-search" data-toggle="collapse">
-          <md-icon class="md-24" >close</md-icon>
-        </button>
-      </div>
-    </div>
-  </form>
+<div class="navbar-search-overlap" [@toggleSearch]="_stateSearch" *ngIf="showSearch">
+  <md-toolbar>
+    <md-input-container class="full-width">
+      <md-icon mdPrefix class="md-24">search</md-icon>
+      <input #search mdInput type="text" placeholder="Search...">
+    </md-input-container>
+    <button md-icon-button (click)="toggleSearchbar()">
+        <md-icon class="md-18">close</md-icon>
+    </button>
+  </md-toolbar>
 </div>
 <!-- End Site Navbar Seach -->
