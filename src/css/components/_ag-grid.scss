@@ -186,7 +186,7 @@
       background-color: #403e3e;
     }
     .ag-row-selected {
-      background-color: #4a708b;
+      background-color: mat-color($dark-foreground, base);
     }
     .ag-row-stub {
       background-color: #333;
@@ -223,45 +223,6 @@
     .ag-footer-cell-entire-row {
       background-color: #302e2e;
       padding: 2px;
-    }
-    .ag-group-cell {
-      font-style: italic;
-    }
-    .ag-ltr .ag-group-expanded {
-      padding-right: 4px;
-    }
-    .ag-rtl .ag-group-expanded {
-      padding-left: 4px;
-    }
-    .ag-ltr .ag-group-contracted {
-      padding-right: 4px;
-    }
-    .ag-rtl .ag-group-contracted {
-      padding-left: 4px;
-    }
-    .ag-ltr .ag-group-loading {
-      padding-right: 4px;
-    }
-    .ag-rtl .ag-group-loading {
-      padding-left: 4px;
-    }
-    .ag-ltr .ag-group-value {
-      padding-right: 2px;
-    }
-    .ag-rtl .ag-group-value {
-      padding-left: 2px;
-    }
-    .ag-ltr .ag-group-checkbox {
-      padding-right: 2px;
-    }
-    .ag-rtl .ag-group-checkbox {
-      padding-left: 2px;
-    }
-    .ag-group-child-count {
-      display: inline-block;
-    }
-    .ag-footer-cell {
-      font-style: italic;
     }
     .ag-menu {
       border: 1px solid #555;
