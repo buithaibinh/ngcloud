@@ -20,7 +20,7 @@
     <div fxFlex.gt-sm="50%" fxFlex="100">
         <md-card>
             <md-card-subtitle><b>Employees Skills and Contact Details</b> {{rowCount}}</md-card-subtitle>
-            <md-card-title fxLayout="row" class="handle" fxLayoutAlign="start center">
+            <md-card-title fxLayout="row wrap" fxLayoutAlign="start center">
                 <md-slide-toggle *ngIf="showGrid" (change)="showCountryColumn()" [checked]="isShowCountry" color="primary">
                     {{isShowCountry? 'Hide Country Column':'Show Country Column'}}
                 </md-slide-toggle>
