@@ -29,12 +29,9 @@ const MENUITEMS = [
   },
   {
     route: 'material',
-    name: 'Material',
+    name: 'Basic UI',
     type: 'sub',
-    icon: 'public',
-    badge: [
-      { type: 'red', value: '5' }
-    ],
+    icon: 'palette',
     children: [
       { name: 'Autocomplete', route: 'autocomplete' },
       { name: 'Button', route: 'button' },
@@ -58,8 +55,6 @@ const MENUITEMS = [
       { name: 'Tabs', route: 'tabs' },
       { name: 'Toolbar', route: 'toolbar' },
       { name: 'Tooltip', route: 'tooltip' },
-      { name: 'Platform', route: 'platform' },
-      { name: 'Style', route: 'style' },
       { name: 'Typography', route: 'typography' }
     ]
   },
