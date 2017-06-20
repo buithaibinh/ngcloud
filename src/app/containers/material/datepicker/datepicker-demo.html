@@ -1,6 +1,6 @@
 <md-card>
   <md-card-content>
-    <h2>Options</h2>
+    <h4>Options</h4>
     <p>
       <md-checkbox [(ngModel)]="touch">Use touch UI</md-checkbox>
       <md-checkbox [(ngModel)]="filterOdd">Filter odd months and dates</md-checkbox>
@@ -26,7 +26,7 @@
       <md-datepicker #startAtPicker [touchUi]="touch"></md-datepicker>
     </p>
 
-    <h2>Result</h2>
+    <h4>Result</h4>
 
     <p>
       <button [mdDatepickerToggle]="resultPicker"></button>

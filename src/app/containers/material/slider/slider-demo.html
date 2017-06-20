@@ -25,7 +25,9 @@
     <h4>Disabled Slider</h4>
     <md-slider disabled [(ngModel)]="disabledValue" [tickInterval]="1" aria-label="Disabled slider">
     </md-slider>
-    <input [(ngModel)]="disabledValue" type="number">
+    <md-input-container >
+        <input mdInput [(ngModel)]="disabledValue"  type="number">
+    </md-input-container>
 
     <h4>Slider with set value</h4>
     <md-slider value="43" aria-label="Initial value slider"></md-slider>
@@ -43,11 +45,15 @@
 
     <h4>Slider with one-way binding</h4>
     <md-slider [value]="val" step="40" aria-label="Slider with value binding"></md-slider>
-    <input [(ngModel)]="val" type="number">
+     <md-input-container >
+        <input mdInput [(ngModel)]="val"  type="number">
+    </md-input-container>
 
     <h4>Slider with two-way binding</h4>
     <md-slider [(ngModel)]="demo" step="40" aria-label="Slider with ngModel"></md-slider>
-    <input [(ngModel)]="demo" type="number">
+     <md-input-container >
+        <input mdInput [(ngModel)]="demo"  type="number">
+    </md-input-container>
 
     <h4>Inverted slider</h4>
     <md-slider invert value="50" tickInterval="5" aria-label="Inverted slider"></md-slider>
@@ -60,9 +66,14 @@
     <md-slider vertical invert thumbLabel tickInterval="auto" value="50" aria-label="Inverted vertical slider">
     </md-slider>
 
+
+    <h4>Slider in a tab</h4>
     <md-tab-group>
       <md-tab label="One">
         <md-slider min="1" max="5" value="3" aria-label="Slider in a tab"></md-slider>
+      </md-tab>
+      <md-tab label="OnTwoe">
+        <md-slider min="10" max="100" value="60" aria-label="Slider in a tab"></md-slider>
       </md-tab>
     </md-tab-group>
 

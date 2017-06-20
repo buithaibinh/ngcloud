@@ -52,7 +52,6 @@ const MENUITEMS = [
       { name: 'Radio', route: 'radio' },
       { name: 'Ripple', route: 'ripple' },
       { name: 'Select', route: 'select' },
-      { name: 'Sidenav', route: 'sidenav' },
       { name: 'Slider', route: 'slider' },
       { name: 'Slide Toggle', route: 'slide-toggle' },
       { name: 'Snack Bar', route: 'snack-bar' },

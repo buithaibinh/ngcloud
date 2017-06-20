@@ -92,7 +92,8 @@ md-sidenav.site-sidebar {
     display: block;
     height: auto;
     max-height: 48px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     padding: 0;
     -webkit-transition: max-height .3s cubic-bezier(.35, 0, .25, 1);
     -moz-transition: max-height .3s cubic-bezier(.35, 0, .25, 1);
@@ -105,7 +106,7 @@ md-sidenav.site-sidebar {
     transition: background-color .3s cubic-bezier(.35, 0, .25, 1);
   }
   .mat-list-item.open > .mat-list-item-content {
-    max-height: 1000px;
+    max-height: 2000px;
     background: mat-color($background, 'hover');
   }
   .mat-nav-list a {
@@ -160,7 +161,7 @@ md-sidenav.site-sidebar {
       @include rotate(180deg);
     }
     .open > .mat-list-item-content > .sub-menu {
-      max-height: 1000px;
+      max-height: 2000px;
     }
   }
 }

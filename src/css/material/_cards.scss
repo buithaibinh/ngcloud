@@ -1,5 +1,3 @@
-/* $cards
- ------------------------------------------*/
 $mat-card-header-size: 40px !default;
 body {
   .mat-card {
@@ -20,8 +18,7 @@ body {
     > :last-child {
       border-radius: 0 0 $border-radius-base $border-radius-base;
     }
-    /* Temporary fix */
-    /* https://github.com/angular/material2/issues/3131 */
+   
     [md-card-avatar] {
       height: $mat-card-header-size;
       width: $mat-card-header-size;
