@@ -1,5 +1,6 @@
 /* $main-panel
  ------------------------------------------*/
+
 .app-inner {
   position: relative;
   width: 100%;
@@ -8,6 +9,7 @@
   @include flexbox;
   @include flex-direction(row);
 }
+
 
 /* Boxed layout*/
 
@@ -19,7 +21,7 @@
     max-width: $page-centered-max-width;
     margin: 0 auto;
     position: relative;
-    min-height: calc(100% - #{$site-footer-height});
+    min-height: calc(100% - #{$site-footer-height + 3});
   }
 }
 
@@ -33,8 +35,6 @@
 //     }
 //   }
 // }
-
-
 .mat-sidenav-content {
   min-height: 100%;
   box-sizing: border-box;
@@ -52,6 +52,8 @@
 
 .avatar {
   position: relative;
+  width: 40px;
+  border-radius: 1000px;
   i {
     position: absolute;
     right: 0;
@@ -61,7 +63,15 @@
     border: 2px solid #fff;
     border-radius: 100%;
   }
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 0 none;
+    border-radius: 1000px;
+  }
 }
+
 .avatar-lg {
   width: 50px;
   i {
@@ -69,20 +79,32 @@
     height: 12px;
   }
 }
+
 .avatar-online i {
   background-color: #4caf50;
 }
+
 .avatar-off i {
   background-color: #616161;
 }
+
 .avatar-busy i {
   background-color: #ff9800;
 }
+
 .avatar-away i {
   background-color: #f44336;
 }
+
 // pace loading css
-.pace .pace-activity {top: 25px; left: 5px} .pace .pace-progress-inner {box-shadow: none;}
+.pace .pace-activity {
+  top: 25px;
+  left: 5px
+}
+
+.pace .pace-progress-inner {
+  box-shadow: none;
+}
 
 a:hover,
 a:focus {

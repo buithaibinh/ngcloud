@@ -2,7 +2,7 @@ import {
   ApplicationRef, Directive, HostListener, ElementRef,
   ComponentRef, Injector, OnInit, EventEmitter, Output, OnDestroy, Type,
   Component, ComponentFactoryResolver, ComponentFactory, ViewContainerRef, ReflectiveInjector,
-  Compiler, AfterViewInit
+  Compiler, AfterViewInit, Input
 
 } from '@angular/core';
 
@@ -55,13 +55,28 @@ export interface IGoldenState {
   status: boolean;
 }
 
+export interface IGoldenLayoutRegist {
+  compType: Type<any>;
+  compName: string;
+  moduleType?: Type<any>
+}
+
 @Directive({
   selector: '[appGoldenLayout]'
 })
 export class GoldenLayoutDirective implements AfterViewInit, OnDestroy {
-  private goldenConfig: any;
-  private rootContentItem: any;
   private rootLayout: any;
+  private _compRegists: IGoldenLayoutRegist[];
+  @Input('config') goldenConfig: {};
+
+  @Input('compRegists')
+  set compRegists(compRegists: IGoldenLayoutRegist[]) {
+    this._compRegists = compRegists;
+  }
+
+  get compRegists() {
+    return this._compRegists;
+  }
 
   constructor(private elementRef: ElementRef,
     private viewContainer: ViewContainerRef,
@@ -72,7 +87,7 @@ export class GoldenLayoutDirective implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     // this.goldenConfig = this._loadContentConfig(GL_LAYOUT.DEFAULT_1);
-    // this.initGoldenLayout();
+    this.initGoldenLayout();
 
     // use ngx-store for creating layout.
   }
@@ -95,30 +110,36 @@ export class GoldenLayoutDirective implements AfterViewInit, OnDestroy {
     self.rootLayout = new GoldenLayout(self.goldenConfig, self.elementRef.nativeElement);
     self.rootLayout.on('stackCreated', (stack: any) => self._onStackCreated(stack));
     self.rootLayout.on('initialised', () => {
-      self.rootContentItem = self.rootLayout.root.contentItems[0];
 
       self.rootLayout.on('stateChanged', () => self._onStateChanged());
       self.rootLayout.on('itemDestroyed', (item: any) => self._onItemDestroyed(item));
     });
 
     // regsister all components here.
-
+    for (let comp of this.compRegists) {
+      this._register(comp);
+    }
 
     // start init golden layout.
     self.rootLayout.init();
   }
 
+  /**
+   * use for add or remove component by component id
+   * @param  
+   */
   addOrRemoveComp($event: IGoldenState) {
     let isAdded = $event.status;
     this._minimise();
+    let rootItem = this.rootLayout.root.contentItems[0];
     if (isAdded) {
       let config = this._newConfig($event);
       if (!config) return;
-      this.rootContentItem.addChild(config);
+      rootItem.addChild(config);
     } else {
       let compId = $event.compId;
       try {
-        let item = this.rootContentItem.getItemsById(compId);
+        let item = rootItem.getItemsById(compId);
         if (item && item.length > 0) {
           item[0].close();
         }
@@ -156,26 +177,24 @@ export class GoldenLayoutDirective implements AfterViewInit, OnDestroy {
 
   /**
    * regist component for golden layout.
-   * @param compType Component class
-   * @param compName  name of component, 
-   * @param moduleType in case use module intead of component. It is module class name
+   * @param compRegist IGoldenLayoutRegist class
    */
-  private _register(compType: Type<any>, compName: string, moduleType?: Type<any>) {
+  private _register(compRegist: IGoldenLayoutRegist) {
     let self = this;
-    self.rootLayout.registerComponent(compName, (container: any, componentState: any) => {
+    self.rootLayout.registerComponent(compRegist.compName, (container: any, componentState: any) => {
 
       let compId = container._config.id;
       container.on('destroy', () => {
         self._onContainerDestroy(compId);
       });
 
-      if (moduleType) { // use module
-        self.compiler.compileModuleAndAllComponentsAsync(moduleType).then((factory: any) => {
-          const compFactory = factory.componentFactories.find((x: any) => x.componentType === compType);
+      if (compRegist.moduleType) { // use module
+        self.compiler.compileModuleAndAllComponentsAsync(compRegist.moduleType).then((factory: any) => {
+          const compFactory = factory.componentFactories.find((x: any) => x.componentType === compRegist.compType);
           self._appendComp(container, componentState, compFactory);
         });
       } else { // use component only
-        let compFactory = self.componentFactoryResolver.resolveComponentFactory(compType);
+        const compFactory = self.componentFactoryResolver.resolveComponentFactory(compRegist.compType);
         self._appendComp(container, componentState, compFactory);
       }
     });

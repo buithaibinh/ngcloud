@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 
 import { SharedModule } from '../../shared/index';
 import { FlexLayoutComponent } from './flex-layout/flex-layout.component';
-import { GoldenLayoutComponent } from './golden-layout/golden-layout.component';
+import { GoldenLayoutComponent, RainyComponent, SunnyComponent, FoggyComponent } from './golden-layout/golden-layout.component';
 import { LayoutRoutes } from './layouts-routing';
 
 @NgModule({
@@ -11,8 +11,9 @@ import { LayoutRoutes } from './layouts-routing';
         RouterModule.forChild(LayoutRoutes),
         SharedModule,
     ],
-    exports: [],
-    declarations: [FlexLayoutComponent, GoldenLayoutComponent],
+    exports: [FlexLayoutComponent, GoldenLayoutComponent],
+    declarations: [FlexLayoutComponent, GoldenLayoutComponent, RainyComponent, SunnyComponent, FoggyComponent],
     providers: [],
+    entryComponents: [RainyComponent, SunnyComponent, FoggyComponent]
 })
 export class LayoutsModule { }

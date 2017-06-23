@@ -23,7 +23,7 @@ const initialState: IAppSettings = {
   chatbarExpanded: false,
   requestInProcess: false,
   theme: {
-    dark: false
+    dark: true
   },
   version: {
     semver: '',

@@ -1,4 +1,4 @@
-<div class="page">
+<div class="gl-container">
   <md-toolbar class="page-header">
     <ol class="breadcrumb">
       <li><a [routerLink]="['/home']">Home</a></li>
@@ -15,6 +15,6 @@
     </div>
   </md-toolbar>
 
-  <div class="golden-layout" appGoldenLayout>
+  <div class="golden-layout" [config]="config" [compRegists]="compRegists" appGoldenLayout>
   </div>
 </div>
