@@ -152,23 +152,22 @@ export class GoldenLayoutDirective implements AfterViewInit, OnDestroy {
   /**
    * public method, call when you want to change layout
    * Firstly it will destroy all comps in layout, after that init layout again.
-   * @param key 
+   * @param config 
    */
-  public changeLayout(key: string) {
+  public changeLayout(config: {}) {
     if (this.rootLayout) {
       this.rootLayout.destroy();
       this.rootLayout = null;
     }
-    this.goldenConfig = this._loadContentConfig(key);
+    this.goldenConfig = config;
     this.initGoldenLayout();
   }
 
   /**
    * load config from localstore.
-   * @param key key in local
+   * @param config content config. See more http://golden-layout.com/docs/ItemConfig.html
    */
-  private _loadContentConfig(key: string) {
-    let config: any = null;
+  private _loadContentConfig(config: {}) {
 
     let glConfig = $.extend({}, BASE_CONFIG);
     glConfig['content'] = [config];

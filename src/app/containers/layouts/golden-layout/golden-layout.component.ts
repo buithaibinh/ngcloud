@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { GoldenLayoutDirective, IGoldenLayoutRegist, IGoldenState } from '../../../shared/directives/golden-layout.directive';
 
@@ -8,6 +8,7 @@ import { GoldenLayoutDirective, IGoldenLayoutRegist, IGoldenState } from '../../
   styleUrls: ['./golden-layout.component.scss']
 })
 export class GoldenLayoutComponent implements OnInit {
+  @ViewChild(GoldenLayoutDirective) glLayout: GoldenLayoutDirective
   private compRegists: IGoldenLayoutRegist[] = [
     {
       compType: SunnyComponent,
@@ -46,12 +47,20 @@ export class GoldenLayoutComponent implements OnInit {
     }]
   };
 
+  private type: 'column' | 'row' | 'stack' = 'column';
+
   constructor() {
   }
 
   ngOnInit() {
   }
-
+  changeLayout() {
+    if(this.config.content[0].type === this.type){
+      return;
+    }
+    this.config.content[0].type = this.type;
+    this.glLayout.changeLayout(this.config);
+  };
 }
 
 @Component({

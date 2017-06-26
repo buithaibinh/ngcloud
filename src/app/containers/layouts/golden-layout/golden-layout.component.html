@@ -6,15 +6,26 @@
       <li class="active">Golden Layout</li>
     </ol>
     <span fxFlex></span>
-    <div fxShow="false" fxShow.gt-xs>
-      <md-chip-list>
-        <md-chip (select)="onSelect">
-          <a href="#">Official Website</a>
-        </md-chip>
-      </md-chip-list>
-    </div>
+    <md-button-toggle-group [(ngModel)]="type" (change)="changeLayout()" vertical="false">
+      <md-button-toggle value="column" mdTooltip="column display">
+        <md-icon class="md-24">more_vert</md-icon>
+      </md-button-toggle>
+      <md-button-toggle value="row" mdTooltip="row display">
+        <md-icon class="md-24">more_horiz</md-icon>
+      </md-button-toggle>
+      <md-button-toggle value="stack" mdTooltip="stack display">
+        <md-icon class="md-24">filter_none</md-icon>
+      </md-button-toggle>
+    </md-button-toggle-group>
+    <button md-icon-button [mdMenuTriggerFor]="menuRef">
+        <md-icon class="md-24">menu</md-icon>
+    </button>
   </md-toolbar>
 
   <div class="golden-layout" [config]="config" [compRegists]="compRegists" appGoldenLayout>
   </div>
 </div>
+
+<md-menu xPosition="before" [overlapTrigger]="false" #menuRef="mdMenu">
+    <a href="http://golden-layout.com" target="_blank" md-menu-item>Official Website</a>
+</md-menu>
