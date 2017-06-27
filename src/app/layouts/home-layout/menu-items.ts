@@ -96,6 +96,19 @@ const MENUITEMS = [
       { name: 'Rich grid', route: 'rich-grid' },
     ]
   },
+  {
+    route: 'pages',
+    name: 'Pages',
+    type: 'sub',
+    icon: 'grid_on',
+    children: [
+      { name: 'Error 400', route: 'err-400' },
+      { name: 'Error 403', route: 'err-403' },
+      { name: 'Error 404', route: 'err-404' },
+      { name: 'Error 500', route: 'err-500' },
+      { name: 'Error 503', route: 'err-503' },
+    ]
+  },
 ];
 
 @Injectable()

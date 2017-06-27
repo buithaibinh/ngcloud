@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
+import { AuthLayoutComponent } from './layouts/auth/auth-layout.component';
 
 export const AppRoutes: Routes = [
     {
@@ -32,5 +33,16 @@ export const AppRoutes: Routes = [
                 loadChildren: './containers/ag-grid/#A2GridModule'
             },
         ]
+    },
+    {
+        path: '',
+        component: AuthLayoutComponent,
+        children: [{
+            path: 'pages',
+            loadChildren: './containers/pages/#PagesModule'
+        }]
+    }, {
+        path: '**',
+        redirectTo: 'pages/err-404'
     }
 ];

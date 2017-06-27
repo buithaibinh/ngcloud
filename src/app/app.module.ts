@@ -29,6 +29,7 @@ import { BusyModule } from 'angular2-busy';
 // app container
 import { APP_CORE_MODULES } from './core/components';
 import { HomeLayoutModule } from './layouts/home-layout';
+import { AuthLayoutComponent } from './layouts/auth/auth-layout.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
@@ -38,6 +39,7 @@ export function HttpLoaderFactory(http: Http) {
 @NgModule({
   declarations: [
     AppComponent,
+    AuthLayoutComponent
   ],
   imports: [
     RouterModule.forRoot(AppRoutes),
