@@ -22,8 +22,17 @@
 // bootstrap extend
 @import 'bootstrap_extend';
 
+// // pages
+// // -------------------------------
+@import "pages";
+
+html, body {
+  height: 100%;
+}
+
 body {
   font-weight: $font-weight-base;
   font-family: $font-family-base;
   margin: $body-margin-base;
+  height: 100%;
 }

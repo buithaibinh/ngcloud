@@ -25,6 +25,13 @@
   }
 }
 
+.layout-full {
+  height: 100%;
+  .page {
+    height: 100%;
+  }
+}
+
 // @media (min-width: $screen-lg-min) {
 //   .app.boxed {
 //     max-width: $layout-boxed-width;
@@ -109,4 +116,11 @@
 a:hover,
 a:focus {
   text-decoration: none;
+}
+
+.page-copyright {
+  margin-top: 60px;
+  font-size: 12px;
+  color: #424242;
+  letter-spacing: 1px;
 }
