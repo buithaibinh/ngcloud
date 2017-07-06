@@ -39,7 +39,7 @@ export function HttpLoaderFactory(http: Http) {
 @NgModule({
   declarations: [
     AppComponent,
-    AuthLayoutComponent
+    AuthLayoutComponent,
   ],
   imports: [
     RouterModule.forRoot(AppRoutes),
