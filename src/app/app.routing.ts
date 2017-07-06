@@ -43,6 +43,6 @@ export const AppRoutes: Routes = [
         }]
     }, {
         path: '**',
-        redirectTo: 'pages/err-404'
+        redirectTo: 'pages/err'
     }
 ];
