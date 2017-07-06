@@ -77,7 +77,7 @@ const MENUITEMS = [
     type: 'sub',
     icon: 'grid_on',
     children: [
-      { name: 'All Table', route: 'ngx-table' },
+      { name: 'Basic', route: 'basic' },
       { name: 'Selections', route: 'selection' },
       { name: 'Filter', route: 'filter' },
       { name: 'Paging', route: 'paging' },
@@ -103,6 +103,15 @@ const MENUITEMS = [
     icon: 'grid_on',
     children: [
       { name: 'Error', route: 'err' },
+    ]
+  },
+  {
+    route: 'sections',
+    name: 'Sections',
+    type: 'sub',
+    icon: 'grid_on',
+    children: [
+      { name: 'Invoice', route: 'invoice' },
     ]
   },
 ];

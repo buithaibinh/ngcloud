@@ -6,26 +6,31 @@ import 'rxjs/add/operator/delay';
 
 import * as _ from 'lodash';
 
-export interface ProjectData {
-    name: string;
-    tel: string;
-    email: string;
-    photo?: string;
+export interface OrderData {
+    product: string;
+    popularity: number;
+    sale: number;
+    invoice: string;
+    amount: string;
+    date: string;
+    username: string;
+    payment: string;
+    orderId: string;
 }
 
 @Injectable()
-export class ProjectDataService {
-    data: ProjectData[];
+export class OrderDataService {
+    data: OrderData[];
 
     constructor(public http: Http) {
     }
-    getAll(endIndex: number = 10): Observable<ProjectData[]> {
+    getAll(endIndex: number = 10): Observable<OrderData[]> {
         let self = this;
         if (this.data) {
             return Observable.of(this.data.slice(0, endIndex));
         } else {
             return this.http
-                .get('assets/data/projects.json')
+                .get('assets/data/orders.json')
                 .map(res => {
                     let data = res.json();
                     self.data = data;

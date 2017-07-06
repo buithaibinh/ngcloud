@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-import { NgxTableComponent } from './ngx-table/ngx-table.component';
+import { BasicTableComponent } from './basic/basic-table.component';
 import { SelectionTableComponent } from './selection-table/selection-table.component';
 import { FilterTableComponent } from './filter-table/filter-table.component';
 import { PagingTableComponent } from './paging-table/paging-table.component';
@@ -15,8 +15,8 @@ export const TablesRoutes: Routes = [
         children: [
             { path: '', redirectTo: 'selection', pathMatch: 'full' },
             {
-                path: 'ngx-table',
-                component: NgxTableComponent
+                path: 'basic',
+                component: BasicTableComponent
             },
             {
                 path: 'selection',

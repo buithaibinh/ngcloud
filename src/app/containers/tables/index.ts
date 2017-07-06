@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 
 import { SharedModule } from '../../shared/index';
 
-import { NgxTableComponent } from './ngx-table/ngx-table.component';
+import { BasicTableComponent } from './basic/basic-table.component';
 import { SelectionTableComponent } from './selection-table/selection-table.component';
 import { FilterTableComponent } from './filter-table/filter-table.component';
 import { PagingTableComponent } from './paging-table/paging-table.component';
@@ -16,7 +16,7 @@ import { ContactComponent } from './contact/contact.component';
 import { TablesRoutes } from './tables.routing';
 
 const TABLE_COMPONENTS = [
-    NgxTableComponent,
+    BasicTableComponent,
     SelectionTableComponent,
     FilterTableComponent,
     PagingTableComponent,

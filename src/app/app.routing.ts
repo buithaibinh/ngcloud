@@ -32,6 +32,10 @@ export const AppRoutes: Routes = [
                 path: 'ag-grid',
                 loadChildren: './containers/ag-grid/#A2GridModule'
             },
+            {
+                path: 'sections',
+                loadChildren: './containers/samples/#SamplesModule'
+            },
         ]
     },
     {

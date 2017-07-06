@@ -1,0 +1,159 @@
+<div fxLayout="row wrap">
+  <div fxFlex.gt-sm="50" fxFlex="100">
+    <md-card>
+      <md-card-header>
+        <md-card-title>Basic</md-card-title>
+        <md-card-subtitle>
+          <p>Add class <code>.table</code>.</p>
+        </md-card-subtitle>
+      </md-card-header>
+      <md-card-content>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Country</th>
+              <th>DOB</th>
+              <th>Position</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of contacts; let i = index">
+              <td>{{i + 1}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.country}}</td>
+              <td>{{item.birthday}}</td>
+              <td>
+                <span class="label" [class.label-danger]="i%3==0" [class.label-info]="i%3!=0" [class.label-success]="i%2==0">{{item.position}}</span>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </md-card-content>
+    </md-card>
+  </div>
+
+  <div fxFlex.gt-sm="50" fxFlex="100">
+    <md-card>
+      <md-card-header>
+        <md-card-title>Hover Table</md-card-title>
+        <md-card-subtitle>
+          <p>Add<code>.table-hover</code>to enable a hover state on table rows within a<code>&lt;tbody&gt;</code></p>
+        </md-card-subtitle>
+      </md-card-header>
+
+      <md-card-content>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Products</th>
+              <th>Popularity</th>
+              <th>Sales</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of orders; let i = index">
+              <td>{{i+1}}</td>
+              <td>{{item.product}}</td>
+              <td>
+                <md-progress-bar mode="determinate" value="{{item.popularity}}" [color]="item.popularity >= 60 ? 'primary':'accent'" mdTooltip="{{item.popularity}}">
+                </md-progress-bar>
+              </td>
+              <td>
+                <span class="text-semibold">{{item.sale}}%</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>
+
+<div fxLayout="row wrap">
+  <div fxFlex.gt-sm="50" fxFlex="100">
+    <md-card>
+      <md-card-header>
+        <md-card-title>Bordered Table</md-card-title>
+        <md-card-subtitle>
+          <p>Add<code>.table-bordered</code>for borders on all sides of the table and cells.</p>
+        </md-card-subtitle>
+      </md-card-header>
+      <md-card-content>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Progress</th>
+              <th>Deadline</th>
+              <th class="text-nowrap">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of projects; let i = index">
+              <td>{{item.project|slice:0:10}}</td>
+              <td>
+                <md-progress-bar mode="determinate" value="{{item.progress}}" [color]="item.progress >= 60 ? 'primary':'accent'" mdTooltip="{{item.progress}}">
+                </md-progress-bar>
+              </td>
+              <td>{{item.date}}</td>
+              <td class="text-nowrap">
+                <button md-icon-button mdTooltip="Edit" (click)="onClick">
+                    <md-icon class="md-18">edit</md-icon>
+                </button>
+                <button md-icon-button mdTooltip="Delete" (click)="onClick">
+                    <md-icon class="md-18">clear</md-icon>
+                </button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </md-card-content>
+    </md-card>
+  </div>
+
+  <div fxFlex.gt-sm="50" fxFlex="100">
+    <md-card>
+      <md-card-header>
+        <md-card-title>Striped Rows</md-card-title>
+        <md-card-subtitle>
+          <p>Use<code>.table-striped</code>to add zebra-striping to any table row within the<code>&lt;tbody&gt;</code></p>
+        </md-card-subtitle>
+
+      </md-card-header>
+
+      <md-card-content>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Username</th>
+              <th>Payment</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of orders; let i = index">
+              <td><a href="javascript:;" >Order-{{item.orderId}}</a></td>
+              <td>@{{item.username}}</td>
+              <td>
+                <md-chip-list>
+                    <md-chip color="accent">
+                        {{item.payment}}
+                    </md-chip>
+                </md-chip-list>
+                
+              </td>
+              <td>{{item.amount}}</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>
