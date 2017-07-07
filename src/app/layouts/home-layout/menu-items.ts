@@ -97,8 +97,8 @@ const MENUITEMS = [
     ]
   },
   {
-    route: 'pages',
-    name: 'Pages',
+    route: 'sections',
+    name: 'Sections',
     type: 'sub',
     icon: 'grid_on',
     children: [
@@ -106,12 +106,17 @@ const MENUITEMS = [
     ]
   },
   {
-    route: 'sections',
-    name: 'Sections',
+    route: 'pages',
+    name: 'Pages',
     type: 'sub',
     icon: 'grid_on',
     children: [
+      { name: 'Blank', route: 'blank' },
+      { name: 'Google Map', route: 'google-map' },
       { name: 'Invoice', route: 'invoice' },
+      { name: 'Profile', route: 'profile' },
+      { name: 'Search Result', route: 'search-result' },
+      { name: 'User List', route: 'user-list' },
     ]
   },
 ];

@@ -1,18 +1,4 @@
-.page-invoice {
-  &-amount {
-    margin-bottom: 40px;
-    padding-top: 10px;
-    font-size: 20px;
-    border-top: 1px solid mat-color($foreground, divider);;
-  }
-}
-
-@media(max-width: $screen-xs-max) {
-  .page-invoice {
-    .page-content {
-      .btn-animate {
-        margin-bottom: 10px;
-      }
-    }
-  }
+.page-invoice-table {
+  margin-top: 40px;
+  margin-bottom: 20px;
 }

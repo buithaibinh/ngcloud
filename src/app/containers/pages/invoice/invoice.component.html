@@ -1,0 +1,99 @@
+<md-card class="invoice">
+  <md-card-header fxLayout="row wrap">
+  </md-card-header>
+  <md-card-content>
+    <div fxLayout="row wrap">
+      <div fxFlex.gt-sm="50" fxFlex="100">
+        <h4>
+          <img class="margin-right-10" src="../../assets//images/logo-blue.png" alt="...">ngCloud</h4>
+        <address>
+          P.O. Box 701, 6177 Est. Rd
+          <br> San Francisco, CA, 94107
+          <br>
+          <abbr title="Mail">E-mail:</abbr>&nbsp;&nbsp;dui.in.sodales@lacus.co.uk
+          <br>
+          <abbr title="Phone">Phone:</abbr>&nbsp;&nbsp;1-180-646-6837
+          <br>
+          <abbr title="Fax">Fax:</abbr>&nbsp;&nbsp;1-323-609-9311
+        </address>
+
+      </div>
+
+      <div fxFlex.gt-sm="50" fxFlex="100" class="text-right">
+        <h4>Invoice Info</h4>
+        <p>
+          <a class="font-size-20" href="javascript:void(0)">#3007021</a>
+          <br> To:
+          <br>
+          <span class="font-size-20">Krist</span>
+        </p>
+        <address>
+          322-8249 Diam Road
+          <br>
+          <abbr title="Phone">P:</abbr>&nbsp;&nbsp;1-694-387-8573
+          <br>
+        </address>
+        <span>Invoice Date: January 20, 2017</span>
+        <br>
+        <span>Due Date: January 22, 2017</span>
+      </div>
+    </div>
+    <div class="page-invoice-table table-responsive">
+      <ngx-datatable class="material" [rows]="invoiceItems" [columnMode]="'flex'" [headerHeight]="50" [footerHeight]="0" [rowHeight]="'auto'">
+        <ngx-datatable-column name="Description" [flexGrow]="4">
+          <ng-template ngx-datatable-cell-template let-row="row">
+            <strong>{{row.title}}</strong><br/><span class="md-text-muted">{{row.subtitle}}</span>
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Unit Price" [flexGrow]="1">
+          <ng-template ngx-datatable-cell-template let-row="row">
+            <strong>{{row.price | currency:'USD':true:'1.2-2'}}</strong>
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Quantity" [flexGrow]="1">
+          <ng-template ngx-datatable-cell-template let-row="row">
+            <strong>{{row.quantity}}</strong>
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Amount" [flexGrow]="1">
+          <ng-template ngx-datatable-cell-template let-row="row">
+            <strong>{{ (row.price * row.quantity) | currency:'USD':true:'1.2-2'}}</strong>
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+  </md-card-content>
+
+  <hr>
+  <md-card-content>
+    <div fxLayout="row" fxLayoutWrap="wrap">
+      <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100" class="mt-1 mb-1">
+        <h6 class="text-uppercase text-md ma-0 text-bold">Subtotal</h6>
+        <h3 class="ma-0">{{getSubTotal() | currency:'USD':true:'1.2-2'}}</h3>
+      </div>
+      <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100" class="mt-1 mb-1 text-sm-right text-md-left">
+        <h6 class="text-uppercase text-md ma-0 text-bold">Tax (15%)</h6>
+        <h3 class="ma-0">{{getCalculatedTax() | currency:'USD':true:'1.2-2'}}</h3>
+      </div>
+      <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100" class="mt-1 mb-1">
+        <h6 class="text-uppercase text-md ma-0 text-bold">Discount</h6>
+        <h3 class="ma-0">$0.00</h3>
+      </div>
+      <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100" class="mt-1 mb-1 text-xs-left text-sm-right">
+        <h6 class="text-uppercase text-sm ma-0 text-bold">Total</h6>
+        <h3 class="ma-0 md-text-accent">{{ getTotal() | currency:'USD':true:'1.2-2'}}</h3>
+      </div>
+    </div>
+  </md-card-content>
+
+  <md-card-actions align="end">
+    <button md-button color="primary">
+        <md-icon class="md-18">shopping_cart</md-icon>Checkout
+    </button>
+    <button md-button color="accent">
+        <md-icon class="md-18">print</md-icon>Print
+    </button>
+  </md-card-actions>
+
+  
+</md-card>

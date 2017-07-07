@@ -33,8 +33,8 @@ export const AppRoutes: Routes = [
                 loadChildren: './containers/ag-grid/#A2GridModule'
             },
             {
-                path: 'sections',
-                loadChildren: './containers/samples/#SamplesModule'
+                path: 'pages',
+                loadChildren: './containers/pages/#PagesModule'
             },
         ]
     },
@@ -42,11 +42,11 @@ export const AppRoutes: Routes = [
         path: '',
         component: AuthLayoutComponent,
         children: [{
-            path: 'pages',
-            loadChildren: './containers/pages/#PagesModule'
+            path: 'sections',
+            loadChildren: './containers/sections/#SectionsModule'
         }]
     }, {
         path: '**',
-        redirectTo: 'pages/err'
+        redirectTo: 'sections/err'
     }
 ];
