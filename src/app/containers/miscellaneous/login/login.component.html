@@ -1,3 +1,41 @@
-<p>
-  login works!
-</p>
+<div class="login-page">
+  <div class="main">
+
+    <!-- MAIN CONTENT -->
+    <div class="loginscreen animated slideInLeft">
+      <div class="logo">
+        <h3><img src="../assets/images/logo-blue.png" alt="NgCloud" width="150px" /> </h3>
+      </div>
+      <md-card>
+        <md-card-content>
+          <md-input-container class="full-width">
+            <input mdInput type="text" required placeholder="Email">
+          </md-input-container>
+          <md-input-container class="full-width">
+            <input mdInput type="password" required placeholder="Password">
+          </md-input-container>
+
+          <div fxLayout="column" fxLayoutGap="20px">
+            <div fxLayout="row nowrap" fxLayoutAlign="space-between center">
+              <md-checkbox>Remember me</md-checkbox>
+              <a href="#">Forgot password?</a>
+            </div>
+
+            <a md-raised-button color="primary" href="#">Sign in</a>
+          </div>
+        </md-card-content>
+        <md-card-actions align="end">
+          <span>Have no account? Please go to<a href="#"> Sign up</a></span>
+        </md-card-actions>
+
+      </md-card>
+      <footer class="site-footer">
+        <div class="site-footer-legal">© {{today | date:'yyyy'}} <a href="#">NgCloud</a></div>
+        <div class="site-footer-right">
+          Created by <a href="#">Krist</a>
+        </div>
+      </footer>
+    </div>
+
+  </div>
+</div>
