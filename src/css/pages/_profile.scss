@@ -1,0 +1,14 @@
+.page-profile {
+  max-width: $layout-boxed-width;
+  margin: 0 auto;
+  .widget {
+    .avatar {
+      width: 130px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+  }
+  .profile-desc {
+    padding: 0 10px;
+  }
+}

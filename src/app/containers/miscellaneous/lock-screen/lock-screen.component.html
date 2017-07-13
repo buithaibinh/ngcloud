@@ -1,0 +1,41 @@
+<div class="lock-page">
+  <div class="main">
+
+    <!-- MAIN CONTENT -->
+    <div class="lockscreen animated flipInY">
+      <div class="logo">
+        <h3><img src="../assets/images/logo-blue.png" alt="" /> NgCloud</h3>
+      </div>
+      <md-card>
+        <md-card-header>
+          <img md-card-avatar src="assets/avatars/1.png">
+          <md-card-title>
+            <h4>Krist</h4>
+          </md-card-title>
+          <md-card-subtitle>Locked</md-card-subtitle>
+          <span fxFlex></span>
+          <i class="fa fa-user fa-3x text-muted"></i>
+        </md-card-header>
+        <md-card-content>
+          <div fxLayout="row nowrap" fxLayoutAlign="center flex-start">
+            <md-input-container color="accent" class="full-width">
+              <input mdInput required  placeholder="Enter your password">
+            </md-input-container>
+            <button md-icon-button (click)="onClick">
+              <md-icon class="md-18">lock_open</md-icon>
+          </button>
+          </div>
+          <p>Logged as someone else? <a href="#">Click here</a></p>
+        </md-card-content>
+
+      </md-card>
+      <footer class="site-footer">
+        <div class="site-footer-legal">© {{today | date:'yyyy'}} <a href="#">NgCloud</a></div>
+        <div class="site-footer-right">
+          Created by <a href="#">Krist</a>
+        </div>
+      </footer>
+    </div>
+
+  </div>
+</div>

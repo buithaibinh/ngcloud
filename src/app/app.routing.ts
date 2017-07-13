@@ -42,11 +42,11 @@ export const AppRoutes: Routes = [
         path: '',
         component: AuthLayoutComponent,
         children: [{
-            path: 'sections',
-            loadChildren: './containers/sections/#SectionsModule'
+            path: 'miscellaneous',
+            loadChildren: './containers/miscellaneous/#MiscellaneousModule'
         }]
     }, {
         path: '**',
-        redirectTo: 'sections/err'
+        redirectTo: 'miscellaneous/err-404'
     }
 ];

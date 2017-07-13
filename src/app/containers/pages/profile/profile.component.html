@@ -1,3 +1,101 @@
-<p>
-  profile works!
-</p>
+<div class="page-profile">
+  <div fxLayout="row wrap" fxLayoutGap.gt-sm="5%" fxLayoutGap="0%">
+    <div fxFlex.gt-sm="30" fxFlex="100">
+      <md-card>
+          <div class="widget text-center">
+            <a class="avatar avatar-lg" href="javascript:void(0)">
+                <img src="../assets/avatars/1.png" alt="...">
+            </a>
+            <h4 class="mat-h4">Krist</h4>
+            <p class="text-uppercase text-md">Developer</p>
+            <p class="profile-desc">My name is Krist, and I’m a (near) full stack developer working out of and residing in the Viet Nam.</p>
+
+            <div class="profile-social" fxLayout="row nowrap" fxLayoutAlign="center center">
+              <button md-icon-button (click)="onClick">
+                  <md-icon class="md-18">share</md-icon>
+              </button>
+              <button md-icon-button (click)="onClick">
+                  <md-icon class="md-18">public</md-icon>
+              </button>
+            </div>
+            <button md-raised-button (click)="onClick">Follower Me! </button>
+            <hr>
+            <div fxLayout="row" fxLayoutWrap="wrap">
+              <div fxFlex="33.33%">
+                <h5 class="mt-0 mb-0">89</h5>
+                <p class="mt-0 mb-0 text-md md-text-muted">Photos</p>
+              </div>
+              <div fxFlex="33.33%">
+                <h5 class="mt-0 mb-0">354</h5>
+                <p class="mt-0 mb-0 text-md md-text-muted">Followers</p>
+              </div>
+              <div fxFlex="33.33%">
+                <h5 class="mt-0 mb-0">945</h5>
+                <p class="mt-0 mb-0 text-md md-text-muted">Following</p>
+              </div>
+            </div>
+          </div>
+      </md-card>
+    </div>
+    <div fxFlex.gt-sm="65" fxFlex="100">
+      <md-card>
+        <md-tab-group>
+          <md-tab>
+            <template md-tab-label>General</template>
+            <md-card-content>
+              <form fxLayout="column">
+
+                <md-input-container class="mb-1">
+                  <input mdInput placeholder="First name">
+                </md-input-container>
+
+                <md-input-container class="mb-1">
+                  <input mdInput placeholder="Last name">
+                </md-input-container>
+
+                <md-input-container class="mb-1">
+                  <input mdInput placeholder="Company">
+                </md-input-container>
+
+                <md-input-container class="mb-1">
+                  <input mdInput placeholder="Email address">
+                </md-input-container>
+
+                <md-input-container class="mb-1">
+                  <input mdInput placeholder="Username">
+                </md-input-container>
+
+              </form>
+            </md-card-content>
+          </md-tab>
+          <md-tab>
+            <template md-tab-label>Security</template>
+            <md-card-content>
+              <form fxLayout="column">
+
+                <md-input-container class="mb-1">
+                  <input mdInput placeholder="Old password" type="password">
+                </md-input-container>
+
+                <md-input-container class="mb-1">
+                  <input mdInput placeholder="New password" type="password">
+                </md-input-container>
+
+                <md-input-container class="mb-1">
+                  <input mdInput placeholder="Confirm new password" type="password">
+                </md-input-container>
+
+              </form>
+            </md-card-content>
+          </md-tab>
+        </md-tab-group>
+        <hr>
+        <md-card-actions>
+          <button md-raised-button class="shadow-none">Save</button>
+          <button md-raised-button color="primary">Cancel</button>
+        </md-card-actions>
+      </md-card>
+    </div>
+
+  </div>
+</div>

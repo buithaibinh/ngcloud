@@ -1,0 +1,35 @@
+.lock-page {
+  .main {
+    position: static;
+    padding: 0;
+    min-height: 500px;
+    .lockscreen {
+      left: 50%;
+      margin-left: -239px;
+      margin-top: -185px;
+      position: absolute;
+      top: 50%;
+      width: 478px;
+      i {
+        opacity: .1;
+        padding: 15px;
+      }
+      @media (max-width: $screen-sm) {
+        height: auto;
+        left: 5%;
+        margin-left: 0;
+        margin-top: 25%;
+        position: absolute;
+        top: 0;
+        width: 90%;
+      }
+      md-card {
+        background: #FFF;
+        box-shadow: -31px 32px 53px rgba(0, 0, 0, .2);
+        overflow: hidden;
+        padding: 13px;
+        position: relative;
+      }
+    }
+  }
+}

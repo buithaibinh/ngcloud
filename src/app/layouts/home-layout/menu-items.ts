@@ -25,7 +25,7 @@ const MENUITEMS = [
     route: 'home',
     name: 'Home',
     type: 'link',
-    icon: 'explore'
+    icon: 'dashboard'
   },
   {
     route: 'material',
@@ -97,26 +97,30 @@ const MENUITEMS = [
     ]
   },
   {
-    route: 'sections',
-    name: 'Sections',
+    route: 'miscellaneous',
+    name: 'Miscellaneous',
     type: 'sub',
-    icon: 'grid_on',
+    icon: 'web',
     children: [
       { name: 'Error', route: 'err' },
+      { name: 'Error 404', route: 'err-404' },
+      { route: 'forgot-password', name: 'Forgot Password' },
+      { route: 'lock-screen', name: 'Lock Screen' },
+      { route: 'login', name: 'Login' },
+      { route: 'maintenance', name: 'Maintenance' },
+      { route: 'register', name: 'Register' },
     ]
   },
   {
     route: 'pages',
     name: 'Pages',
     type: 'sub',
-    icon: 'grid_on',
+    icon: 'pages',
     children: [
       { name: 'Blank', route: 'blank' },
       { name: 'Google Map', route: 'google-map' },
       { name: 'Invoice', route: 'invoice' },
       { name: 'Profile', route: 'profile' },
-      { name: 'Search Result', route: 'search-result' },
-      { name: 'User List', route: 'user-list' },
     ]
   },
 ];
