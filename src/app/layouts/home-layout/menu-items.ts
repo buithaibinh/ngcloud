@@ -123,6 +123,15 @@ const MENUITEMS = [
       { name: 'Profile', route: 'profile' },
     ]
   },
+  {
+    route: 'apps',
+    name: 'Apps',
+    type: 'sub',
+    icon: 'apps',
+    children: [
+      { name: 'Videos', route: 'videos' },
+    ]
+  },
 ];
 
 @Injectable()

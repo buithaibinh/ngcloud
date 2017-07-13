@@ -1,3 +1,41 @@
-<p>
-  register works!
-</p>
+<div class="register-page">
+  <div class="main">
+
+    <!-- MAIN CONTENT -->
+    <div class="registerscreen">
+      <div class="logo">
+        <h3><img src="../assets/images/logo-blue.png" alt="NgCloud" width="150px" /> </h3>
+      </div>
+      <md-card>
+        <md-card-content>
+          <md-input-container class="full-width">
+            <input mdInput type="text" required placeholder="Full Name">
+          </md-input-container>
+          <md-input-container class="full-width">
+            <input mdInput type="text" required placeholder="Email">
+          </md-input-container>
+          <md-input-container class="full-width">
+            <input mdInput type="password" required placeholder="Password">
+          </md-input-container>
+          <md-input-container class="full-width">
+            <input mdInput type="password" required placeholder="Re-enter Password">
+          </md-input-container>
+
+          <div fxLayout="column" fxLayoutGap="30px">
+
+            <a md-raised-button color="primary" href="#">Sign up</a>
+            <span>Have account already? Please go to<a href="#"> Sign in</a></span>
+          </div>
+        </md-card-content>
+
+      </md-card>
+      <footer class="site-footer">
+        <div class="site-footer-legal">© {{today | date:'yyyy'}} <a href="#">NgCloud</a></div>
+        <div class="site-footer-right">
+          Created by <a href="#">Krist</a>
+        </div>
+      </footer>
+    </div>
+
+  </div>
+</div>

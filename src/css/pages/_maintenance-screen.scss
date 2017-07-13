@@ -1,21 +1,18 @@
-.login-page {
+.maintenance-page {
   .main {
     position: static;
     padding: 0;
     min-height: 500px;
-    .loginscreen {
+    .maintenancescreen {
       left: 50%;
       margin-left: -239px;
-      margin-top: -215px;
+      margin-top: -270px;
       position: absolute;
       top: 50%;
       width: 478px;
-      .mat-input-wrapper {
-        margin-bottom: 30px;
-      }
+      text-align: center;
       i {
-        opacity: .1;
-        padding: 15px;
+        font-size: 48px;
       }
       @media (max-width: $screen-sm) {
         height: auto;

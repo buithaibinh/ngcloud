@@ -36,6 +36,10 @@ export const AppRoutes: Routes = [
                 path: 'pages',
                 loadChildren: './containers/pages/#PagesModule'
             },
+            {
+                path: 'apps',
+                loadChildren: './containers/apps/#AppsModule'
+            },
         ]
     },
     {
