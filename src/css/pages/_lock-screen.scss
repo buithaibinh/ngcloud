@@ -29,6 +29,10 @@
         overflow: hidden;
         padding: 13px;
         position: relative;
+        .mat-card-avatar {
+          height: 70px;
+          width: 70px;
+        }
       }
     }
   }
