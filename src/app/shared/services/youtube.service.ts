@@ -6,15 +6,14 @@ import 'rxjs/add/operator/delay';
 
 import * as _ from 'lodash';
 
-import { GoogleApiYouTubeVideoResource } from './video.model';
 
 @Injectable()
 export class YoutubeService {
-    data: GoogleApiYouTubeVideoResource[];
+    data: any[];
 
     constructor(public http: Http) {
     }
-    getAll(): Observable<GoogleApiYouTubeVideoResource[]> {
+    getAll(): Observable<any[]> {
         let self = this;
         if (this.data) {
             return Observable.of(this.data);
@@ -23,8 +22,8 @@ export class YoutubeService {
                 .get('assets/data/videos.json')
                 .map(res => {
                     let data = res.json();
-                    self.data = data;
-                    return data.items;
+                    self.data = data.items;
+                    return self.data;
                 })
                 .catch((error: any) => {
                     console.log(error);

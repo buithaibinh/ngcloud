@@ -275,3 +275,49 @@ $inverse:                   white;
 		@include transform(translate(-50%, -50%));
 	}
 }
+
+/* applying a nicer UX*/
+.nicer-ux *,
+.ux-maker {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition:    all 0.3s ease-out;
+    -ms-transition:     all 0.3s ease-out;
+    -o-transition:      all 0.3s ease-out;
+    transition:         all 0.3s ease-out;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// 3d flip
+.card .face {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all .8s ease;
+}
+
+.card .front {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
+
+.card .back {
+    -webkit-transform: perspective(400px) rotateY(-179.9deg);
+    transform: perspective(400px) rotateY(-179.9deg);
+    opacity: 0;
+}
+
+.show-description .face.front {
+    -webkit-transform: perspective(400px) rotateY(179.9deg);
+    transform: perspective(400px) rotateY(179.9deg);
+}
+.show-description .face.back {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+}

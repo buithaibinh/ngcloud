@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs/Observable';
 
-import { GoogleApiYouTubeVideoResource } from './model/video.model';
-import { YoutubeService } from './model/youtube.service';
+import { YoutubeService } from '../../../shared/services/youtube.service';
 
 @Component({
   selector: 'app-videos',
@@ -21,13 +20,13 @@ export class VideosComponent implements OnInit {
     this.videos$ = this.videoService.getAll();
   }
 
-  playSelectedVideo(media: GoogleApiYouTubeVideoResource) {
+  playSelectedVideo(media: any) {
 
   }
 
-  queueSelectedVideo(media: GoogleApiYouTubeVideoResource) {
+  queueSelectedVideo(media: any) {
   }
 
-  removeVideoFromPlaylist(media: GoogleApiYouTubeVideoResource) {
+  removeVideoFromPlaylist(media: any) {
   }
 }

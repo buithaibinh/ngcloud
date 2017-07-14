@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 import { YoutubeMediaComponent } from '../youtube-media/youtube-media';
-import { GoogleApiYouTubeVideoResource } from '../model/video.model';
 
 @Component({
   selector: 'youtube-list',
@@ -23,8 +22,8 @@ import { GoogleApiYouTubeVideoResource } from '../model/video.model';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class YoutubeListComponent {
-  @Input() list: GoogleApiYouTubeVideoResource[] = [];
-  @Input() queued: GoogleApiYouTubeVideoResource[] = [];
+  @Input() list: any[] = [];
+  @Input() queued: any[] = [];
   @Output() play = new EventEmitter();
   @Output() queue = new EventEmitter();
   @Output() add = new EventEmitter();
@@ -48,7 +47,7 @@ export class YoutubeListComponent {
     this.unqueue.emit(media);
   }
 
-  getMediaStatus(media: GoogleApiYouTubeVideoResource) {
+  getMediaStatus(media: any) {
     return {
       queued: this.queued.findIndex(queue => queue.id === media.id) >= 0
     };

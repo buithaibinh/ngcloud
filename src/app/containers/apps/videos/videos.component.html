@@ -1,2 +1,7 @@
-<youtube-list [list]="videos$ | async" (play)="playSelectedVideo($event)" (queue)="queueSelectedVideo($event)"
-  (unqueue)="removeVideoFromPlaylist($event)"></youtube-list>
+<md-toolbar class="page-header">
+  <span fxFlex></span>
+  <button md-icon-button><md-icon>settings</md-icon></button>
+  <button md-icon-button><md-icon>chevron_left</md-icon></button>
+  <button md-icon-button><md-icon>chevron_right</md-icon></button>
+</md-toolbar>
+<youtube-list [list]="videos$ | async" (play)="playSelectedVideo($event)" (queue)="queueSelectedVideo($event)" (unqueue)="removeVideoFromPlaylist($event)"></youtube-list>

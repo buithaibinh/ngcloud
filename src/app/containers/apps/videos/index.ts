@@ -7,8 +7,6 @@ import { YoutubeListComponent } from './youtube-list/youtube-list';
 import { YoutubeMediaComponent } from './youtube-media/youtube-media';
 import { VideosComponent } from './videos.component';
 
-import { YoutubeService } from './model/youtube.service';
-
 const COMPONENTS = [
     YoutubeListComponent,
     YoutubeMediaComponent,
@@ -21,6 +19,6 @@ const COMPONENTS = [
     ],
     exports: [VideosComponent],
     declarations: COMPONENTS,
-    providers: [YoutubeService],
+    providers: [],
 })
 export class VideosModule { }

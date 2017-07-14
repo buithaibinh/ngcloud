@@ -1,0 +1,21 @@
+<md-toolbar class="page-header">
+    <span fxFlex></span>
+    <button md-icon-button><md-icon>settings</md-icon></button>
+    <button md-icon-button><md-icon>chevron_left</md-icon></button>
+    <button md-icon-button><md-icon>chevron_right</md-icon></button>
+</md-toolbar>
+<md-grid-list cols="5" rowHeight="1:1" [gutterSize]="'1px'">
+    <md-grid-tile *ngFor="let media of videos; let i = index" rowHeight="2:1">
+        <md-grid-tile-header>
+            <md-icon md-grid-avatar>ligature</md-icon>
+            {{media.snippet.channelTitle}}
+        </md-grid-tile-header>
+        <img src="{{ media.snippet.thumbnails.high.url }}" />
+        <md-grid-tile-footer>
+            <span md-line>{{media.snippet.title}}</span>
+            <button [color]="i %3 == 0 ? 'accent':''" md-icon-button (click)="onClick">
+          <md-icon>favorite</md-icon>
+      </button>
+        </md-grid-tile-footer>
+    </md-grid-tile>
+</md-grid-list>

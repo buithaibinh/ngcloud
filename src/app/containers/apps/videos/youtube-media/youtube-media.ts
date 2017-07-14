@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
-import { GoogleApiYouTubeVideoResource } from '../model/video.model';
 
 interface MediaStatus {
   queued: boolean;
@@ -19,25 +18,25 @@ export class YoutubeMediaComponent {
     queued: false,
     isPlaying: false
   };
-  @Output() play = new EventEmitter<GoogleApiYouTubeVideoResource>();
-  @Output() queue = new EventEmitter<GoogleApiYouTubeVideoResource>();
-  @Output() add = new EventEmitter<GoogleApiYouTubeVideoResource>();
-  @Output() unqueue = new EventEmitter<GoogleApiYouTubeVideoResource>();
+  @Output() play = new EventEmitter<any>();
+  @Output() queue = new EventEmitter<any>();
+  @Output() add = new EventEmitter<any>();
+  @Output() unqueue = new EventEmitter<any>();
 
   showDesc = false;
   isPlaying = false;
 
   constructor() { }
 
-  playVideo(media: GoogleApiYouTubeVideoResource) {
+  playVideo(media: any) {
     this.play.emit(media);
   }
 
-  queueVideo(media: GoogleApiYouTubeVideoResource) {
+  queueVideo(media: any) {
     this.queue.emit(media);
   }
 
-  addVideo(media: GoogleApiYouTubeVideoResource) {
+  addVideo(media: any) {
     this.add.emit(media);
   }
 
@@ -45,7 +44,7 @@ export class YoutubeMediaComponent {
     this.showDesc = !showDesc;
   }
 
-  removeVideoFromQueue(media: GoogleApiYouTubeVideoResource) {
+  removeVideoFromQueue(media: any) {
     this.unqueue.emit(media);
   }
 }

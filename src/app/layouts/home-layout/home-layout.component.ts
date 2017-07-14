@@ -76,19 +76,6 @@ export class HomeLayoutComponent implements OnInit, OnDestroy {
     return navigator.platform.toUpperCase().indexOf('MAC') >= 0;
   }
 
-  addMenuItem(): void {
-    this.menuItems.add({
-      route: 'menu',
-      name: 'MENU',
-      type: 'sub',
-      icon: 'trending_flat',
-      children: [
-        { route: 'menu', name: 'MENU' },
-        { route: 'timelmenuine', name: 'MENU' }
-      ]
-    });
-  }
-
   closeSidebar() {
     return this.store.dispatch(this.appLayoutActions.collapseSidebar());
   }

@@ -27,9 +27,46 @@ const MENUITEMS = [
     type: 'link',
     icon: 'dashboard'
   },
+   {
+    route: 'apps',
+    name: 'Apps',
+    type: 'sub',
+    icon: 'apps',
+    children: [
+      { name: 'Videos', route: 'videos' },
+      { name: 'Gallery', route: 'gallery' },
+    ]
+  },
+  {
+    route: 'pages',
+    name: 'Pages',
+    type: 'sub',
+    icon: 'pages',
+    children: [
+      { name: 'Blank', route: 'blank' },
+      { name: 'Google Map', route: 'google-map' },
+      { name: 'Invoice', route: 'invoice' },
+      { name: 'Profile', route: 'profile' },
+    ]
+  },
+  {
+    route: 'miscellaneous',
+    name: 'Miscellaneous',
+    type: 'sub',
+    icon: 'web',
+    children: [
+      { name: 'Error', route: 'err' },
+      { name: 'Error 404', route: 'err-404' },
+      { route: 'forgot-password', name: 'Forgot Password' },
+      { route: 'lock-screen', name: 'Lock Screen' },
+      { route: 'login', name: 'Login' },
+      { route: 'maintenance', name: 'Maintenance' },
+      { route: 'register', name: 'Register' },
+    ]
+  },
   {
     route: 'material',
-    name: 'Basic UI',
+    name: 'UI',
     type: 'sub',
     icon: 'palette',
     children: [
@@ -96,51 +133,14 @@ const MENUITEMS = [
       { name: 'Rich grid', route: 'rich-grid' },
     ]
   },
-  {
-    route: 'miscellaneous',
-    name: 'Miscellaneous',
-    type: 'sub',
-    icon: 'web',
-    children: [
-      { name: 'Error', route: 'err' },
-      { name: 'Error 404', route: 'err-404' },
-      { route: 'forgot-password', name: 'Forgot Password' },
-      { route: 'lock-screen', name: 'Lock Screen' },
-      { route: 'login', name: 'Login' },
-      { route: 'maintenance', name: 'Maintenance' },
-      { route: 'register', name: 'Register' },
-    ]
-  },
-  {
-    route: 'pages',
-    name: 'Pages',
-    type: 'sub',
-    icon: 'pages',
-    children: [
-      { name: 'Blank', route: 'blank' },
-      { name: 'Google Map', route: 'google-map' },
-      { name: 'Invoice', route: 'invoice' },
-      { name: 'Profile', route: 'profile' },
-    ]
-  },
-  {
-    route: 'apps',
-    name: 'Apps',
-    type: 'sub',
-    icon: 'apps',
-    children: [
-      { name: 'Videos', route: 'videos' },
-    ]
-  },
+  
+  
+ 
 ];
 
 @Injectable()
 export class MenuItems {
   getAll(): Menu[] {
     return MENUITEMS;
-  }
-
-  add(menu: Menu) {
-    MENUITEMS.push(menu);
   }
 }
