@@ -3,18 +3,19 @@ import { RouterModule } from '@angular/router';
 
 import { SharedModule } from '../../shared/index';
 
-import { VideosComponent } from './videos/videos.component';
+import { VideosModule } from './videos/index';
 
 import { AppsRoutes } from './apps-routing';
 
 const COMPONENTS = [
-    VideosComponent
+    
 ]
 
 @NgModule({
     imports: [
         RouterModule.forChild(AppsRoutes),
         SharedModule,
+        VideosModule
     ],
     exports: [],
     declarations: COMPONENTS,

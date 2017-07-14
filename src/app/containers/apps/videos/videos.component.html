@@ -1,3 +1,2 @@
-<p>
-  videos works!
-</p>
+<youtube-list [list]="videos$ | async" (play)="playSelectedVideo($event)" (queue)="queueSelectedVideo($event)"
+  (unqueue)="removeVideoFromPlaylist($event)"></youtube-list>

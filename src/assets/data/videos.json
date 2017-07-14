@@ -1,0 +1,1662 @@
+{
+    "kind": "youtube#searchListResponse",
+    "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/B7OWTjq51yU_UptOlpuHYZmPLmQ\"",
+    "nextPageToken": "CDIQAA",
+    "regionCode": "VN",
+    "pageInfo": {
+        "totalResults": 1000000,
+        "resultsPerPage": 50
+    },
+    "items": [
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/MMzRgk0I4RHyLq_4niRESMHcm7Q\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "nfs8NYg7yQM"
+            },
+            "snippet": {
+                "publishedAt": "2017-04-24T17:00:05.000Z",
+                "channelId": "UCwppdrjsBPAZg5_cUwQjfMQ",
+                "title": "Charlie Puth - Attention [Official Video]",
+                "description": "Download and Stream \"Attention\": https://Atlantic.lnk.to/AttentionID Video Directed by Emil Nava Written By: Charlie Puth and Jacob Kasher Produced By: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/nfs8NYg7yQM/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/nfs8NYg7yQM/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/nfs8NYg7yQM/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Charlie Puth",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/hPeH_Azu_aaKSTxzNIG-gosL560\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "m2ua3O_fdCY"
+            },
+            "snippet": {
+                "publishedAt": "2015-05-15T13:00:05.000Z",
+                "channelId": "UCdI8evszfZvyAl2UVCypkTA",
+                "title": "Happy Hippie Presents: Don't Dream It's Over (Performed by Miley Cyrus & Ariana Grande)",
+                "description": "Happy Hippie Presents: Backyard Sessions - Don't Dream It's Over performed by Miley Cyrus and Ariana Grande Click here to donate: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/m2ua3O_fdCY/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/m2ua3O_fdCY/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/m2ua3O_fdCY/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "MileyCyrusVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/UapgvLP147XoQQjIGJxkugyp2RQ\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "nSDgHBxUbVQ"
+            },
+            "snippet": {
+                "publishedAt": "2015-05-10T00:40:11.000Z",
+                "channelId": "UC0C-w0YjGpqDXGB8IHb662A",
+                "title": "Ed Sheeran - Photograph (Official Music Video)",
+                "description": "Download on iTunes: http://smarturl.it/x-itunesdlx Listen on Spotify: http://smarturl.it/stream.photograph Directed by Emil Nava Subscribe to Ed's channel: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/nSDgHBxUbVQ/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/nSDgHBxUbVQ/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/nSDgHBxUbVQ/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Ed Sheeran",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/V2PHNziBEoMDZb_fiFi3GQ0AeWE\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "h--P8HzYZ74"
+            },
+            "snippet": {
+                "publishedAt": "2017-02-23T13:00:03.000Z",
+                "channelId": "UCFzm6oAGFmmZfkrzQ5wATSQ",
+                "title": "Zedd, Alessia Cara - Stay (Lyric Video)",
+                "description": "Alessia and I first met at rehearsals for the HALO awards, where Alessia, Daya and I performed together. I've loved her songs before but realized that she's an ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/h--P8HzYZ74/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/h--P8HzYZ74/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/h--P8HzYZ74/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "ZEDDVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/mW9OlbJ1-GIHMEgzyrnGz6nVCls\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "S9bCLPwzSC0"
+            },
+            "snippet": {
+                "publishedAt": "2009-12-25T04:20:46.000Z",
+                "channelId": "UC20vb-R_px4CguHzzBPhoyQ",
+                "title": "Eminem - Mockingbird",
+                "description": "Music video by Eminem performing Mockingbird. YouTube view counts pre-VEVO: 14297644. (C) 2004 Aftermath Entertainment/Interscope Records.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/S9bCLPwzSC0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/S9bCLPwzSC0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/S9bCLPwzSC0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "EminemVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/JC8r3BBLPDvcWqsGO53Ue0NljIE\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "JByDbPn6A1o"
+            },
+            "snippet": {
+                "publishedAt": "2011-06-27T07:00:00.000Z",
+                "channelId": "UC20vb-R_px4CguHzzBPhoyQ",
+                "title": "Eminem - Space Bound",
+                "description": "Eminem performing Space Bound. buy now http://bit.ly/lVFDxd © 2010 Aftermath Records.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/JByDbPn6A1o/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/JByDbPn6A1o/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/JByDbPn6A1o/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "EminemVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/9NlOfaJ8RazCU59dbSpmCS4tEC8\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "3AtDnEC4zak"
+            },
+            "snippet": {
+                "publishedAt": "2016-08-02T20:00:26.000Z",
+                "channelId": "UCwppdrjsBPAZg5_cUwQjfMQ",
+                "title": "Charlie Puth - We Don't Talk Anymore (feat. Selena Gomez) [Official Video]",
+                "description": "Get \"We Don't Talk Anymore\": http://smarturl.it/CharlieWDTA Get Charlie's debut album Nine Track Mind, available now! Download: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/3AtDnEC4zak/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/3AtDnEC4zak/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/3AtDnEC4zak/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Charlie Puth",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/6GtvENsC5CpD6UcFOplXTk633Mo\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "ekzHIouo8Q4"
+            },
+            "snippet": {
+                "publishedAt": "2013-02-05T20:01:34.000Z",
+                "channelId": "UCoUM-UJ7rirJYP8CQ0EIaHA",
+                "title": "Bruno Mars - When I Was Your Man [Official Video]",
+                "description": "Moonshine Jungle Tour 2014 tickets and more info: http://www.brunomars.com/moonshinejungletour Directed by Cameron Duddy & Bruno Mars Bruno Mars ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/ekzHIouo8Q4/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/ekzHIouo8Q4/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/ekzHIouo8Q4/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Bruno Mars",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/rKpW0Blph5iV1fpQMm1fcQXl8Xo\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "87gWaABqGYs"
+            },
+            "snippet": {
+                "publishedAt": "2017-05-04T06:06:16.000Z",
+                "channelId": "UC0C-w0YjGpqDXGB8IHb662A",
+                "title": "Ed Sheeran - Galway Girl [Official Video]",
+                "description": "Out Now: https://atlanti.cr/yt-album Subscribe to Ed's channel: http://bit.ly/SubscribeToEdSheeran Follow Ed on... Facebook: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/87gWaABqGYs/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/87gWaABqGYs/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/87gWaABqGYs/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Ed Sheeran",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/BFxZIqmYgxNEUaJ79TIkRjXim4I\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "Ahha3Cqe_fk"
+            },
+            "snippet": {
+                "publishedAt": "2011-11-11T18:37:24.000Z",
+                "channelId": "UC-8Q-hLdECwQmaWNwXitYDw",
+                "title": "Katy Perry - The One That Got Away (Official)",
+                "description": "Sometimes you promise someone forever but it doesn't work out that way. Watch Katy Perry and Diego Luna star in the sixth chapter of the “Teenage Dream” ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/Ahha3Cqe_fk/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/Ahha3Cqe_fk/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/Ahha3Cqe_fk/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "KatyPerryVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/sgIDfXml1uxLCMMugn9Khkpwdss\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "dT2owtxkU8k"
+            },
+            "snippet": {
+                "publishedAt": "2017-06-21T04:00:01.000Z",
+                "channelId": "UC4-TgOSMJHn-LtY4zCzbQhw",
+                "title": "Shawn Mendes - There's Nothing Holdin' Me Back",
+                "description": "Shawn Mendes' new single “There's Nothing Holdin' Me Back” is out now. Get it off Illuminate: iTunes: https://lnk.to/IlluminateDeluxeDL/itunes Apple Music: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/dT2owtxkU8k/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/dT2owtxkU8k/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/dT2owtxkU8k/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "ShawnMendesVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/qZMYA33dYhiRsO3nQO4M4Yfa1KQ\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "uxUATkpMQ8A"
+            },
+            "snippet": {
+                "publishedAt": "2009-10-08T10:14:15.000Z",
+                "channelId": "UCSJfjbTHLKj1H2-oqi6jN8Q",
+                "title": "The All-American Rejects - Gives You Hell (Full Narrative Version)",
+                "description": "Music video by The All-American Rejects performing Gives You Hell. (C) 2008 DGC/Interscope Records.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/uxUATkpMQ8A/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/uxUATkpMQ8A/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/uxUATkpMQ8A/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "AllAmericanRjctsVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/fkUEkA25_IO6YtK_RaQt9ELLclU\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "wnJ6LuUFpMo"
+            },
+            "snippet": {
+                "publishedAt": "2017-06-30T04:00:05.000Z",
+                "channelId": "UCrHL_BF5lHyK43BxLU8-vBQ",
+                "title": "J. Balvin, Willy William - Mi Gente",
+                "description": "J BALVIN & WILLY WILLIAM “MI GENTE” https://UMLE.lnk.to/-Rc9DFp Connect with J Balvin: https://www.facebook.com/JBalvinOficial/ ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/wnJ6LuUFpMo/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/wnJ6LuUFpMo/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/wnJ6LuUFpMo/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "jbalvinVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/DOERxakKST-uJ3pOpRUuBOeP81k\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "FM7MFYoylVs"
+            },
+            "snippet": {
+                "publishedAt": "2017-02-22T21:15:00.000Z",
+                "channelId": "UCRzzwLpLiUNIs6YOPe33eMg",
+                "title": "The Chainsmokers & Coldplay - Something Just Like This (Lyric)",
+                "description": "The Chainsmokers debut album 'Memories... Do Not Open' is out now! Buy & Stream: http://smarturl.it/TCSMemories Physical CD: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/FM7MFYoylVs/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/FM7MFYoylVs/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/FM7MFYoylVs/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "ChainsmokersVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/id3uz64VI_Frb6lxlzAYDG8yCuw\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "A2FsgKoGD04"
+            },
+            "snippet": {
+                "publishedAt": "2017-05-25T21:58:58.000Z",
+                "channelId": "UCRijo3ddMTht_IHyNSNXpNQ",
+                "title": "Real Life Trick Shots | Dude Perfect",
+                "description": "Trick shots should be an everyday thing! Thanks to Kingsford for sponsoring this video! ▻ Click HERE to subscribe to Dude Perfect! http://bit.ly/SubDudePerfect ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/A2FsgKoGD04/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/A2FsgKoGD04/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/A2FsgKoGD04/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Dude Perfect",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/EuxX1MYIjH3YelbBQhTfc7EylM8\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "BxuY9FET9Y4"
+            },
+            "snippet": {
+                "publishedAt": "2015-09-14T22:01:17.000Z",
+                "channelId": "UCwppdrjsBPAZg5_cUwQjfMQ",
+                "title": "Charlie Puth - One Call Away [Official Video]",
+                "description": "Charlie Puth's debut album Nine Track Mind is available now! Download: http://smarturl.it/NineTrackMind Stream: http://smarturl.it/StreamNTM Exclusive Nine ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/BxuY9FET9Y4/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/BxuY9FET9Y4/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/BxuY9FET9Y4/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Charlie Puth",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/vA0W8iGDgOfQeG9nOyc-uEf3_ME\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "k4V3Mo61fJM"
+            },
+            "snippet": {
+                "publishedAt": "2011-05-30T13:47:04.000Z",
+                "channelId": "UCDPM_n1atn2ijUwHd0NNRQw",
+                "title": "Coldplay - Fix You",
+                "description": "Get A Head Full Of Dreams now: – iTunes http://cldp.ly/cpitunes – Amazon http://smarturl.it/AHFODamazon – Google Play http://smarturl.it/AHFODgplay – CD ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/k4V3Mo61fJM/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/k4V3Mo61fJM/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/k4V3Mo61fJM/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Coldplay Official",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/BrsBTVDXdikOH1fo3o-I5ZxR55U\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "n1a7o44WxNo"
+            },
+            "snippet": {
+                "publishedAt": "2015-06-11T17:00:01.000Z",
+                "channelId": "UCFzm6oAGFmmZfkrzQ5wATSQ",
+                "title": "Zedd - Beautiful Now ft. Jon Bellion",
+                "description": "Get Zedd's new album “True Colors,” out now: http://smarturl.it/ZeddTrueColors Sign up for updates: http://smarturl.it/Zedd.News Written and directed by Jodeb ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/n1a7o44WxNo/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/n1a7o44WxNo/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/n1a7o44WxNo/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "ZEDDVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/xQPgeOXEYs1VUh7rHuIX7dAWEgY\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "o6b9JpBFjd4"
+            },
+            "snippet": {
+                "publishedAt": "2015-07-24T06:57:56.000Z",
+                "channelId": "UCMJ5Qf3sOvQpcYiai1Noa3Q",
+                "title": "Major Lazer - Powerful (feat. Ellie Goulding & Tarrus Riley) (Official Music Video)",
+                "description": "THE NEW MAJOR LAZER EP - KNOW NO BETTER - LISTEN NOW ON YOUTUBE - http://vid.io/xcRj OFFICIAL MUSIC VIDEO // MAJOR LAZER - POWERFUL ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/o6b9JpBFjd4/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/o6b9JpBFjd4/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/o6b9JpBFjd4/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "majorlazer",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/nWx__vJ13XiQoP1hXb52EjtTcD4\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "1pfuHcIppnM"
+            },
+            "snippet": {
+                "publishedAt": "2017-05-31T01:48:50.000Z",
+                "channelId": "UCT2X19JJaJGUN7mrYuImANQ",
+                "title": "Demian Aditya: Escape Artist Risks His Life During AGT Audition - America's Got Talent 2017",
+                "description": "An escape artist attempts a death-defying stunt--and shocks the crowd. Check it out the big twist in his act! » Get The America's Got Talent App: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/1pfuHcIppnM/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/1pfuHcIppnM/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/1pfuHcIppnM/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "America's Got Talent",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/6plN_SzYiU-l2cit-FGkh6jN5d0\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "RB-RcX5DS5A"
+            },
+            "snippet": {
+                "publishedAt": "2011-05-27T16:20:57.000Z",
+                "channelId": "UCDPM_n1atn2ijUwHd0NNRQw",
+                "title": "Coldplay - The Scientist",
+                "description": "Get A Head Full Of Dreams now: – iTunes http://cldp.ly/cpitunes – Amazon http://smarturl.it/AHFODamazon – Google Play http://smarturl.it/AHFODgplay – CD ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/RB-RcX5DS5A/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/RB-RcX5DS5A/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/RB-RcX5DS5A/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Coldplay Official",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/WOS2tvswhr46dRVOTcMpul7jFP8\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "yKNxeF4KMsY"
+            },
+            "snippet": {
+                "publishedAt": "2011-05-30T13:12:47.000Z",
+                "channelId": "UCDPM_n1atn2ijUwHd0NNRQw",
+                "title": "Coldplay - Yellow",
+                "description": "Get A Head Full Of Dreams now: – iTunes http://cldp.ly/cpitunes – Amazon http://smarturl.it/AHFODamazon – Google Play http://smarturl.it/AHFODgplay – CD ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/yKNxeF4KMsY/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/yKNxeF4KMsY/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/yKNxeF4KMsY/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Coldplay Official",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/yRbQztVbkPUC5TGAKC0UU9a7fk0\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "yWEK4v9AVKQ"
+            },
+            "snippet": {
+                "publishedAt": "2017-04-18T16:00:06.000Z",
+                "channelId": "UCFzm6oAGFmmZfkrzQ5wATSQ",
+                "title": "Zedd, Alessia Cara - Stay (Official Music Video)",
+                "description": "Zedd & Alessia Cara - Stay (Official Music Video) Watch the official music video for “Stay” by Zedd and Alessia Cara. I'm so excited to share the Stay music video ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/yWEK4v9AVKQ/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/yWEK4v9AVKQ/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/yWEK4v9AVKQ/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "ZEDDVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/VudV_nUmix0cILM8O9cXalOuBvM\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "7OrLroFa0AI"
+            },
+            "snippet": {
+                "publishedAt": "2017-07-06T16:01:19.000Z",
+                "channelId": "UCXYRdIXDdeZIf816EWAr5zQ",
+                "title": "MACKLEMORE FEAT SKYLAR GREY - GLORIOUS (OFFICIAL MUSIC VIDEO)",
+                "description": "GLORIOUS available now! http://smarturl.it/MacklemoreGlorious DIRECTED BY Jason Koenig STARRING Helen Schott & Ben Haggerty CONCEPT BY Ben ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/7OrLroFa0AI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/7OrLroFa0AI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/7OrLroFa0AI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Macklemore LLC",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/F3xqEKLQ0jFwKriiuSy7i7np8uk\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "SR6iYWJxHqs"
+            },
+            "snippet": {
+                "publishedAt": "2010-11-22T16:55:48.000Z",
+                "channelId": "UCoUM-UJ7rirJYP8CQ0EIaHA",
+                "title": "Bruno Mars - Grenade [OFFICIAL VIDEO]",
+                "description": "Moonshine Jungle Tour 2014 tickets and more info: http://www.brunomars.com/moonshinejungletour Available now on iTunes! http://smarturl.it/Doo-Wops ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/SR6iYWJxHqs/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/SR6iYWJxHqs/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/SR6iYWJxHqs/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Bruno Mars",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/Nz_h6lF4zv4Yzdz7kX7AHEnOvTA\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "XjwZAa2EjKA"
+            },
+            "snippet": {
+                "publishedAt": "2013-11-20T08:03:53.000Z",
+                "channelId": "UC-8Q-hLdECwQmaWNwXitYDw",
+                "title": "Katy Perry - Unconditionally (Official)",
+                "description": "Download \"Unconditionally\" from Katy Perry's 'PRISM': http://smarturl.it/PRISM Official video for Katy Perry's \"Unconditionally\" directed by Brent Bonacorso and ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/XjwZAa2EjKA/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/XjwZAa2EjKA/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/XjwZAa2EjKA/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "KatyPerryVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/oUUvDGtKXgVhn8gekRSxzOa0H4E\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "1G4isv_Fylg"
+            },
+            "snippet": {
+                "publishedAt": "2011-10-19T02:42:54.000Z",
+                "channelId": "UCDPM_n1atn2ijUwHd0NNRQw",
+                "title": "Coldplay - Paradise (Official Video)",
+                "description": "Taken from Mylo Xyloto Get A Head Full Of Dreams now: – iTunes http://cldp.ly/cpitunes – Amazon http://smarturl.it/AHFODamazon – Google Play ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/1G4isv_Fylg/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/1G4isv_Fylg/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/1G4isv_Fylg/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Coldplay Official",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/GN5Zkj9N7n0ECJdXFiBwpSI74Fs\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "BPNTC7uZYrI"
+            },
+            "snippet": {
+                "publishedAt": "2016-05-16T13:58:40.000Z",
+                "channelId": "UCDPM_n1atn2ijUwHd0NNRQw",
+                "title": "Coldplay - Up&Up (Official Video)",
+                "description": "The third single to be taken from Coldplay's acclaimed new album, A Head Full Of Dreams (out now). Download the song from http://smarturl.it/AHFOD or stream ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/BPNTC7uZYrI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/BPNTC7uZYrI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/BPNTC7uZYrI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Coldplay Official",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/rgRP0JZW2xZL6mdyM7xHxjJOw8E\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "k2qgadSvNyU"
+            },
+            "snippet": {
+                "publishedAt": "2017-07-07T09:00:05.000Z",
+                "channelId": "UC-J-KZfRV8c13fOCkhXdLiQ",
+                "title": "Dua Lipa - New Rules (Official Music Video)",
+                "description": "MY DEBUT ALBUM #DL1 IS OUT NOW!!! A massive thank you to everyone buying and streaming it THANK YOU MY LOVES ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/k2qgadSvNyU/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/k2qgadSvNyU/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/k2qgadSvNyU/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Dua Lipa",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/DizFAjK2vS5rYURAMjObEZv3qnw\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "_dK2tDK9grQ"
+            },
+            "snippet": {
+                "publishedAt": "2017-01-06T04:59:03.000Z",
+                "channelId": "UC0C-w0YjGpqDXGB8IHb662A",
+                "title": "Ed Sheeran - Shape Of You [Official Lyric Video]",
+                "description": "Watch the official video now: https://www.youtube.com/watch?v=JGwWNGJdvx8 Stream or Download Shape Of You: https://atlanti.cr/2singles ÷. Out 3rd March: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/_dK2tDK9grQ/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/_dK2tDK9grQ/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/_dK2tDK9grQ/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Ed Sheeran",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/S0ImE1Iyp9t6-rk7574vWzyotfk\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "YykjpeuMNEk"
+            },
+            "snippet": {
+                "publishedAt": "2016-01-29T15:00:38.000Z",
+                "channelId": "UCDPM_n1atn2ijUwHd0NNRQw",
+                "title": "Coldplay - Hymn For The Weekend (Official Video)",
+                "description": "The second single to be taken from Coldplay's acclaimed new album, A Head Full Of Dreams (out now). Download the song from http://smarturl.it/AHFOD or ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/YykjpeuMNEk/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/YykjpeuMNEk/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/YykjpeuMNEk/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Coldplay Official",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/lNHPk5TYH8ZLCVG9sWjxuYcL08k\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "1UQzJfsT2eo"
+            },
+            "snippet": {
+                "publishedAt": "2017-03-03T07:09:13.000Z",
+                "channelId": "UC0C-w0YjGpqDXGB8IHb662A",
+                "title": "Ed Sheeran - Perfect [Official Audio]",
+                "description": "Out Now: https://atlanti.cr/yt-album Subscribe to Ed's channel: http://bit.ly/SubscribeToEdSheeran Follow Ed on... Facebook: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/1UQzJfsT2eo/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/1UQzJfsT2eo/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/1UQzJfsT2eo/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Ed Sheeran",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/D_T0kpcfQ1R5_9HX5BhZgRHRzwY\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "YuOBzWF0Aws"
+            },
+            "snippet": {
+                "publishedAt": "2014-01-21T18:11:03.000Z",
+                "channelId": "UCPDXXXJj9nax0fr0Wfc048g",
+                "title": "If Google Was A Guy",
+                "description": "Everything you ask Google sounds a lot more stupid when you actually ask Google. Click the link below for a chance to win $500!",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/YuOBzWF0Aws/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/YuOBzWF0Aws/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/YuOBzWF0Aws/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "CollegeHumor",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/JBK_OG5VZiMMLTMTa2TZJ3_6UlA\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "K0ibBPhiaG0"
+            },
+            "snippet": {
+                "publishedAt": "2017-01-23T11:21:26.000Z",
+                "channelId": "UC0C-w0YjGpqDXGB8IHb662A",
+                "title": "Ed Sheeran - Castle On The Hill [Official Video]",
+                "description": "Stream or Download Castle On The Hill: https://atlanti.cr/2singles ÷. Out Now: https://atlanti.cr/yt-album Subscribe to Ed's channel: ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/K0ibBPhiaG0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/K0ibBPhiaG0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/K0ibBPhiaG0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Ed Sheeran",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/7qrVCuwYxA9_KXPnd3Jy9XOytmk\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "JRfuAukYTKg"
+            },
+            "snippet": {
+                "publishedAt": "2011-12-21T00:00:00.000Z",
+                "channelId": "UC1l7wYrva1qCH-wgqcHaaRg",
+                "title": "David Guetta - Titanium ft. Sia (Official Video)",
+                "description": "From the album Nothing But The Beat Ultimate - Download on iTunes here: http://smarturl.it/NBTBiTunes?IQid=vevo Featuring Sia, Ne-Yo, Akon, Nicki Minaj, Flo ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/JRfuAukYTKg/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/JRfuAukYTKg/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/JRfuAukYTKg/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "David Guetta",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/e08HdBPww8K8PW2VJQGjneJXKAA\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "D5drYkLiLI8"
+            },
+            "snippet": {
+                "publishedAt": "2017-02-16T05:00:01.000Z",
+                "channelId": "UCYpVqLSvfseUqb2URAkexlw",
+                "title": "Kygo, Selena Gomez - It Ain't Me (with Selena Gomez) (Audio)",
+                "description": "Music video by Kygo, Selena Gomez performing It Ain't Me. (C) 2017 Kygo AS under exclusive license to Sony Music Entertainment International Ltd / Ultra ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/D5drYkLiLI8/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/D5drYkLiLI8/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/D5drYkLiLI8/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "KygoOfficialVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/1VWXa7Qtn3Y8H_NUu6X5pMA6Wv8\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "lgT1AidzRWM"
+            },
+            "snippet": {
+                "publishedAt": "2009-11-26T01:47:17.000Z",
+                "channelId": "UC20vb-R_px4CguHzzBPhoyQ",
+                "title": "Eminem - Beautiful",
+                "description": "Music video by Eminem performing Beautiful. (C) 2009 Aftermath Records.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/lgT1AidzRWM/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/lgT1AidzRWM/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/lgT1AidzRWM/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "EminemVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/T7XoCEHQsbBJsdpeQu3BEvLm7Hw\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "0gWxHFMog9w"
+            },
+            "snippet": {
+                "publishedAt": "2013-08-19T13:00:46.000Z",
+                "channelId": "UCRijo3ddMTht_IHyNSNXpNQ",
+                "title": "Pickup Basketball Stereotypes",
+                "description": "Pickup ballers. Love 'em or hate 'em, we all know 'em. ---------------------------------------- ▻ VISIT our NEW STORE! - http://dudeperfect.merchline.com ▻ Play our ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/0gWxHFMog9w/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/0gWxHFMog9w/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/0gWxHFMog9w/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Dude Perfect",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/Nbi0lsqecc8JSDI4fPDJwqdEGps\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "r2LpOUwca94"
+            },
+            "snippet": {
+                "publishedAt": "2016-06-16T16:53:47.000Z",
+                "channelId": "UCMJ5Qf3sOvQpcYiai1Noa3Q",
+                "title": "Major Lazer – Light it Up (feat. Nyla & Fuse ODG) [Music Video Remix] by Method Studios",
+                "description": "THE NEW MAJOR LAZER EP - KNOW NO BETTER - LISTEN NOW ON YOUTUBE - http://vid.io/xcRj OFFICIAL MUSIC VIDEO // MAJOR LAZER - LIGHT IT UP ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/r2LpOUwca94/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/r2LpOUwca94/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/r2LpOUwca94/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "majorlazer",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/udFM04674PX93aWkcO08wSwcGGU\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "dvgZkm1xWPE"
+            },
+            "snippet": {
+                "publishedAt": "2008-08-04T09:36:03.000Z",
+                "channelId": "UCDPM_n1atn2ijUwHd0NNRQw",
+                "title": "Coldplay - Viva La Vida",
+                "description": "Taken from the album Viva La Vida Or Death And All His Friends Get A Head Full Of Dreams now: – iTunes http://cldp.ly/cpitunes – Amazon ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/dvgZkm1xWPE/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/dvgZkm1xWPE/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/dvgZkm1xWPE/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Coldplay Official",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/14Iw8Uc6Y0tB6phJpGepnu4mx0k\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "gPDcwjJ8pLg"
+            },
+            "snippet": {
+                "publishedAt": "2009-10-05T13:40:24.000Z",
+                "channelId": "UCSJfjbTHLKj1H2-oqi6jN8Q",
+                "title": "The All-American Rejects - Dirty Little Secret",
+                "description": "Music video by The All-American Rejects performing Dirty Little Secret. (C) 2005 Interscope Records.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/gPDcwjJ8pLg/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/gPDcwjJ8pLg/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/gPDcwjJ8pLg/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "AllAmericanRjctsVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/YUjcFTh5oJNJe_89sj-r91GZHxY\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "PMivT7MJ41M"
+            },
+            "snippet": {
+                "publishedAt": "2017-03-02T02:00:11.000Z",
+                "channelId": "UCoUM-UJ7rirJYP8CQ0EIaHA",
+                "title": "Bruno Mars - That’s What I Like [Official Video]",
+                "description": "Stream and download 'That's What I Like\" off the new album \"24K Magic\" now: https://atlantic.lnk.to/ThatsWhatILike Directed by Bruno Mars and Jonathan Lia ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/PMivT7MJ41M/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/PMivT7MJ41M/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/PMivT7MJ41M/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Bruno Mars",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/7Q6IQ3BATMB1VxN75nQTjUURJRM\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "AXCTMGYUg9A"
+            },
+            "snippet": {
+                "publishedAt": "2017-06-28T13:00:13.000Z",
+                "channelId": "UC2-BeLxzUBSs0uSrmzWhJuQ",
+                "title": "The Greatest Showman | Official Trailer | 20th Century FOX",
+                "description": "Inspired by the imagination of P.T. Barnum, The Greatest Showman is an original musical that celebrates the birth of show business & tells of a visionary who ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/AXCTMGYUg9A/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/AXCTMGYUg9A/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/AXCTMGYUg9A/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "20th Century Fox",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/I39Ak240z6Urv2u41Uy7ZTa5JMU\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "JGulAZnnTKA"
+            },
+            "snippet": {
+                "publishedAt": "2016-02-25T21:00:00.000Z",
+                "channelId": "UCm3FgJ2Hqm7tb70T-GfwXVA",
+                "title": "Halsey - Colors",
+                "description": "Discover more Halsey on Spotify: https://halsey.lnk.to/insidemyhead Sign up for the official Halsey newsletter: http://smarturl.it/HalseyMailingList?IQid=YT Limited ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/JGulAZnnTKA/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/JGulAZnnTKA/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/JGulAZnnTKA/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "HalseyVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/MtIZ1z3d50AbQ22UBOfsdpMHiS8\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "e3hjpNuvapQ"
+            },
+            "snippet": {
+                "publishedAt": "2017-05-26T04:00:02.000Z",
+                "channelId": "UCm3FgJ2Hqm7tb70T-GfwXVA",
+                "title": "Halsey - Strangers (Audio) ft. Lauren Jauregui",
+                "description": "order album on iTunes: http://www.iamhalsey.com/hfkitunes listen to \"Strangers\" on Apple Music: http://www.iamhalsey.com/insidemyheadapple listen to ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/e3hjpNuvapQ/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/e3hjpNuvapQ/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/e3hjpNuvapQ/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "HalseyVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/-NAVnSGGAztuaf5AD5T4epH_sk8\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "u3VTKvdAuIY"
+            },
+            "snippet": {
+                "publishedAt": "2017-04-24T17:24:17.000Z",
+                "channelId": "UCYpVqLSvfseUqb2URAkexlw",
+                "title": "Kygo, Selena Gomez - It Ain't Me",
+                "description": "\"It Ain't Me | Kygo x Selena Gomez | Official music video.\" https://SonyMusic.lnk.to/ItAintMeKygo Written and Directed by Phillip R. Lopez Executive Produced by ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/u3VTKvdAuIY/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/u3VTKvdAuIY/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/u3VTKvdAuIY/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "KygoOfficialVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/FTtKSwtGoHXxlCvWG5OF3Ntkrtg\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "j5-yKhDd64s"
+            },
+            "snippet": {
+                "publishedAt": "2010-06-05T05:02:39.000Z",
+                "channelId": "UC20vb-R_px4CguHzzBPhoyQ",
+                "title": "Eminem - Not Afraid",
+                "description": "Music video by Eminem performing Not Afraid. (C) 2010 Aftermath Records #VEVOCertified on September 11, 2010.http://www.vevo.com/certified ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/j5-yKhDd64s/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/j5-yKhDd64s/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/j5-yKhDd64s/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "EminemVEVO",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/DI5xkiSJC8l-D1lYOU_tVEeuQxw\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "Pci6_OFKmAM"
+            },
+            "snippet": {
+                "publishedAt": "2017-03-01T21:37:54.000Z",
+                "channelId": "UCxSz6JVYmzVhtkraHWZC7HQ",
+                "title": "NOT HOW IT'S SUPPOSED TO HAPPEN!!",
+                "description": "Bloopers + outtakes + awkward kisses! Everything that doesn't make the final cut so I can make a video out of it when I'm sick and dying. RSVP to my funeral ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/Pci6_OFKmAM/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/Pci6_OFKmAM/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/Pci6_OFKmAM/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Liza Koshy",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/UycVQ7SPXgMNVmOEGlJ98azhQxo\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "hjWf8A0YNSE"
+            },
+            "snippet": {
+                "publishedAt": "2017-07-04T04:33:11.000Z",
+                "channelId": "UCq-Fj5jknLsUf-MWSy4_brA",
+                "title": "Guru Randhawa: High Rated Gabru Official Song | Manj Musik | DirectorGifty | T-Series",
+                "description": "T-Series presents Guru Randhawa latest punjabi song of 2017 \"High Rated Gabru\" shot in exotic locations of USA by DirectorGifty Song: High Rated Gabru ...",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/hjWf8A0YNSE/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/hjWf8A0YNSE/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/hjWf8A0YNSE/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "T-Series",
+                "liveBroadcastContent": "none"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "\"m2yskBQFythfE4irbTIeOgYYfBU/9sy72HnAAhEDlczdyVPHQ0RYsSY\"",
+            "id": {
+                "kind": "youtube#video",
+                "videoId": "lY2yjAdbvdQ"
+            },
+            "snippet": {
+                "publishedAt": "2016-07-12T17:00:05.000Z",
+                "channelId": "UC4-TgOSMJHn-LtY4zCzbQhw",
+                "title": "Shawn Mendes - Treat You Better",
+                "description": "Shawn Mendes; “Treat You Better\" Get \"Treat You Better” here now: http://smarturl.it/TreatYouBetter http://vevo.ly/OmBn2p.",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/lY2yjAdbvdQ/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/lY2yjAdbvdQ/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/lY2yjAdbvdQ/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "ShawnMendesVEVO",
+                "liveBroadcastContent": "none"
+            }
+        }
+    ]
+}
