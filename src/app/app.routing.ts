@@ -40,6 +40,10 @@ export const AppRoutes: Routes = [
                 path: 'apps',
                 loadChildren: './containers/apps/#AppsModule'
             },
+            {
+                path: 'chart',
+                loadChildren: './containers/chart/#ChartModule'
+            },
         ]
     },
     {

@@ -50,6 +50,12 @@ const MENUITEMS = [
     ]
   },
   {
+    route: 'chart',
+    name: 'Chart',
+    type: 'link',
+    icon: 'trending_up'
+  },
+  {
     route: 'miscellaneous',
     name: 'Miscellaneous',
     type: 'sub',

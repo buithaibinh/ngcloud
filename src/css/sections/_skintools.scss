@@ -1,0 +1,42 @@
+.site-skintools {
+  position: fixed;
+  top: 30px;
+  right: -270px;
+  z-index: 1300;
+  width: 270px;
+  color: #757575;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  .site-skintools-inner {
+    height: 100%;
+  }
+}
+
+.site-skintools-content {
+  height: 100%;
+  min-height: 100px;
+  padding: 5px 20px 20px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .08);
+  border-radius: 0 3px 3px;
+}
+
+.site-skintools-toggle {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  cursor: pointer;
+  border-color: rgba(0, 0, 0, .09);
+  border-style: solid;
+  border-width: 1px 0 1px 1px;
+  border-radius: 3px 0 0 3px;
+}
+.site-skintools-content {
+    height: 100%;
+    min-height: 100px;
+    padding: 5px 20px 20px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 0 3px 3px;
+}

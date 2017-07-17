@@ -62,83 +62,18 @@
     <!--Chat Panel-->
     <md-sidenav #end align="end" class="chat-panel" mode="over" [opened]="chatbarExpanded$ | async" (close)="closeChatbar()"
       (open)="openChatbar()">
-      <md-tab-group [selectedIndex]="2" md-stretch-tabs>
+      <md-tab-group [selectedIndex]="0" md-stretch-tabs>
         <md-tab>
           <ng-template md-tab-label>
             <button md-icon-button>
               <md-icon class="md-24">info</md-icon>
             </button>
           </ng-template>
-          <div class="scroll">
-            <md-list class="pt-1 pb-1">
-              <md-list-item>
-                <div fxLayout="column">
-                  <h2 class="ma-0">{{ today | date:'EEEE' }}</h2>
-                  <h6 class="md-text-muted ma-0"><span>{{ today | date:'dd' }}</span>&nbsp;<span>{{ today | date:'MMMM' }}</span></h6>
-                </div>
-              </md-list-item>
-            </md-list>
-            <md-nav-list>
-              <md-divider></md-divider>
-              <h3 md-subheader class="text-uppercase font-weight-bold">Stocks</h3>
-              <md-list-item>
-                <a md-line href="javascript:;">NASDAQ</a>
-                <span class="md-text-muted text-md mr-xs ml-xs">4,492.87</span>
-                <span>-0.29%</span>
-              </md-list-item>
-              <md-list-item>
-                <a md-line href="javascript:;">NYSE</a>
-                <span class="md-text-muted text-md mr-xs ml-xs">10,692.07</span>
-                <span>-0.53%</span>
-              </md-list-item>
-              <md-list-item>
-                <a md-line href=javascript:;>DOW J</a>
-                <span class="md-text-muted text-md mr-xs ml-xs">17,046.81</span>
-                <span>-0.14%</span>
-              </md-list-item>
-              <md-list-item>
-                <a md-line href="javascript:;">APPL</a>
-                <span class="md-text-muted text-md mr-xs ml-xs">100,89</span>
-                <span>+0.75%</span>
-              </md-list-item>
-              <md-divider></md-divider>
-              <h3 md-subheader class="text-uppercase font-weight-bold">Weather</h3>
-              <md-list-item>
-                <a md-line href="javascript:;">{{ today | date:'shortTime' }}</a>
-                <p md-line class="md-text-muted">London</p>
-                <span class="h4 pe-is-w-blizzard mr-1"></span>
-                <span class="h4">26°</span>
-              </md-list-item>
-              <md-divider></md-divider>
-              <h3 md-subheader class="text-uppercase font-weight-bold">Todo</h3>
-              <md-list-item>
-                <a md-line href="javascript:;">Learn Angular 2.0</a>
-                <p md-line class="md-text-muted text-md">2:45PM</p>
-              </md-list-item>
-              <md-list-item>
-                <a md-line href="javascript:;">Learn Angular Material</a>
-                <p md-line class="md-text-muted text-md">3:20PM</p>
-              </md-list-item>
-              <md-list-item>
-                <a md-line href="javascript:;">Write documentation</a>
-                <p md-line class="md-text-muted text-md">6:00PM</p>
-              </md-list-item>
-              <md-divider class="mt-xs mb-xs"></md-divider>
-              <h3 md-subheader class="text-uppercase font-weight-bold">Stats</h3>
-              <md-list-item>
-                <p class="text-md" md-line>Local Storage (4023 / 10690)</p>
-                <md-progress-bar md-line mode="determinate" color="warn" value="40"></md-progress-bar>
-              </md-list-item>
-              <md-list-item>
-                <p class="text-md" md-line>Cloud Storage (700 / 1030)</p>
-                <md-progress-bar md-line mode="determinate" color="accent" value="70"></md-progress-bar>
-              </md-list-item>
-              <md-list-item>
-                <p class="text-md" md-line>Local Storage (20 / 100)</p>
-                <md-progress-bar md-line mode="determinate" value="20"></md-progress-bar>
-              </md-list-item>
-            </md-nav-list>
+          <div>
+            <md-radio-button>dark</md-radio-button>
+            <md-radio-button>dark</md-radio-button>
           </div>
+
         </md-tab>
         <md-tab>
           <ng-template md-tab-label>
@@ -287,7 +222,18 @@
       </div>
     </footer>
 
+    <div class="site-skintools hide">
+      <div class="site-skintools-inner">
+        <div class="site-skintools-toggle">
+          <button md-icon-button (click)="onClick" color="primary|accent|warn">
+              <md-icon class="md-18">settings</md-icon>
+          </button>
+        </div>
+        <div class="site-skintools-content">
+          adsadds
+        </div>
+      </div>
+    </div>
   </md-sidenav-container>
-
 
 </div>
