@@ -72,7 +72,6 @@ const MENUITEMS = [
     children: [
       { name: 'Error', route: 'err' },
       { name: 'Error 404', route: 'err-404' },
-      { route: 'forgot-password', name: 'Forgot Password' },
       { route: 'lock-screen', name: 'Lock Screen' },
       { route: 'login', name: 'Login' },
       { route: 'maintenance', name: 'Maintenance' },

@@ -69,8 +69,8 @@
     <md-card-title>Grid list with footer</md-card-title>
     <md-card-content>
       <md-grid-list cols="3" rowHeight="200px">
-        <md-grid-tile *ngFor="let dog of dogs">
-          <img [alt]="dog.name" src="https://material.angularjs.org/material2_assets/ngconf/{{dog.name}}.png">
+        <md-grid-tile *ngFor="let dog of dogs; let i = index">
+          <img [alt]="dog.name" src="../assets/photos/s{{i%10}}.jpeg">
           <md-grid-tile-footer>
             <h3 md-line>{{dog.name}}</h3>
             <span md-line>Human: {{dog.human}}</span>
