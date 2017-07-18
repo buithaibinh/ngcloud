@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { SharedModule } from '../../shared/index';
-import { EditorRoutes } from './editor.routing';
-import { EditorComponent } from './editor.component';
+import { EditorsRoutes } from './editors.routing';
+import { QuillComponent } from './quill/quill.component';
 
 @NgModule({
     imports: [
         SharedModule,
-        RouterModule.forChild(EditorRoutes),
+        RouterModule.forChild(EditorsRoutes),
     ],
     exports: [],
-    declarations: [EditorComponent],
+    declarations: [QuillComponent],
     providers: [],
 })
-export class EditorModule { }
+export class EditorsModule { }

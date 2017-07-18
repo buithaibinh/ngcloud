@@ -27,7 +27,7 @@ const MENUITEMS = [
     type: 'link',
     icon: 'dashboard'
   },
-   {
+  {
     route: 'apps',
     name: 'Apps',
     type: 'sub',
@@ -54,6 +54,15 @@ const MENUITEMS = [
     name: 'Chart',
     type: 'link',
     icon: 'trending_up'
+  },
+  {
+    route: 'editors',
+    name: 'Editor',
+    type: 'sub',
+    icon: 'edit',
+    children: [
+      { name: 'Quill', route: 'quill' },
+    ]
   },
   {
     route: 'miscellaneous',
@@ -139,9 +148,9 @@ const MENUITEMS = [
       { name: 'Rich grid', route: 'rich-grid' },
     ]
   },
-  
-  
- 
+
+
+
 ];
 
 @Injectable()

@@ -44,6 +44,10 @@ export const AppRoutes: Routes = [
                 path: 'chart',
                 loadChildren: './containers/chart/#ChartModule'
             },
+            {
+                path: 'editors',
+                loadChildren: './containers/editors/#EditorsModule'
+            },
         ]
     },
     {

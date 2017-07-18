@@ -1,56 +1,119 @@
 .radius-none {
   border-radius: 0;
 }
+
 .radius-round {
   border-radius: $border-radius-base;
 }
+
 .radius-circle {
   border-radius: 50%;
 }
+
 .overflow-visible {
   overflow: visible;
 }
+
 .overflow-hidden {
   overflow: hidden;
 }
+
 .overflow-auto {
   overflow: auto;
 }
+
 .block {
   display: block;
 }
+
 .button-block {
   display: block;
   width: 100%;
 }
+
 .inline-block {
   display: inline-block;
 }
+
 .center-block {
   display: block;
   margin: 0 auto;
 }
+
 .relative {
   position: relative;
 }
+
 .fixed {
   position: fixed;
 }
+
 .absolute {
   position: absolute;
 }
+
 .shadow-none {
   box-shadow: none!important;
 }
+
 .border-none {
   border: 0!important;
 }
+
 .background-none {
   background-color: transparent!important;
 }
+
 .full-width {
-  width: 100% !important; 
+  width: 100% !important;
 }
+
 .mb-1 {
-    margin-bottom: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+// margin utilities
+$sizes: (0, 3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50);
+@each $zValue in $sizes {
+  .ma-#{$zValue} {
+    margin: $zValue !important;
+  }
+}
+
+@each $zValue in $sizes {
+  .mv-#{$zValue} {
+    margin-bottom: $zValue !important;
+    margin-top: $zValue !important;
+  }
+}
+
+@each $zValue in $sizes {
+  .mh-#{$zValue} {
+    margin-left: $zValue !important;
+    margin-right: $zValue !important;
+  }
+}
+
+@each $zValue in $sizes {
+  .mr-#{$zValue} {
+    margin-right: $zValue !important;
+  }
+}
+
+@each $zValue in $sizes {
+  .ml-#{$zValue} {
+    margin-left: $zValue !important;
+  }
+}
+
+@each $zValue in $sizes {
+  .mb-#{$zValue} {
+    margin-bottom: $zValue !important;
+  }
+}
+
+@each $zValue in $sizes {
+  .mt-#{$zValue} {
+    margin-top: $zValue !important;
+  }
 }
