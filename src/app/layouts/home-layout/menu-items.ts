@@ -56,6 +56,12 @@ const MENUITEMS = [
     icon: 'trending_up'
   },
   {
+    route: 'calendar',
+    name: 'Calendar',
+    type: 'link',
+    icon: 'perm_contact_calendar'
+  },
+  {
     route: 'editors',
     name: 'Editor',
     type: 'sub',

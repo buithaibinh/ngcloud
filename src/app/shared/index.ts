@@ -8,6 +8,7 @@ import { MultilingualModule } from '../core/i18n/index';
 import { TranslateModule } from '@ngx-translate/core';
 import { ChartsModule } from 'ng2-charts';
 import { DragulaModule } from 'ng2-dragula';
+import { DragAndDropModule } from 'angular-draggable-droppable';
 
 // ngx datatable
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
@@ -34,6 +35,7 @@ export const ANGULAR_MODULES = [
   TranslateModule,
   ChartsModule,
   DragulaModule,
+  DragAndDropModule,
   NgxDatatableModule,
   BusyModule,
 ];

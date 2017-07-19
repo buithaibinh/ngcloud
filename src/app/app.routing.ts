@@ -48,6 +48,10 @@ export const AppRoutes: Routes = [
                 path: 'editors',
                 loadChildren: './containers/editors/#EditorsModule'
             },
+            {
+                path: 'calendar',
+                loadChildren: './containers/calendar/#MyCalendarModule'
+            },
         ]
     },
     {
