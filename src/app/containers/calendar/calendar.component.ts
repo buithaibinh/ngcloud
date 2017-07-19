@@ -57,7 +57,7 @@ export class CalendarComponent {
   eventIcon: string = 'notifications';
 
   view: string = 'month';
-  title: string = '';
+  title: string = 'Project Meeting';
 
   viewDate: Date = new Date();
   actions: CalendarEventAction[] = [{
