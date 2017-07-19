@@ -79,20 +79,32 @@ export class CalendarComponent {
       color: colors.yellow,
       start: new Date(),
       draggable: true,
-      actions: this.actions
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true
+      }
     }, {
       title: 'Lunch Break',
       color: colors.blue,
       start: new Date(),
       draggable: true,
-      actions: this.actions
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true
+      }
     }
     , {
       title: 'URGENT',
       color: colors.accent,
       start: new Date(),
       draggable: true,
-      actions: this.actions
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true
+      }
     }
   ];
 
@@ -171,7 +183,11 @@ export class CalendarComponent {
       color: color,
       start: new Date(),
       draggable: true,
-      actions: this.actions
+      actions: this.actions,
+      resizable: {
+        beforeStart: true,
+        afterEnd: true
+      }
     }
     this.externalEvents.push(event);
   }

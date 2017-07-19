@@ -59,7 +59,7 @@ const MENUITEMS = [
     route: 'calendar',
     name: 'Calendar',
     type: 'link',
-    icon: 'perm_contact_calendar'
+    icon: 'today'
   },
   {
     route: 'editors',
