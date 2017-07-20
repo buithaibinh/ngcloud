@@ -1,3 +1,23 @@
+<md-toolbar class="page-header">
+    <ol class="breadcrumb">
+        <li><a [routerLink]="['/home']">Home</a></li>
+        <li><a [routerLink]="['/pages']">Pages</a></li>
+        <li class="active">blank</li>
+    </ol>
+    <span fxFlex></span>
+    <div fxShow="false" fxShow.gt-xs>
+        <button mdTooltip="Edit" md-icon-button [mdMenuTriggerFor]="appMenu" color="primary">
+            <md-icon class="md-18">edit</md-icon>
+        </button>
+        <button mdTooltip="Setting" md-icon-button [mdMenuTriggerFor]="appMenu" color="primary">
+            <md-icon class="md-18">settings</md-icon>
+        </button>
+    </div>
+    <md-menu #appMenu="mdMenu" xPosition="before" [overlapTrigger]="false">
+        <button md-menu-item> Settings </button>
+        <button md-menu-item> Help </button>
+    </md-menu>
+</md-toolbar>
 <p>
   blank!
 </p>
