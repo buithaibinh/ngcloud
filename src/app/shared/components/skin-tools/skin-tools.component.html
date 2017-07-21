@@ -1,0 +1,53 @@
+<div class="site-skintools" [class.is-open]="isOpenSkinTool">
+    <div class="site-skintools-inner">
+        <div class="site-skintools-toggle">
+            <button md-icon-button (click)="isOpenSkinTool = !isOpenSkinTool">
+              <md-icon class="md-24">settings</md-icon>
+          </button>
+        </div>
+        <div class="site-skintools-content">
+            <md-card class="ma-0">
+                <md-card-content>
+                    <md-tab-group [selectedIndex]="0" [disableRipple]="true">
+                        <md-tab label="Skins">
+                            <div fxLayout="row" fxLayoutAlign="start center">
+                                <span fxFlex>Ultra Light</span>
+                                <div class="theme-picker">
+                                    <md-icon class="theme-chosen-icon mat-icon material-icons">check_circle</md-icon>
+                                    <div class="theme-chosen-color theme1"></div>
+                                </div>
+                            </div>
+
+                            <div fxLayout="row" fxLayoutAlign="start center">
+                                <span fxFlex>Dark Elegance</span>
+                                <div class="theme-picker">
+                                    <md-icon class="theme-chosen-icon mat-icon material-icons">check_circle</md-icon>
+                                    <div class="theme-chosen-color theme2"></div>
+                                </div>
+                            </div>
+                        </md-tab>
+                        <md-tab label="Layout">
+                            <div fxLayout="row" fxLayoutAlign="start center">
+                                <span fxFlex>Boxed layout</span>
+                                <md-slide-toggle (change)="boxed = (boxed == true ? false : true)"></md-slide-toggle>
+                            </div>
+                            <div fxLayout="row" fxLayoutAlign="start center">
+                                <span fxFlex>RTL Support</span>
+                                <md-slide-toggle (change)="boxed = (boxed == true ? false : true)"></md-slide-toggle>
+                            </div>
+                        </md-tab>
+                        <md-tab label="Primary">
+                            <div fxLayout="row" *ngFor="let color of colors" fxLayoutAlign="start center">
+                                <span fxFlex>{{color}}</span>
+                                <md-radio-button class="{{color}}"></md-radio-button>
+                            </div>
+                        </md-tab>
+                    </md-tab-group>
+                </md-card-content>
+                <md-card-actions align="end">
+                    <button class="full-width" color="primary" md-raised-button (click)="onAction1">Default</button>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </div>
+</div>

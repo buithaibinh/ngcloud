@@ -21,7 +21,6 @@ export class HomeLayoutComponent implements OnInit, OnDestroy {
   url: string;
   boxed: boolean = false;
   dir = 'ltr';
-
   @ViewChild('sidemenu') sidemenu;
 
   constructor(public menuItems: MenuItems, private router: Router, private appLayoutActions: AppLayoutActions,
