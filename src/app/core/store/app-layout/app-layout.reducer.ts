@@ -8,22 +8,22 @@ export interface IAppVersion {
   isNewAvailable: boolean;
   checkingForVersion: boolean;
 }
-export interface ITheme {
-  dark: boolean;
+export interface ISkins {
+  theme: number;
 }
 export interface IAppSettings {
   sidebarExpanded: boolean;
   chatbarExpanded: boolean;
   requestInProcess: boolean;
   version: IAppVersion;
-  theme: ITheme;
+  skins: ISkins;
 }
 const initialState: IAppSettings = {
   sidebarExpanded: true,
   chatbarExpanded: false,
   requestInProcess: false,
-  theme: {
-    dark: false
+  skins: {
+    theme: 1
   },
   version: {
     semver: '',
@@ -66,11 +66,12 @@ export function appLayout(state: IAppSettings = initialState, action: Action): I
     }
 
     case AppLayoutActions.THEME_CHANGED: {
-      if (state.theme !== action.payload)
-        return (<any>Object).assign({}, state, {
+      if (state.skins.theme !== action.payload) {
+        const skins = Object.assign({}, state.skins, {
           theme: action.payload
         });
-
+        return Object.assign({}, state, { skins });
+      }
       return state;
     }
 

@@ -12,7 +12,7 @@ import {
 } from '@angular/animations';
 
 import { NgCloudAppState } from '../../store';
-import { AppLayoutActions, ITheme, getSidebarExpanded$ } from '../../store/app-layout';
+import { AppLayoutActions, ISkins, getSidebarExpanded$ } from '../../store/app-layout';
 
 @Component({
   selector: 'app-navbar',
@@ -66,11 +66,11 @@ export class TopbarComponent implements OnInit {
 
   dark: boolean = false;
   changeTheme() {
-    this.dark = !this.dark;
-    let data: ITheme = {
-      dark: this.dark
-    }
-    return this.store.dispatch(this.appLayoutActions.changeTheme(data));
+    // this.dark = !this.dark;
+    // let data: ITheme = {
+    //   dark: this.dark
+    // }
+    // return this.store.dispatch(this.appLayoutActions.changeTheme(data));
   }
 
   toggleNotification() {

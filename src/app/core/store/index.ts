@@ -20,7 +20,6 @@ export { HomeLayoutState } from './reducers';
 
 const actions = NgCloudActions;
 const reducers = NgCloudReducers;
-// const storageConfig = ['videos', 'player', 'nowPlaylist', 'search', 'appLayout'];
 const composeStore = reducers;
 const optionalImports = [];
 // const productionReducer = compose(localStorageSync(Object.keys(reducers)), combineReducers)(reducers);

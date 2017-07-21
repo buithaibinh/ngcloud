@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs/Observable';
-import { IAppSettings, ITheme } from './app-layout.reducer';
+import { IAppSettings, ISkins } from './app-layout.reducer';
 import { NgCloudAppState } from '../reducers';
 
 export function getAppLayoutState$(state$: Observable<NgCloudAppState>): Observable<IAppSettings> {
@@ -18,11 +18,11 @@ export function getAppVersion$(state$: Observable<NgCloudAppState>): Observable<
   return state$.select(state => state.appLayout.version);
 }
 
-export function getAppTheme$(state$: Observable<NgCloudAppState>): Observable<ITheme> {
+export function getSkins$(state$: Observable<NgCloudAppState>): Observable<ISkins> {
   return state$.select(state => {
-    return state.appLayout.theme;
+    return state.appLayout.skins;
   });
 }
-export function getDarkTheme$(state$: Observable<NgCloudAppState>) {
-  return state$.select((state) => state.appLayout.theme.dark);
+export function getAppTheme$(state$: Observable<NgCloudAppState>) {
+  return state$.select((state) => state.appLayout.skins.theme);
 }

@@ -3,7 +3,7 @@ import { Action } from '@ngrx/store';
 
 import { ActionCreatorFactory } from 'ngrx-action-creator-factory';
 
-import { ITheme } from './app-layout.reducer';
+import { ISkins } from './app-layout.reducer';
 
 @Injectable()
 export class AppLayoutActions {
@@ -66,7 +66,7 @@ export class AppLayoutActions {
     };
   }
 
-  changeTheme(data: ITheme): Action {
+  changeTheme(data: number): Action {
     return {
       type: AppLayoutActions.THEME_CHANGED,
       payload: data

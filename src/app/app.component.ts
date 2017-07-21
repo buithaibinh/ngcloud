@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Rx';
 
 import { NgCloudAppState } from './core/store';
 
-import { AppLayoutActions, getSidebarExpanded$, getDarkTheme$ } from './core/store/app-layout';
+import { AppLayoutActions, getAppTheme$ } from './core/store/app-layout';
 
 import * as $ from 'jquery';
 
@@ -15,13 +15,11 @@ import * as $ from 'jquery';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
   host: {
-    '[class.dark-theme]': 'dark',
+    '[class.dark-theme]': 'theme === 2',
   },
 })
 export class AppComponent {
-  private theme: any = {};
-  sidebarExpanded$: Observable<any> = this.store.let(getSidebarExpanded$);
-  dark: boolean = false;
+  theme: number;
 
   items = [
     { text: 'Refresh' },
@@ -81,8 +79,8 @@ export class AppComponent {
     private store: Store<NgCloudAppState>, ) {
     console.log('jQuery version  = ', $().jquery);
 
-    this.store.let(getDarkTheme$).subscribe(isDark => {
-      this.dark = isDark;
+    this.store.let(getAppTheme$).subscribe(theme => {
+      this.theme = theme;
     });
   }
 

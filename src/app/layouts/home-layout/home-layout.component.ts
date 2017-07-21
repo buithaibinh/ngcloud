@@ -5,7 +5,7 @@ import { MenuItems } from './menu-items';
 import { Subscription, Observable } from 'rxjs/Rx';
 
 import { NgCloudAppState } from '../../core/store';
-import { AppLayoutActions, getSidebarExpanded$, getDarkTheme$, getChatbarExpanded$ } from '../../core/store/app-layout';
+import { AppLayoutActions, getSidebarExpanded$, getChatbarExpanded$ } from '../../core/store/app-layout';
 
 import * as Ps from 'perfect-scrollbar';
 

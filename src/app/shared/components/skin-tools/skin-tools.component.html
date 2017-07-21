@@ -12,16 +12,16 @@
                         <md-tab label="Skins">
                             <div fxLayout="row" fxLayoutAlign="start center">
                                 <span fxFlex>Ultra Light</span>
-                                <div class="theme-picker">
-                                    <md-icon class="theme-chosen-icon mat-icon material-icons">check_circle</md-icon>
+                                <div class="theme-picker" (click)="changeTheme(1)">
+                                    <md-icon *ngIf="theme === 1"  class="theme-chosen-icon mat-icon material-icons">check_circle</md-icon>
                                     <div class="theme-chosen-color theme1"></div>
                                 </div>
                             </div>
 
                             <div fxLayout="row" fxLayoutAlign="start center">
                                 <span fxFlex>Dark Elegance</span>
-                                <div class="theme-picker">
-                                    <md-icon class="theme-chosen-icon mat-icon material-icons">check_circle</md-icon>
+                                <div class="theme-picker" (click)="changeTheme(2)">
+                                    <md-icon *ngIf="theme === 2"  class="theme-chosen-icon mat-icon material-icons">check_circle</md-icon>
                                     <div class="theme-chosen-color theme2"></div>
                                 </div>
                             </div>
