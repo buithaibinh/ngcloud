@@ -5,7 +5,7 @@ import { MenuItems } from './menu-items';
 import { Subscription, Observable } from 'rxjs/Rx';
 
 import { NgCloudAppState } from '../../core/store';
-import { AppLayoutActions, getSidebarExpanded$, getChatbarExpanded$ } from '../../core/store/app-layout';
+import { AppLayoutActions, getSidebarExpanded$, getChatbarExpanded$, getAppBoxed$, getAppDir$ } from '../../core/store/app-layout';
 
 import * as Ps from 'perfect-scrollbar';
 
@@ -19,12 +19,16 @@ export class HomeLayoutComponent implements OnInit, OnDestroy {
   private _router: Subscription;
   today: number = Date.now();
   url: string;
-  boxed: boolean = false;
-  dir = 'ltr';
+  boxed$: Observable<any> = this.store.let(getAppBoxed$);
+
+  dir: string;
   @ViewChild('sidemenu') sidemenu;
 
   constructor(public menuItems: MenuItems, private router: Router, private appLayoutActions: AppLayoutActions,
     private store: Store<NgCloudAppState>) {
+    this.store.let(getAppDir$).subscribe(dir => {
+      this.dir = dir;
+    });
   }
 
   ngOnInit(): void {
@@ -64,11 +68,7 @@ export class HomeLayoutComponent implements OnInit, OnDestroy {
   }
 
   isOver(): boolean {
-    if (this.boxed || this.url === '/apps/messages' || this.url === '/apps/calendar' || this.url === '/apps/media' || this.url === '/maps/leaflet') {
-      return true;
-    } else {
-      return window.matchMedia(`(max-width: 960px)`).matches;
-    }
+    return window.matchMedia(`(max-width: 960px)`).matches;
   }
 
   isMac(): boolean {

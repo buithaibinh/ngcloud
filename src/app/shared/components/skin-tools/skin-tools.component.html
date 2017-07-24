@@ -9,31 +9,30 @@
             <md-card class="ma-0">
                 <md-card-content>
                     <md-tab-group [selectedIndex]="0" [disableRipple]="true">
-                        <md-tab label="Skins">
-                            <div fxLayout="row" fxLayoutAlign="start center">
-                                <span fxFlex>Ultra Light</span>
-                                <div class="theme-picker" (click)="changeTheme(1)">
-                                    <md-icon *ngIf="theme === 1"  class="theme-chosen-icon mat-icon material-icons">check_circle</md-icon>
-                                    <div class="theme-chosen-color theme1"></div>
-                                </div>
-                            </div>
-
-                            <div fxLayout="row" fxLayoutAlign="start center">
-                                <span fxFlex>Dark Elegance</span>
-                                <div class="theme-picker" (click)="changeTheme(2)">
-                                    <md-icon *ngIf="theme === 2"  class="theme-chosen-icon mat-icon material-icons">check_circle</md-icon>
-                                    <div class="theme-chosen-color theme2"></div>
-                                </div>
-                            </div>
-                        </md-tab>
-                        <md-tab label="Layout">
+                        <md-tab label="Settings">
+                            <h4 class="site-skintools-title">Primary Skins</h4>
+                            <md-grid-list cols="4" rowHeight="1:1" [gutterSize]="'1px'">
+                                <md-grid-tile  *ngFor="let theme of [1,2,3,4]" rowHeight="1:1">
+                                    <div class="theme-picker" (click)="changeTheme(theme)">
+                                        <md-icon *ngIf="currentTheme === theme" class="theme-chosen-icon">check_circle</md-icon>
+                                        <div class="theme-chosen-color theme{{theme}}"></div>
+                                    </div>
+                                </md-grid-tile>
+                            </md-grid-list>
+                            <h4 class="site-skintools-title">Layout Skins</h4>
                             <div fxLayout="row" fxLayoutAlign="start center">
                                 <span fxFlex>Boxed layout</span>
-                                <md-slide-toggle (change)="boxed = (boxed == true ? false : true)"></md-slide-toggle>
+                                <md-slide-toggle [(ngModel)]="boxed" (change)="boxedLayout()"></md-slide-toggle>
                             </div>
+                        </md-tab>
+                        <!-- <md-tab label="Layout">
                             <div fxLayout="row" fxLayoutAlign="start center">
+                                <span fxFlex>Boxed layout</span>
+                                <md-slide-toggle (change)="boxedLayout()"></md-slide-toggle>
+                            </div>
+                            <div fxLayout="row" class="hide" fxLayoutAlign="start center">
                                 <span fxFlex>RTL Support</span>
-                                <md-slide-toggle (change)="boxed = (boxed == true ? false : true)"></md-slide-toggle>
+                                <md-slide-toggle (change)="changeRtl()"></md-slide-toggle>
                             </div>
                         </md-tab>
                         <md-tab label="Primary">
@@ -41,11 +40,11 @@
                                 <span fxFlex>{{color}}</span>
                                 <md-radio-button class="{{color}}"></md-radio-button>
                             </div>
-                        </md-tab>
+                        </md-tab> -->
                     </md-tab-group>
                 </md-card-content>
                 <md-card-actions align="end">
-                    <button class="full-width" color="primary" md-raised-button (click)="onAction1">Default</button>
+                    <button class="full-width" color="primary" md-raised-button (click)="resetDefault()">Default</button>
                 </md-card-actions>
             </md-card>
         </div>

@@ -10,6 +10,8 @@ export interface IAppVersion {
 }
 export interface ISkins {
   theme: number;
+  boxed: boolean;
+  dir: string;
 }
 export interface IAppSettings {
   sidebarExpanded: boolean;
@@ -23,7 +25,9 @@ const initialState: IAppSettings = {
   chatbarExpanded: false,
   requestInProcess: false,
   skins: {
-    theme: 1
+    theme: 1,
+    boxed: false,
+    dir: 'ltr',
   },
   version: {
     semver: '',
@@ -65,7 +69,7 @@ export function appLayout(state: IAppSettings = initialState, action: Action): I
       return Object.assign({}, state, { version });
     }
 
-    case AppLayoutActions.THEME_CHANGED: {
+    case AppLayoutActions.THEME_SKIN: {
       if (state.skins.theme !== action.payload) {
         const skins = Object.assign({}, state.skins, {
           theme: action.payload
@@ -73,6 +77,24 @@ export function appLayout(state: IAppSettings = initialState, action: Action): I
         return Object.assign({}, state, { skins });
       }
       return state;
+    }
+    case AppLayoutActions.THEME_LAYOUT_TOGGLE: {
+      const skins = Object.assign({}, state.skins, {
+        boxed: !state.skins.boxed
+      });
+      return Object.assign({}, state, { skins });
+    }
+    case AppLayoutActions.THEME_LAYOUT_EXPAND: {
+      const skins = Object.assign({}, state.skins, {
+        boxed: false
+      });
+      return Object.assign({}, state, { skins });
+    }
+    case AppLayoutActions.THEME_DIR: {
+      const skins = Object.assign({}, state.skins, {
+        dir: state.skins.dir === 'ltr'? 'rtl':'ltr'
+      });
+      return Object.assign({}, state, { skins });
     }
 
     default:

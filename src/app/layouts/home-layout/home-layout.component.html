@@ -1,4 +1,4 @@
-<div class="app" [class.boxed]="boxed" #root="$implicit" [dir]="dir" fullscreen>
+<div class="app" [class.boxed]="boxed$ | async" #root="$implicit" [dir]="dir" fullscreen>
   <app-navbar></app-navbar>
 
   <md-sidenav-container class="app-inner">

@@ -11,7 +11,10 @@ export class AppLayoutActions {
   static SIDEBAR_COLLAPSE = '[APP LAYOUT] SIDEBAR_COLLAPSE';
   static SIDEBAR_TOGGLE = '[APP LAYOUT] SIDEBAR_TOGGLE';
 
-  static THEME_CHANGED = '[APP LAYOUT] THEME_CHANGED';
+  static THEME_SKIN = '[APP LAYOUT] THEME_SKIN';
+  static THEME_LAYOUT_TOGGLE = '[APP LAYOUT] THEME_LAYOUT_TOGGLE';
+  static THEME_LAYOUT_EXPAND = '[APP LAYOUT] THEME_LAYOUT_EXPAND';
+  static THEME_DIR = '[APP LAYOUT] THEME_DIR';
 
   static CHATBAR_EXPAND = '[APP LAYOUT] CHATBAR_EXPAND';
   static CHATBAR_COLLAPSE = '[APP LAYOUT] CHATBAR_COLLAPSE';
@@ -68,8 +71,24 @@ export class AppLayoutActions {
 
   changeTheme(data: number): Action {
     return {
-      type: AppLayoutActions.THEME_CHANGED,
+      type: AppLayoutActions.THEME_SKIN,
       payload: data
+    };
+  }
+
+  toggleLayout(): Action {
+    return {
+      type: AppLayoutActions.THEME_LAYOUT_TOGGLE
+    };
+  }
+  expandLayout(): Action {
+    return {
+      type: AppLayoutActions.THEME_LAYOUT_EXPAND
+    };
+  }
+  changeDir(): Action {
+    return {
+      type: AppLayoutActions.THEME_DIR,
     };
   }
 };

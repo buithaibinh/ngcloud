@@ -137,16 +137,16 @@
     .datatable-body-row {
       &.active,
       &.active .datatable-row-group {
-        @include _mat-toolbar-color($primary);
+        @include _mat-toolbar-color($light-primary);
       }
       &.active:hover,
       &.active:hover .datatable-row-group {
-        background-color: darken(mat-color($primary), 2%);
+        background-color: darken(mat-color($light-primary), 2%);
         color: #FFF;
       }
       &.active:focus,
       &.active:focus .datatable-row-group {
-        background-color: darken(mat-color($primary), 4%);
+        background-color: darken(mat-color($light-primary), 4%);
         color: #FFF;
       }
     }
@@ -177,16 +177,16 @@
       }
       &.active,
       &.active .datatable-row-group {
-        @include _mat-toolbar-color($primary);
+        @include _mat-toolbar-color($light-primary);
       }
       &.active:hover,
       &.active:hover .datatable-row-group {
-        background-color: darken(mat-color($primary), 2%);
+        background-color: darken(mat-color($light-primary), 2%);
         color: #FFF;
       }
       &.active:focus,
       &.active:focus .datatable-row-group {
-        background-color: darken(mat-color($primary), 4%);
+        background-color: darken(mat-color($light-primary), 4%);
         color: #FFF;
       }
     }
@@ -274,7 +274,7 @@
           border: none;
         }
         &.active a {
-          background: mat-color($primary);
+          background: mat-color($light-primary);
           color: white;
           font-weight: $font-weight-base;
         }

@@ -1,39 +1,48 @@
 // Import all the tools needed to customize the theme and extract parts of it
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
-
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // **Be sure that you only ever include this mixin once!**
 @include mat-core();
-
 // Define the default theme (same as the example above).
-$primary: mat-palette($mat-indigo);
-$accent:  mat-palette($mat-pink, A200, A100, A400);
-$theme:   mat-light-theme($primary, $accent);
-$background: map-get($theme, background);
-$foreground: map-get($theme, foreground);
-
+$light-primary: mat-palette($mat-indigo);
+$light-accent: mat-palette($mat-pink, A200, A100, A400);
+$light-theme: mat-light-theme($light-primary, $light-accent);
+$background: map-get($light-theme, background);
+$foreground: map-get($light-theme, foreground);
 // Include the default theme styles.
-@include angular-material-theme($theme);
-
+@include angular-material-theme($light-theme);
+// deeppurple-amber
+$light-deeppurple-primary: mat-palette($mat-deep-purple);
+$light-deeppurple-accent: mat-palette($mat-amber, A200, A100, A400);
+$light-deeppurple-theme: mat-light-theme($light-deeppurple-primary, $light-deeppurple-accent);
+$light-deeppurple-background: map-get($light-deeppurple-theme, background);
+$light-deeppurple-foreground: map-get($light-deeppurple-theme, foreground);
+.light-deeppurple-theme {
+  @include angular-material-theme($light-deeppurple-theme);
+}
 
 // Define an alternate dark theme.
-// $dark-primary: mat-palette($mat-blue-grey);
-// $dark-accent:  mat-palette($mat-amber, A200, A100, A400);
-// $dark-warn:    mat-palette($mat-deep-orange);
-// $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
-
-$dark-primary: mat-palette($mat-blue-grey);
-$dark-accent:  mat-palette($mat-amber, A200, A100, A400);
+$dark-primary: mat-palette($mat-purple, 700, 500, 800);
+$dark-accent: mat-palette($mat-green, A200, A100, A400);
 $dark-warn: mat-palette($mat-deep-orange);
 $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 $dark-background: map-get($dark-theme, background);
 $dark-foreground: map-get($dark-theme, foreground);
-
 // Include the alternative theme styles inside of a block with a CSS class. You can make this
 // CSS class whatever you want. In this example, any component inside of an element with
 // `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.
 .dark-theme {
   @include angular-material-theme($dark-theme);
+}
+
+$dark-pink-primary: mat-palette($mat-pink, 700, 500, 900);
+$dark-pink-accent : mat-palette($mat-blue-grey, A200, A100, A400);
+$dark-pink-warn: mat-palette($mat-deep-orange);
+$dark-pink-theme: mat-dark-theme($dark-pink-primary, $dark-pink-accent, $dark-pink-warn);
+$dark-pink-background: map-get($dark-pink-theme, background);
+$dark-pink-foreground: map-get($dark-pink-theme, foreground);
+.dark-pink-theme {
+  @include angular-material-theme($dark-pink-theme);
 }

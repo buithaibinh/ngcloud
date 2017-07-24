@@ -23,6 +23,17 @@
     position: relative;
     min-height: calc(100% - #{$site-footer-height + 3});
   }
+  
+  @media (min-width: $screen-lg-min) {
+    &.boxed {
+      max-width: $layout-boxed-width;
+      .navbar-search-overlap{
+        margin-right: auto;
+        margin-left: auto;
+        max-width: $layout-boxed-width;
+      }
+    }
+  }
 }
 
 .layout-full {
@@ -32,16 +43,6 @@
   }
 }
 
-// @media (min-width: $screen-lg-min) {
-//   .app.boxed {
-//     max-width: $layout-boxed-width;
-//     .navbar-search-overlap{
-//       margin-right: auto;
-//       margin-left: auto;
-//       max-width: $layout-boxed-width;
-//     }
-//   }
-// }
 .mat-sidenav-content {
   min-height: 100%;
   box-sizing: border-box;

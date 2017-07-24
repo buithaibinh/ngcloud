@@ -15,7 +15,9 @@ import * as $ from 'jquery';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None,
   host: {
-    '[class.dark-theme]': 'theme === 2',
+    '[class.light-deeppurple-theme]': 'theme === 2',
+    '[class.dark-theme]': 'theme === 3',
+    '[class.dark-pink-theme]': 'theme === 4',
   },
 })
 export class AppComponent {

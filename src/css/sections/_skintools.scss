@@ -1,7 +1,7 @@
 .site-skintools {
   position: fixed;
   top: 0px;
-  right: -270px;
+  right: -272px;
   z-index: 1300;
   width: 270px;
   color: #757575;
@@ -23,6 +23,10 @@
   .mat-tab-body-wrapper {
     height: 100%;
     padding-top: 5px;
+  }
+  .site-skintools-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .site-skintools-content {
     height: 100%;
@@ -49,8 +53,8 @@
   }
   .theme-picker {
     position: relative;
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     margin: 6px;
     border-radius: 50%;
     overflow: hidden;
@@ -67,10 +71,16 @@
       width: 100%;
       height: 100%;
       &.theme1 {
-        background: mat-color($primary);
+        background: mat-color($light-primary);
       }
       &.theme2 {
+        background: mat-color($light-deeppurple-primary);
+      }
+      &.theme3 {
         background: mat-color($dark-primary);
+      }
+      &.theme4 {
+        background: mat-color($dark-pink-primary);
       }
     }
   }

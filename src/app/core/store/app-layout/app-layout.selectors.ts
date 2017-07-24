@@ -26,3 +26,10 @@ export function getSkins$(state$: Observable<NgCloudAppState>): Observable<ISkin
 export function getAppTheme$(state$: Observable<NgCloudAppState>) {
   return state$.select((state) => state.appLayout.skins.theme);
 }
+export function getAppBoxed$(state$: Observable<NgCloudAppState>) {
+  return state$.select((state) => state.appLayout.skins.boxed);
+}
+
+export function getAppDir$(state$: Observable<NgCloudAppState>) {
+  return state$.select((state) => state.appLayout.skins.dir);
+}
