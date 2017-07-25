@@ -1,0 +1,11 @@
+.dark-theme, .dark-pink-theme {
+  .ql-snow .ql-picker .ql-picker-label {
+    color: mat-color($dark-foreground, base);
+  }
+  .ql-snow .ql-stroke {
+    stroke: mat-color($dark-foreground, base);
+  }
+  .ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill {
+    fill: mat-color($dark-foreground, base);
+  }
+}
