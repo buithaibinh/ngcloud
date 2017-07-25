@@ -2,7 +2,7 @@ $gl-vertical-padding: 10px;
 $gl-horizontal-padding: 10px;
 // Color variables (appears count calculates by raw css)
 $color0: #000000; // Appears 7 times
-$color1: map-get( $dark-background, card ); // Appears 3 times
+$color1: map-get( $dark-background, card); // Appears 3 times
 $color2: #eeeeee; // Appears 2 times
 $color3: #dddddd; // Appears 2 times
 $color4: #cccccc; // Appears 1 time
@@ -14,22 +14,20 @@ $color9: #555555; // Appears 1 time
 $color10: #ffffff; // Appears 2 time
 .lm_content {}
 
-.dark-theme {
+.dark-theme,
+.dark-pink-theme {
   // Entire GoldenLayout Container, if a background is set, it is visible as color of "pane header" and "splitters" (if these latest has opacity very low)
   .lm_goldenlayout {
     background: $color0;
-  }
-  // Single Pane content (area in which final dragged content is contained)
+  } // Single Pane content (area in which final dragged content is contained)
   .lm_content {
     background: $color1;
-  }
-  // Single Pane content during Drag (style of moving window following mouse)
+  } // Single Pane content during Drag (style of moving window following mouse)
   .lm_dragProxy {
     .lm_content {
       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
     }
-  }
-  // Placeholder Container of target position
+  } // Placeholder Container of target position
   .lm_dropTargetIndicator {
     box-shadow: inset 0 0 30px $color0;
     outline: 1px dashed $color4;
@@ -38,8 +36,7 @@ $color10: #ffffff; // Appears 2 time
       background: $color0;
       opacity: 0.2;
     }
-  }
-  // Separator line (handle to change pane size)
+  } // Separator line (handle to change pane size)
   .lm_splitter {
     background: $color0;
     opacity: 0.001;
@@ -49,8 +46,7 @@ $color10: #ffffff; // Appears 2 time
       background: $color5;
       opacity: 1;
     }
-  }
-  // Pane Header (container of Tabs for each pane)
+  } // Pane Header (container of Tabs for each pane)
   .lm_header {
     height: 20px;
     user-select: none;
@@ -102,8 +98,7 @@ $color10: #ffffff; // Appears 2 time
         box-shadow: 0 2px 2px $color0;
       }
     }
-  }
-  // If Pane Header (container of Tabs for each pane) is selected (used only if addition of new Contents is made "by selection" and not "by drag")
+  } // If Pane Header (container of Tabs for each pane) is selected (used only if addition of new Contents is made "by selection" and not "by drag")
   .lm_selected {
     .lm_header {
       background-color: $color8;
@@ -116,12 +111,10 @@ $color10: #ffffff; // Appears 2 time
       background: $color1;
       color: $color3;
     }
-  }
-  // Dropdown arrow for additional tabs when too many to be displayed
+  } // Dropdown arrow for additional tabs when too many to be displayed
   .lm_header .lm_controls .lm_tabdropdown:before {
     color: $color10;
-  }
-  // Pane controls (popout, maximize, minimize, close)
+  } // Pane controls (popout, maximize, minimize, close)
   .lm_controls {
     // All Pane controls shares these
     >li {
@@ -143,8 +136,7 @@ $color10: #ffffff; // Appears 2 time
     .lm_close {
       background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAQUlEQVR4nHXOQQ4AMAgCQeT/f6aXpsGK3jSTuCVJAAr7iBdoAwCKd0nwfaAdHbYERw5b44+E8JoBjEYGMBq5gAYP3usUDu2IvoUAAAAASUVORK5CYII=);
     }
-  }
-  // If a specific Pane is maximized
+  } // If a specific Pane is maximized
   .lm_maximised {
     // Pane Header (container of Tabs for each pane) can have different style when is Maximized
     .lm_header {
@@ -159,8 +151,7 @@ $color10: #ffffff; // Appears 2 time
   .lm_transition_indicator {
     background-color: $color0;
     border: 1px dashed $color9;
-  }
-  // If a specific Pane is Popped Out, so move it to a different Browser Window, Icon to restore original position is:
+  } // If a specific Pane is Popped Out, so move it to a different Browser Window, Icon to restore original position is:
   .lm_popin {
     cursor: pointer; // Background of Icon
     .lm_bg {

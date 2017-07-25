@@ -68,6 +68,7 @@ const MENUITEMS = [
     icon: 'edit',
     children: [
       { name: 'Quill', route: 'quill' },
+      { name: 'Ck-Editor', route: 'ck-editor' },
     ]
   },
   {

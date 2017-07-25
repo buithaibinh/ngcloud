@@ -6,104 +6,107 @@
   height: 70vh;
 }
 
-.dark-theme .ngx-datatable.material {
-  background: mat-color($dark-background, card);
-  color: mat-color($dark-foreground, base);
-  &.striped {
-    .datatable-row-odd {
-      background: mat-color($dark-background, 'hover');
-    }
-  }
-  &.single-selection,
-  &.multi-selection {
-    .datatable-body-row {
-      &.active,
-      &.active .datatable-row-group {
-        @include _mat-toolbar-color($dark-primary);
-      }
-      &.active:hover,
-      &.active:hover .datatable-row-group {
-        background-color: darken(mat-color($dark-primary), 2%);
-      }
-      &.active:focus,
-      &.active:focus .datatable-row-group {
-        background-color: darken(mat-color($dark-primary), 4%);
-      }
-    }
-  }
-  &:not(.cell-selection) {
-    .datatable-body-row {
-      &:hover,
-      &:hover .datatable-row-group {
+.dark-theme,
+.dark-pink-theme {
+  .ngx-datatable.material {
+    background: mat-color($dark-background, card);
+    color: mat-color($dark-foreground, base);
+    &.striped {
+      .datatable-row-odd {
         background: mat-color($dark-background, 'hover');
       }
-      &:focus,
-      &:focus .datatable-row-group {
-        background-color: darken(mat-color($dark-background, 'hover'), 2%);
-        ;
+    }
+    &.single-selection,
+    &.multi-selection {
+      .datatable-body-row {
+        &.active,
+        &.active .datatable-row-group {
+          @include _mat-toolbar-color($dark-primary);
+        }
+        &.active:hover,
+        &.active:hover .datatable-row-group {
+          background-color: darken(mat-color($dark-primary), 2%);
+        }
+        &.active:focus,
+        &.active:focus .datatable-row-group {
+          background-color: darken(mat-color($dark-primary), 4%);
+        }
       }
     }
-  }
-  &.cell-selection {
-    .datatable-body-cell {
-      &:hover,
-      &:hover .datatable-row-group {
-        background: mat-color($dark-background, 'hover');
-      }
-      &:focus,
-      &:focus .datatable-row-group {
-        background-color: darken(mat-color($dark-background, 'hover'), 2%);
-        ;
-      }
-      &.active,
-      &.active .datatable-row-group {
-        @include _mat-toolbar-color($dark-primary);
-      }
-      &.active:hover,
-      &.active:hover .datatable-row-group {
-        background-color: darken(mat-color($dark-primary), 2%);
-      }
-      &.active:focus,
-      &.active:focus .datatable-row-group {
-        background-color: darken(mat-color($dark-primary), 4%);
+    &:not(.cell-selection) {
+      .datatable-body-row {
+        &:hover,
+        &:hover .datatable-row-group {
+          background: mat-color($dark-background, 'hover');
+        }
+        &:focus,
+        &:focus .datatable-row-group {
+          background-color: darken(mat-color($dark-background, 'hover'), 2%);
+          ;
+        }
       }
     }
-  }
-  .datatable-header .datatable-row-left,
-  .datatable-body .datatable-row-left,
-  .datatable-header .datatable-row-right,
-  .datatable-body .datatable-row-right {
-    background-color: rgba(73, 73, 73, 1);
-  }
-  /**
+    &.cell-selection {
+      .datatable-body-cell {
+        &:hover,
+        &:hover .datatable-row-group {
+          background: mat-color($dark-background, 'hover');
+        }
+        &:focus,
+        &:focus .datatable-row-group {
+          background-color: darken(mat-color($dark-background, 'hover'), 2%);
+          ;
+        }
+        &.active,
+        &.active .datatable-row-group {
+          @include _mat-toolbar-color($dark-primary);
+        }
+        &.active:hover,
+        &.active:hover .datatable-row-group {
+          background-color: darken(mat-color($dark-primary), 2%);
+        }
+        &.active:focus,
+        &.active:focus .datatable-row-group {
+          background-color: darken(mat-color($dark-primary), 4%);
+        }
+      }
+    }
+    .datatable-header .datatable-row-left,
+    .datatable-body .datatable-row-left,
+    .datatable-header .datatable-row-right,
+    .datatable-body .datatable-row-right {
+      background-color: rgba(73, 73, 73, 1);
+    }
+    /**
    * Header Styles
    */
-  .datatable-header {
-    border-bottom: 1px solid mat-color($dark-foreground, divider);
-    .datatable-header-cell {
-      color: mat-color($dark-foreground, base);
+    .datatable-header {
+      border-bottom: 1px solid mat-color($dark-foreground, divider);
+      .datatable-header-cell {
+        color: mat-color($dark-foreground, base);
+      }
+      .resize-handle {
+        border-right: solid 1px mat-color($dark-foreground, divider);
+      }
     }
-    .resize-handle {
-      border-right: solid 1px mat-color($dark-foreground, divider);
-    }
-  }
-  /**
+    /**
    * Footer Styles
    */
-  .datatable-footer {
-    border-top: 1px solid mat-color($dark-foreground, divider);
-    .datatable-pager {
-      li {
-        &.disabled a {
-          color: rgba(255, 255, 255, 0.26) !important;
-        }
-        a {
-          color: mat-color($dark-foreground, base);
-          background: transparent;
-          border: none;
-        }
-        &.active a {
-          background: mat-color($dark-primary);
+    .datatable-footer {
+      border-top: 1px solid mat-color($dark-foreground, divider);
+      .datatable-pager {
+        li {
+          &.disabled a {
+            color: rgba(255, 255, 255, 0.26) !important;
+          }
+          a {
+            color: mat-color($dark-foreground, base);
+            background: transparent;
+            border: none;
+          }
+          &.active a {
+            background: mat-color($dark-primary);
+          }
         }
       }
     }

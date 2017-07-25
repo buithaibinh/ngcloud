@@ -23,11 +23,10 @@
     position: relative;
     min-height: calc(100% - #{$site-footer-height + 3});
   }
-  
   @media (min-width: $screen-lg-min) {
     &.boxed {
       max-width: $layout-boxed-width;
-      .navbar-search-overlap{
+      .navbar-search-overlap {
         margin-right: auto;
         margin-left: auto;
         max-width: $layout-boxed-width;
@@ -55,6 +54,10 @@
 }
 
 .dark-theme .mat-sidenav-content {
+  background-color: rgba(53, 53, 53, 1.00);
+}
+
+.dark-pink-theme .mat-sidenav-content {
   background-color: rgba(53, 53, 53, 1.00);
 }
 
