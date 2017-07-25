@@ -216,6 +216,68 @@
             </md-card>
         </div>
     </div>
+
+    <!--Row 3-->
+    <div fxLayout="row" fxLayoutWrap="wrap">
+        <div fxFlex.gt-sm="40%" fxFlex="100">
+            <md-card>
+                <md-card-header>
+                    <md-card-title>Tasks</md-card-title>
+                    <md-card-subtitle>
+                        <p>Lorem ipsum dolLorem ip sum dolor sit amet, consectetur adipiscing elit.</p>
+                    </md-card-subtitle>
+                </md-card-header>
+                <md-card-content>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Task</th>
+                                <th>Progress</th>
+                                <th>Deadline</th>
+                                <th class="text-nowrap">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of projects; let i = index">
+                                <td>{{item.project|slice:0:10}}</td>
+                                <td>
+                                    <md-progress-bar mode="determinate" value="{{item.progress}}" [color]="item.progress >= 60 ? 'primary':'accent'" mdTooltip="{{item.progress}}">
+                                    </md-progress-bar>
+                                </td>
+                                <td>{{item.date}}</td>
+                                <td class="text-nowrap" style="width: 100px">
+                                    <button md-icon-button mdTooltip="Edit" (click)="onClick">
+                    <md-icon class="md-18">edit</md-icon>
+                </button>
+                                    <button md-icon-button mdTooltip="Delete" (click)="onClick">
+                    <md-icon class="md-18">clear</md-icon>
+                </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </md-card-content>
+            </md-card>
+        </div>
+        <div fxFlex.gt-sm="60%" fxFlex="100">
+            <md-card>
+                <md-card-header>
+                    <md-card-title fxLayout="row" fxLayoutAlign="start center">
+                        <md-icon>perm_contact_calendar</md-icon>&nbsp;<span>Calendar</span>
+                        <span fxFlex></span>
+                    </md-card-title>
+                </md-card-header>
+                <md-card-content>
+                    <div [ngSwitch]="'month'">
+                        <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events" [activeDayIsOpen]="activeDayIsOpen"
+                            (dayClicked)="dayClicked($event.day)">
+                        </mwl-calendar-month-view>
+                    </div>
+                </md-card-content>
+            </md-card>
+        </div>
+    </div>
 </div>
 <!--Default menu-->
 <md-menu #menudefault="mdMenu" xPosition="before" [overlapTrigger]="false">

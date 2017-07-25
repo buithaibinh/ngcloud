@@ -1,11 +1,13 @@
 .demo-chart {
   height: 400px;
 }
-.mat-slide-toggle{
-    padding-top: 5px;
+
+.mat-slide-toggle {
+  padding-top: 5px;
 }
+
 .handle {
-    cursor: move;
+  cursor: move;
 }
 
 // Map 
@@ -19,16 +21,19 @@
     right: 10px;
     top: 25px;
   }
-  .mat-list{
+  .mat-list {
     height: 395px;
     overflow-y: scroll;
   }
 }
 
 .dashboard {
-    margin: 10px 0px 10px;
-    .card-widget{
-      padding: 10px;
-    }
+  margin: 10px 0px 10px;
+  .card-widget {
+    padding: 10px;
+  }
 }
 
+.table>tbody>tr>td {
+  vertical-align: middle !important;
+}

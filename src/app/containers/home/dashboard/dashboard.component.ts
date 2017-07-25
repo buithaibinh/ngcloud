@@ -7,12 +7,49 @@ import { GridOptions } from "ag-grid";
 import { DragulaService } from 'ng2-dragula';
 import { HomeLayoutState } from '../../../core/store';
 
+import {
+    CalendarEvent,
+    CalendarEventTimesChangedEvent,
+    CalendarEventAction
+} from 'angular-calendar';
+import { Subject } from 'rxjs/Subject';
+import {
+    addDays,
+    differenceInDays,
+    startOfDay,
+    isSameDay,
+    isSameMonth,
+} from 'date-fns';
+
 import { HomeLayoutActions, getDashboardEditMode$ } from '../../../core/store/home-layout';
 import { CellDateComponent } from '../../../core/components/ag-components/cell-date.component';
 
 // example services
 import { ContactDataService, ContactData } from '../../../shared/services/contact.service';
 import { ProjectDataService, ProjectData } from '../../../shared/services/project.service';
+
+const colors: any = {
+    red: {
+        primary: '#ad2121',
+        secondary: '#FAE3E3'
+    },
+    blue: {
+        primary: '#1e90ff',
+        secondary: '#D1E8FF'
+    },
+    yellow: {
+        primary: '#e3bc08',
+        secondary: '#FDF1BA'
+    },
+    warm: {
+        primary: '#ff4081',
+        secondary: '#FDF1BA'
+    },
+    accent: {
+        primary: '#f44336',
+        secondary: '#FDF1BA'
+    }
+};
 
 @Component({
     moduleId: module.id,
@@ -175,6 +212,44 @@ export class DashboardComponent implements OnInit, OnDestroy {
         this.activeLinkIndex = index;
         if (this.dashboardEditMode) {
             return this.store.dispatch(this.homeLayoutActions.editDashboard(false));
+        }
+    }
+
+
+    // calendar
+    viewDate: Date = new Date();
+    events: CalendarEvent[] = [
+        {
+            title: 'Office Meeting',
+            color: colors.yellow,
+            start: new Date(),
+            draggable: true,
+        }, {
+            title: 'Lunch Break',
+            color: colors.blue,
+            start: new Date(),
+            draggable: true,
+        }
+        , {
+            title: 'URGENT',
+            color: colors.accent,
+            start: new Date(),
+            draggable: true,
+        }
+    ];
+    activeDayIsOpen: boolean = false;
+    dayClicked({ date, events }: { date: Date, events: CalendarEvent[] }): void {
+
+        if (isSameMonth(date, this.viewDate)) {
+            if (
+                (isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) ||
+                events.length === 0
+            ) {
+                this.activeDayIsOpen = false;
+            } else {
+                this.activeDayIsOpen = true;
+                this.viewDate = date;
+            }
         }
     }
 }

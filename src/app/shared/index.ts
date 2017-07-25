@@ -9,6 +9,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ChartsModule } from 'ng2-charts';
 import { DragulaModule } from 'ng2-dragula';
 import { DragAndDropModule } from 'angular-draggable-droppable';
+import { CalendarModule } from 'angular-calendar';
 
 // ngx datatable
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
@@ -38,11 +39,13 @@ export const ANGULAR_MODULES = [
   DragAndDropModule,
   NgxDatatableModule,
   BusyModule,
+  
 ];
 
 @NgModule({
   imports: [
     ANGULAR_MODULES,
+    CalendarModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: Config.GOOGLE_MAP_API_KEY
     }),
@@ -55,6 +58,7 @@ export const ANGULAR_MODULES = [
   ],
   exports: [
     AgmCoreModule,
+    CalendarModule,
     ...ANGULAR_MODULES,
     ...PIPES,
     ...COMPONENTS,
