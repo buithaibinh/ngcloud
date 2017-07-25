@@ -5,8 +5,7 @@ body {
     margin: ($gutter/3);
     border-radius: $border-radius-base;
     @include mat-elevation(1);
-    color: rgba(mat-color($foreground, base), 0.5);
-    .mat-select-trigger{
+    .mat-select-trigger {
       font-size: 14px;
     }
     .mat-card-header {
@@ -18,7 +17,6 @@ body {
     > :last-child {
       border-radius: 0 0 $border-radius-base $border-radius-base;
     }
-   
     [md-card-avatar] {
       height: $mat-card-header-size;
       width: $mat-card-header-size;
@@ -68,7 +66,8 @@ body {
       position: absolute;
       right: 8px;
     }
-    &, & .mat-card {
+    &,
+    & .mat-card {
       & .mat-card-actions:last-child {
         padding: $gutter / 2;
         margin: 0;
@@ -102,7 +101,8 @@ body {
       align-content: center;
       max-width: 100%;
       padding: $gutter;
-      [md-card-widget-title], p {
+      [md-card-widget-title],
+      p {
         margin: 0;
         padding: 0;
       }
