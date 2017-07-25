@@ -16,7 +16,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { NG_TABLE_DIRECTIVES } from 'ng2-table';
 
 // Google map
-import { AgmCoreModule } from 'angular2-google-maps/core';
+import { AgmCoreModule } from '@agm/core';
 
 import { COMPONENTS } from './components';
 import { PIPES } from './pipes';
