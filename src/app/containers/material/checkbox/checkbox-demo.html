@@ -3,20 +3,20 @@
     <h4 class="example-h4">Checkbox configuration</h4>
 
     <section class="example-section">
-      <md-checkbox class="example-margin" [(ngModel)]="checked">Checked</md-checkbox>
-      <md-checkbox class="example-margin" [(ngModel)]="indeterminate">Indeterminate</md-checkbox>
+      <md-checkbox class="example-margin">Checked</md-checkbox>
+      <md-checkbox class="example-margin">Indeterminate</md-checkbox>
     </section>
 
     <section class="example-section">
       <label class="example-margin">Align:</label>
-      <md-radio-group [(ngModel)]="align">
+      <md-radio-group>
         <md-radio-button class="example-margin" value="start">Start</md-radio-button>
         <md-radio-button class="example-margin" value="end">End</md-radio-button>
       </md-radio-group>
     </section>
 
     <section class="example-section">
-      <md-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</md-checkbox>
+      <md-checkbox class="example-margin">Disabled</md-checkbox>
     </section>
   </md-card-content>
 </md-card>
@@ -28,10 +28,7 @@
     <section class="example-section">
       <md-checkbox
           class="example-margin"
-          [checked]="checked"
-          [indeterminate]="indeterminate"
-          [align]="align"
-          [disabled]="disabled">
+          >
         I'm a checkbox
       </md-checkbox>
     </section>

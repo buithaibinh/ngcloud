@@ -37,8 +37,8 @@ import { AppLayoutActions, ISkins, getSidebarExpanded$ } from '../../store/app-l
   },
 })
 export class TopbarComponent implements OnInit {
-  private sidebarExpanded: boolean;
-  private showSearch: boolean = false;
+  sidebarExpanded: boolean;
+  showSearch: boolean = false;
   @ViewChild('search') search: ElementRef;
 
   /** State of the search animation. */

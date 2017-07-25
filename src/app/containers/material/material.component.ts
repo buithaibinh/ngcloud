@@ -15,7 +15,7 @@ interface IBreadcrumb {
 })
 
 export class MaterialComponent implements OnInit {
-    private breadcrumb: IBreadcrumb;
+    breadcrumb: IBreadcrumb;
     constructor(private activatedRoute: ActivatedRoute,
         private router: Router) {
     }

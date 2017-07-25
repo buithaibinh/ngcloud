@@ -12,7 +12,7 @@ export class CellDateComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { }
-    private params: any;
+    params: any;
 
     agInit(params: any): void {
         this.params = params;

@@ -231,7 +231,7 @@ export class CalendarComponent {
    </md-dialog-content>
     <md-dialog-actions>
       <button md-button md-dialog-close>Cancel</button>
-      <button md-button [disabled]="!eventTitle.value.trim().length>0" (click)="updateEvent(eventTitle.value.trim())">
+      <button md-button [disabled]="!eventTitle.value.trim().length" (click)="updateEvent(eventTitle.value.trim())">
           <md-icon class="md-18">add</md-icon>Add Event
       </button>
     </md-dialog-actions>
@@ -240,7 +240,6 @@ export class CalendarComponent {
 export class EditCalendarDialog {
   title: string = '';
   constructor(public dialogRef: MdDialogRef<EditCalendarDialog>, @Inject(MD_DIALOG_DATA) public data: any, ) {
-    console.log('xxx:', data);
     this.title = data;
   }
 

@@ -54,7 +54,6 @@ export const ANGULAR_MODULES = [
     ...PIPES,
     ...COMPONENTS,
     ...DIRECTIVES,
-    NG_TABLE_DIRECTIVES,
   ],
   exports: [
     AgmCoreModule,
@@ -63,7 +62,6 @@ export const ANGULAR_MODULES = [
     ...PIPES,
     ...COMPONENTS,
     ...DIRECTIVES,
-    NG_TABLE_DIRECTIVES
   ],
   providers: [
     EXAMPLE_SERVICES

@@ -67,7 +67,7 @@ export class RichGridComponent {
     this.tooltip = this.checkAll ? 'Clear Selection' : 'Select All';
   }
 
-  private createRowData() {
+  createRowData() {
     var rowData: any[] = [];
 
     for (var i = 0; i < 500; i++) {

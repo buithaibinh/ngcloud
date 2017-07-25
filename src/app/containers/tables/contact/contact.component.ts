@@ -28,13 +28,12 @@ export class ContactComponent implements OnInit {
   ];
   // @Input() loading: IBusyConfig;
   page = new Page();
-  private rows = new Array<ContactData>();
+  rows = new Array<ContactData>();
   constructor(private contactDataService: ContactDataService) {
 
     this.page.pageNumber = 0;
     this.page.size = 10;
   }
-
 
   ngOnInit() {
     this.options.template = OPTIONS_TEMPLATE;

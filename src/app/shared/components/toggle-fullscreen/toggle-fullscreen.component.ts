@@ -13,7 +13,7 @@ import * as screenfull from 'screenfull'
 export class ToggleFullscreenComponent implements OnInit {
 
   @Output() onToggleFullscreen: EventEmitter<boolean> = new EventEmitter();
-  private icon: string = 'fullscreen';
+  icon: string = 'fullscreen';
   constructor(private _element: ElementRef) {
 
   }

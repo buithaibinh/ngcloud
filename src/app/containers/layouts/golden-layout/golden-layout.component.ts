@@ -9,7 +9,7 @@ import { GoldenLayoutDirective, IGoldenLayoutRegist, IGoldenState } from '../../
 })
 export class GoldenLayoutComponent implements OnInit {
   @ViewChild(GoldenLayoutDirective) glLayout: GoldenLayoutDirective
-  private compRegists: IGoldenLayoutRegist[] = [
+  compRegists: IGoldenLayoutRegist[] = [
     {
       compType: SunnyComponent,
       compName: 'Sunny',
@@ -24,7 +24,7 @@ export class GoldenLayoutComponent implements OnInit {
     },
   ];
 
-  private config = {
+  config = {
     content: [{
       type: 'column',
       content: [
@@ -47,7 +47,7 @@ export class GoldenLayoutComponent implements OnInit {
     }]
   };
 
-  private type: 'column' | 'row' | 'stack' = 'column';
+  type: 'column' | 'row' | 'stack' = 'column';
 
   constructor() {
   }

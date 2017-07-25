@@ -28,7 +28,7 @@
           </p>
           <p>
             <label for="drinks-theme">Theme:</label>
-            <md-button-toggle-group name="pies" [(ngModel)]="drinksTheme" [vertical]="isVertical">
+            <md-button-toggle-group name="pies" [(ngModel)]="drinksTheme" >
               <md-button-toggle *ngFor="let theme of availableThemes" [value]="theme.value">
                 {{ theme.name }}
               </md-button-toggle>
@@ -60,7 +60,7 @@
           <p> Status: {{ pokemonControl.control?.status }} </p>
           <p>
             <label for="pokemon-theme">Theme:</label>
-            <md-button-toggle-group name="pies" [(ngModel)]="pokemonTheme" [vertical]="isVertical">
+            <md-button-toggle-group name="pies" [(ngModel)]="pokemonTheme">
               <md-button-toggle *ngFor="let theme of availableThemes" [value]="theme.value">
                 {{ theme.name }}
               </md-button-toggle>

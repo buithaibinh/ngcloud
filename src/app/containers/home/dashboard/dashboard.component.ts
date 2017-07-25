@@ -59,24 +59,24 @@ const colors: any = {
 })
 
 export class DashboardComponent implements OnInit, OnDestroy {
-    private dashboardEditMode: boolean;
-    private mapOptions: any = {
+    dashboardEditMode: boolean;
+    mapOptions: any = {
         lat: 51.678418,
         lng: 7.809007,
         zoom: 2,
         scrollwheel: false
     }
-    private initState: any = {
+    initState: any = {
         chart1: true,
         chart2: true,
         chart3: true,
     };
-    private displayOption: any = {};
+    displayOption: any = {};
 
-    private tmpDisplayOption: any = {};
+    tmpDisplayOption: any = {};
     contacts: ContactData[] = [];
     projects: ProjectData[] = [];
-    private gridOptions: GridOptions;
+    gridOptions: GridOptions;
     tabLinks = [
         { label: 'Dashboard', link: '../home' },
         { label: 'Activity', link: '../activity' }
