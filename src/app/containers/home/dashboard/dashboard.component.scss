@@ -11,8 +11,19 @@
 }
 
 // Map 
-.sebm-google-map-container {
-  height: 450px;
+agm-map {
+  height: 470px;
+}
+
+@media(max-width: 768) {
+  agm-map {
+    height: 300px;
+  }
+  .contact {
+    .mat-list {
+      height: 350px;
+    }
+  }
 }
 
 .contact {

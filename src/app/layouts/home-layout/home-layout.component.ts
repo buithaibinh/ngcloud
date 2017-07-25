@@ -11,7 +11,8 @@ import * as Ps from 'perfect-scrollbar';
 
 @Component({
   selector: 'app-layout',
-  templateUrl: './home-layout.component.html'
+  templateUrl: './home-layout.component.html',
+  styleUrls: ['./home-layout.component.scss']
 })
 export class HomeLayoutComponent implements OnInit, OnDestroy {
   sidebarExpanded$: Observable<any> = this.store.let(getSidebarExpanded$);
@@ -23,6 +24,27 @@ export class HomeLayoutComponent implements OnInit, OnDestroy {
 
   dir: string;
   @ViewChild('sidemenu') sidemenu;
+
+  messages: any[] = [
+    {
+      from: 'Nancy',
+      subject: 'Brunch?',
+      message: 'Did you want to go on Sunday? I was thinking that might work.',
+      image: 'assets/avatars/2.png'
+    },
+    {
+      from: 'Mary',
+      subject: 'Summer BBQ',
+      message: 'Wish I could come, but I have some prior obligations.',
+      image: 'assets/avatars/1.png'
+    },
+    {
+      from: 'Bobby',
+      subject: 'Oui oui',
+      message: 'Do you have Paris reservations for the 15th? I just booked!',
+      image: 'assets/avatars/3.png'
+    }
+  ];
 
   constructor(public menuItems: MenuItems, private router: Router, private appLayoutActions: AppLayoutActions,
     private store: Store<NgCloudAppState>) {

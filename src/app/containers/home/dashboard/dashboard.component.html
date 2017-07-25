@@ -180,16 +180,10 @@
     <div fxLayout="row" fxLayoutWrap="wrap">
         <div fxFlex.gt-sm="60%" fxFlex="100">
             <md-card>
-                <md-card-content>
-                    <div>
-                        <!-- this creates a google map on the page with the given lat/lng from -->
-                        <!-- the component as the initial center of the map: -->
 
-                        <!-- <sebm-google-map [latitude]="mapOptions.lat" [longitude]="mapOptions.lng" [scrollwheel]="mapOptions.scrollwheel" [zoom]="mapOptions.zoom">
-                            <sebm-google-map-marker [latitude]="mapOptions.lat" [longitude]="mapOptions.lng"></sebm-google-map-marker>
-                        </sebm-google-map> -->
-                    </div>
-                </md-card-content>
+                <agm-map [latitude]="mapOptions.lat" [longitude]="mapOptions.lng" [scrollwheel]="mapOptions.scrollwheel" [zoom]="mapOptions.zoom">
+                    <agm-marker [latitude]="mapOptions.lat" [longitude]="mapOptions.lng"></agm-marker>
+                </agm-map>
             </md-card>
         </div>
         <div fxFlex.gt-sm="40%" fxFlex="100">
