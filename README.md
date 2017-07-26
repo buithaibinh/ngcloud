@@ -1,4 +1,9 @@
 # NgCloud
+The NgCloud template is an awesome web application and admin dashboard template which built with Angular2 and Angular 2 Material design. It provides a large selection of ready-made UI Components, Widgets, Modules and Web Apps for you to customize and create multiple projects.
+
+THANK YOU FOR PURCHASING!
+
+You can access the documentation: http://ngcloud-doc.readthedocs.io/en/latest/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
 
@@ -26,15 +31,3 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-ng2 Chart
-https://github.com/valor-software/ng2-charts
-
-Google map
-https://angular-maps.com/docs/getting-started.html
-
-ng2Lodash
-https://github.com/gnovotny/ng2-lodash
-
-ngx-datatable
-https://github.com/swimlane/ngx-datatable

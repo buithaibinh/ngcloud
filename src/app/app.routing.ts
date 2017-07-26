@@ -1,4 +1,5 @@
-import { Routes } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { ModuleWithProviders } from '@angular/core';
 
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { AuthLayoutComponent } from './layouts/auth/auth-layout.component';
@@ -14,43 +15,43 @@ export const AppRoutes: Routes = [
         children: [
             {
                 path: 'home',
-                loadChildren: './containers/home/#HomeModule'
+                loadChildren: 'app/containers/home/index#HomeModule'
             },
             {
                 path: 'material',
-                loadChildren: './containers/material/#MaterialDemoModule'
+                loadChildren: 'app/containers/material/#MaterialDemoModule'
             },
             {
                 path: 'layouts',
-                loadChildren: './containers/layouts/#LayoutsModule'
+                loadChildren: 'app/containers/layouts/#LayoutsModule'
             },
             {
                 path: 'tables',
-                loadChildren: './containers/tables/#TablesModule'
+                loadChildren: 'app/containers/tables/#TablesModule'
             },
             {
                 path: 'ag-grid',
-                loadChildren: './containers/ag-grid/#A2GridModule'
+                loadChildren: 'app/containers/ag-grid/#A2GridModule'
             },
             {
                 path: 'pages',
-                loadChildren: './containers/pages/#PagesModule'
+                loadChildren: 'app/containers/pages/#PagesModule'
             },
             {
                 path: 'apps',
-                loadChildren: './containers/apps/#AppsModule'
+                loadChildren: 'app/containers/apps/#AppsModule'
             },
             {
                 path: 'chart',
-                loadChildren: './containers/chart/#ChartModule'
+                loadChildren: 'app/containers/chart/#ChartModule'
             },
             {
                 path: 'editors',
-                loadChildren: './containers/editors/#EditorsModule'
+                loadChildren: 'app/containers/editors/#EditorsModule'
             },
             {
                 path: 'calendar',
-                loadChildren: './containers/calendar/#MyCalendarModule'
+                loadChildren: 'app/containers/calendar/#MyCalendarModule'
             },
         ]
     },
@@ -59,10 +60,13 @@ export const AppRoutes: Routes = [
         component: AuthLayoutComponent,
         children: [{
             path: 'miscellaneous',
-            loadChildren: './containers/miscellaneous/#MiscellaneousModule'
+            loadChildren: 'app/containers/miscellaneous/#MiscellaneousModule'
         }]
     }, {
         path: '**',
         redirectTo: 'miscellaneous/err-404'
     }
 ];
+export const routing: ModuleWithProviders = RouterModule.forRoot(AppRoutes, {
+    preloadingStrategy: PreloadAllModules
+});
