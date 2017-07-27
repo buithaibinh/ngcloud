@@ -13,7 +13,6 @@ import { CalendarModule } from 'angular-calendar';
 
 // ngx datatable
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { NG_TABLE_DIRECTIVES } from 'ng2-table';
 
 // Google map
 import { AgmCoreModule } from '@agm/core';
