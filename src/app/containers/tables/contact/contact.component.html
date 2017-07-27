@@ -1,34 +1,4 @@
-<!--<table class="table" [ngBusy]="loading">
-    <thead class="thead-default">
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Species</th>
-            <th>Occupation</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Arthur Dent</td>
-            <td>Human</td>
-            <td>Radio Employee</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Ford Prefect</td>
-            <td>Betelgeusian</td>
-            <td>Researcher</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Marvin</td>
-            <td>Robot</td>
-            <td>Servant</td>
-        </tr>
-    </tbody>
-</table>-->
-<div [ngBusy]="options">
+<div>
     <ngx-datatable class="material" [rows]="rows" [columns]="columns" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50"
         [rowHeight]="'auto'" [externalPaging]="true" [count]="page.totalElements" [offset]="page.pageNumber" [limit]="page.size"
         (page)='setPage($event)'>

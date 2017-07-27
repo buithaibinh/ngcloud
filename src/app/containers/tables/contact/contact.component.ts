@@ -3,8 +3,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { DatatableComponent } from '@swimlane/ngx-datatable';
 import { ContactDataService, ContactData, Page } from '../../../shared/services/contact.service';
 
-import { IBusyConfig, BUSY_CONFIG_DEFAULTS } from 'angular2-busy';
-
 const OPTIONS_TEMPLATE = `
   <div class="spinner">
   <div class="double-bounce1"></div>
@@ -18,8 +16,6 @@ const OPTIONS_TEMPLATE = `
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  options: IBusyConfig = Object.assign({}, BUSY_CONFIG_DEFAULTS);
-
   columns = [
     { name: 'Name', prop: 'name' },
     { name: 'Gender', prop: 'gender' },
@@ -36,7 +32,6 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.options.template = OPTIONS_TEMPLATE;
     this.setPage({ offset: 0 });
   }
 
@@ -46,7 +41,7 @@ export class ContactComponent implements OnInit {
   */
   setPage(pageInfo) {
     this.page.pageNumber = pageInfo.offset;
-    this.options.busy = this.contactDataService.getResults(this.page).subscribe(pagedData => {
+    this.contactDataService.getResults(this.page).subscribe(pagedData => {
       this.page = pagedData.page;
       this.rows = pagedData.data;
     });

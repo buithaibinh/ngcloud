@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Subscription } from 'rxjs/Rx';
-import { IBusyConfig } from 'angular2-busy';
 import { DatatableComponent } from '@swimlane/ngx-datatable';
 import { ContactDataService, ContactData, Page } from '../../../shared/services/contact.service';
 

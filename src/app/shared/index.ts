@@ -24,7 +24,6 @@ import { DIRECTIVES } from './directives';
 import { Config } from '../core/config';
 
 import { EXAMPLE_SERVICES } from './services';
-import { BusyModule } from 'angular2-busy';
 
 export const ANGULAR_MODULES = [
   CommonModule,
@@ -38,8 +37,6 @@ export const ANGULAR_MODULES = [
   DragulaModule,
   DragAndDropModule,
   NgxDatatableModule,
-  BusyModule,
-  
 ];
 
 @NgModule({
