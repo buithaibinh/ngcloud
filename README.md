@@ -20,9 +20,12 @@ The NgCloud template is an awesome web application and admin dashboard template 
 * Ag grid (https://www.ag-grid.com)
 * Flex layout (https://github.com/angular/flex-layout)
 
+
+Read more: http://www.ng2cloud.com
+
 THANK YOU FOR PURCHASING!
 
-You can access the documentation: http://ngcloud-doc.readthedocs.io/en/latest/
+You can access the documentation: http://docs.ng2cloud.com/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
 
